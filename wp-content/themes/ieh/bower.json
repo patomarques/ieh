@@ -1,0 +1,17 @@
+{
+  "name": "ieh",
+  "authors": [
+    "Pato Marques <patoxmarques@gmail.com>"
+  ],
+  "description": "instituto de ecologia humana",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
