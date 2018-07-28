@@ -1,0 +1,41 @@
+$preto: #000000;
+$branco: #ffffff;
+$cinza: #484c4b;
+$cinza-line: #898980;
+$cinza-5d: #5d5d5d;
+
+$azul-claro: #41b6d6;
+$footer-bg: $azul-claro;
+
+.icon-white{
+  color: $branco;
+}
+
+/*
+* Color Classes
+*/
+.c-white{
+  color: $branco !important;
+}
+
+.c-azul-claro{
+  color: $azul-claro;
+}
+
+.c-cinza-5d{
+  color: $cinza-5d;
+}
+
+
+/*
+* Background Classes
+*/
+
+.bg-azul-claro{
+  background-color: $azul-claro;
+}
+
+.bg-cinza-claro{
+  background-color: $cinza-line;
+}
+

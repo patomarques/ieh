@@ -14,43 +14,249 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area col-sm-12 col-md-12 col-lg-8">
-		<main id="main" class="site-main" role="main">
+<div class="lines-fullsize bg-cinza-claro"></div>
+<div class="lines-fullsize bg-azul-claro"></div>
 
-		<?php
-		if ( have_posts() ) :
+<section id="home-quem-somos" class="content-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 offset-md-1 col-lg-8 offset-lg-2">
+                <h2 class="title-section c-azul-claro">Quem <br>Somos</h2>
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+                <p class="text-content c-gray-5d text-justify">
+                    Fundado em 1990, o Instituto de Ecologia Humana - IEH, nasce com o compromisso de coletivizar a compreensão da questão ambiental, entendendo que o processo de formação dos recursos humanos é um ato continuo e indissociável de uma prática que busca contribuir para uma sociedade mais humana. <a href="<?php echo get_site_url(); ?>/quem-somos" class="btn-saiba-mais"><span class="asterix">*</span>Saiba mais</a></p>
 
-			<?php
-			endif;
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+                <ul class="list-unstyled list-quem-somos">
+                    <li>
+                        <a href="#" class="box-content-quem-somos">
+                            <div class="box-info">
+                                <span class="text-subtitle"><i class="icon-plus"></i> Sobre Nós</span>
+                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/box-quem-somo-img1.png" alt="" class="img-bg-content">
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="box-content-quem-somos">
+                            <div class="box-info">
+                                <span class="text-subtitle"><i class="icon-plus"></i> A Coordenação</span>
+                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/box-quem-somo-img2.png" alt="" class="img-bg-content">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="box-content-quem-somos">
+                            <div class="box-info">
+                                <span class="text-subtitle"><i class="icon-plus"></i> Missão</span>
+                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/box-quem-somo-img3.png" alt="" class="img-bg-content">
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="box-content-quem-somos">
+                            <div class="box-info">
+                                <span class="text-subtitle"><i class="icon-plus"></i> Transparência</span>
+                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/box-quem-somo-img4.png" alt="" class="img-bg-content">
+                            </div>
+                        </a>
+                    </li>
+                </ul>
 
-			endwhile;
+            </div>
 
-			the_posts_navigation();
+        </div>
+    </div>
+</section>
 
-		else :
+<section id="home-o-que-fazemos" class="fullscreen-bg-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2 text-right">
+                <h2 class="title-section c-white">O Que <br>Fazemos</h2>
 
-			get_template_part( 'template-parts/content', 'none' );
+                <p class="text-content c-white text-justify">Há 22 anos o <a href="<?php echo get_site_url(); ?>" class="link c-white text-negrito">Instituto de Ecologia Humana</a> já realizou cerca de 40 eventos, promoveu 120 cursos; propiciou estágios a 100 estudantes universitários, capacitou cerca de 600 educadores, coordenou 40 projetos, dentre eles 15 projetos de pesquisa, todos com metodologia interdisciplinar e realizou cerca de 15 avaliações de projetos. Coordenou e participou das publicações de cerca de 70 títulos. Realizou o encontro da Arte com a Ciência ao concretizar duas exposições sobre a temática ambiental.</p>
 
-		endif; ?>
+                <div class="button-content text-center">
+                    <a href="<?php echo get_site_url(); ?>/o-que-fazemos#objetivos" class="btn-white">Ver Objetivos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+<section id="home-nossos-projetos" class="section-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2 class="title-section c-azul-claro">Nossos Projetos</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 square-grid">
+                <SquareGrid>
+                    <div class="item">
+                        <div class="square-content">
+                            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/nossos-projetos/puzzle.png" alt="" class="img-icon">
+                            <span class="text-box">Exposições</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="square-content">
+                            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/nossos-projetos/puzzle.png" alt="" class="img-icon">
+                            <span class="text-box">Arte e educação</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="square-content">
+                            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/nossos-projetos/puzzle.png" alt="" class="img-icon">
+                            <span class="text-box">Cursos</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="square-content">
+                            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/nossos-projetos/puzzle.png" alt="" class="img-icon">
+                            <span class="text-box">Teatro</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="square-content">
+                            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/nossos-projetos/puzzle.png" alt="" class="img-icon">
+                            <span class="text-box">Simpósios</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="square-content">
+                            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/nossos-projetos/puzzle.png" alt="" class="img-icon">
+                            <span class="text-box">Oficinas</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="square-content">
+                            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/nossos-projetos/puzzle.png" alt="" class="img-icon">
+                            <span class="text-box">Mentoria de grupos</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="square-content">
+                            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/nossos-projetos/puzzle.png" alt="" class="img-icon">
+                            <span class="text-box">Publicações de artistas locais</span>
+                        </div>
+                    </div>
+                </SquareGrid>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="home-apoie-nossos-projetos" class="fullscreen-bg bg-azul-claro">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
+                <h2 class="title-section">Apoie <br>Nossos <br>Projetos</h2>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
+                <p class="subtext-title">Lorem ipsum dolor sit amet consectetur adipiscing elit, cubilia porta ridiculus inceptos sapien id pulvinar, mi eget placerat ornare potenti himenaeos. Vestibulum eleifend consequat urna dui inceptos conubia ullamcorper, fringilla purus sapien ligula fusce id, mi aliquam eget etiam nulla efficitur.</p>
+
+                <button class="btn btn-modal btn-fale-conosco">Fale Conosco</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="modal-fale-conosco hidden">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="title-minor">Fale Conosco</h3>
+
+                <p class="text-modal text-justify">Sinta-se a vontade para nos mandar uma mensagem atráves do email
+                    <a href="mailto:comunicacao@ieh.org.br">comunicacao@ieh.org.br</a>, ou preencha o formulário abaixo com os seus dados e te retornaremos assim que possível.</p>
+
+                <?php echo do_shortcode('[contact-form-7 id="31" title="Fale Conosco"]'); ?>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="home-bg-img-parallax-bg" class="fullscreen"></section>
+
+<section id="home-ieh-em-numeros" class="bg-listrado-transversal">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-left">
+                <h2 class="title-section"><span class="negrito">IEH</span><br>em Números</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
+                <ul class="list-unstyled list-ieh-numeros">
+                    <li>
+                        <div class="box-numeros">
+                            <span class="numero">30</span>
+                            <span class="icone">ampulheta</span>
+                            <span class="text">anos de atuação no mercado</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box-numeros">
+                            <span class="pre-text">Mais <br>de</span>
+                            <span class="numero">120</span>
+                            <span class="icon">pessoas</span>
+                            <span class="text">profissionais <br>associados</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box-numeros">
+                            <span class="numero">21</span>
+                            <span class="icone">anotação</span>
+                            <span class="text">convênios <br>e contratos</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+                <div class="content-mapa">
+                    <div class="box-numeros">
+                        <span class="numero">27</span>
+                        <span class="text">áreas atendidas</span>
+                    </div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/mapa-brasil.png" alt="Mapa do Brasil - Área de atuação">
+
+                    <span class="text-area-atuacao"><strong>AM </strong>(Manaus), <b>PA</b> (Belém), <b>CE</b> (Fortaleza, Icapuí, Caucaia, Trairí, São Gonçalo do Amarante, Paracuru, Paraíbaba e Itapipoca), <b>RN</b>, <b>PB</b> (Soledade e Fagundes), <b>PE</b> (Recife, Desterro, Aldeia e Jatobá), <b>AL</b> (Pariconha, Delmiro Golveia, Olho D'Agua do Casado e Piranhas), <b>SE</b> (Canindé do São Francisco e Poço Redondo), <b>BA</b> (Paulo Afonso e Glória), <b>MG</b> (Belo Horizonte), <b>DF</b> (Brasília) e <b>PR</b> (Curitiba).</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php
-get_sidebar();
+    $args_depo = array(
+        'posts_per_page' => 10, // Number of recent posts thumbnails to display
+        'post_status' => 'depoimentos', // Show only the published posts
+        'orderby' => "date",
+        'order' => "DESC"
+    );
+
+    $depoimentos = new WP_Query($args_depo);
+?>
+<section id="home-depoimentos" class="bg-full-content-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="list-depoimentos">
+                    <?php while ($depoimentos->have_posts()) : $depoimentos->the_post(); ?>
+                    <li>
+                        <div class="box-depoimentos">
+                            <p class="text-depoimento"><?php echo get_the_content(); ?></p>
+                            <span class="author-depo"><?php echo get_post_meta(get_the_ID(), 'autor', TRUE); ?></span>
+                        </div>
+                    </li>
+                    <?php endwhile; ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<?php
 get_footer();

@@ -1,0 +1,35 @@
+.btn-saiba-mais{
+  border: 2px solid $azul-claro;
+  padding: 5px 15px;
+  font-family: $ff-montserrat;
+  color: $azul-claro;
+  text-transform: lowercase;
+  position: absolute;
+  font-size: 14px;
+  margin: 4px 0 0 30px;
+
+  @extend .transition;
+
+  &:hover{
+
+    background-color: $azul-claro !important;
+    color: $branco !important;
+  }
+}
+
+.btn-white{
+  padding: 10px 20px;
+  text-transform: uppercase;
+  background-color: $branco;
+  color: $preto !important;
+  font-family: $ff-montserrat;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+
+  @extend .transition;
+
+  &:hover{
+    opacity: 0.7;
+  }
+}

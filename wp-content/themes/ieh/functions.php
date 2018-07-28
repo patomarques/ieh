@@ -273,3 +273,43 @@ if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
 
 /* Disable WordPress Admin Bar for all users but admins. */
 show_admin_bar(false);
+
+wp_enqueue_style( 'style-custom', get_template_directory_uri() . '/custom/sass/ieh.css');
+/*wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/bower_components/components-font-awesome/css/fontawesome-all.css');*/
+wp_enqueue_script('js-custom', get_template_directory_uri() . '/custom/js/main.js', array(), '', true );
+
+// Our custom post type function
+function create_posttype() {
+
+    register_post_type( 'depoimentos',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Depoimentos' ),
+                'singular_name' => __( 'Depoimentos' )
+            ),
+            'description' => 'Depoimentos do IEH',
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'depoimentos'),
+            'supports' => array( 'title', 'editor', 'custom-fields' )
+        )
+    );
+
+    register_post_type( 'parceiros-apoiadores',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Parceiros e Apoiadores' ),
+                'singular_name' => __( 'Parceiro Apoiador' )
+            ),
+            'description' => 'Depoimentos do IEH',
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'parceiros-apoiadores'),
+            'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'order' )
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );

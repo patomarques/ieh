@@ -1,0 +1,150 @@
+.box-text-home{
+  right: 0;
+  position: absolute;
+  margin-top: 20%;
+}
+
+
+.text-home{
+  font-family: $ff-montserrat;
+  font-size: 5em;
+  text-align: right;
+  font-weight: 500;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.lines-fullsize{
+  width: 100%;
+  height: 8px;
+  display: block;
+  top: 0;
+}
+
+#home-quem-somos{
+  padding-top: 120px;
+
+  .title-section{
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    display: inline-block;
+
+    &:after{
+      background-color: $azul-claro;
+
+    }
+  }
+}
+
+.list-quem-somos{
+  width: 100%;
+  margin-top: 30px;
+}
+
+.box-content-quem-somos{
+  float:left;
+  position: relative;
+  width: 48%;
+  padding-bottom : 40%; /* = width for a 1:1 aspect ratio */
+  margin:1%;
+
+  overflow:hidden;
+
+  .box-info{
+    position:absolute;
+    height:90%; /* = 100% - 2*5% padding */
+    width:90%; /* = 100% - 2*5% padding */
+    font-family: $ff-montserrat;
+    text-transform: uppercase;
+    text-align: center;
+    color: $branco;
+    background-color: $cinza-line;
+    font-size: 16px;
+    letter-spacing: 3px;
+
+    .text-subtitle{
+      width: 100%;
+      padding: 10px;
+      background-color: $azul-claro;
+      display: block;
+
+      &:before{
+        content: '';
+        //background: url('../img/icons/add.png');
+      }
+    }
+  }
+}
+
+#home-o-que-fazemos{
+  background-image: url(../img/bg/o-que-fazemos-home-dark.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: $preto;
+  //@include brightness(50%);
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 150px;
+
+  .title-section{
+    color: $branco;
+    display: inline-block;
+    font-size: 42px;
+    letter-spacing: 3px;
+
+    &:after{
+      background-color: $branco;
+    }
+  }
+
+  .text-content{
+    font-size: 26px;
+  }
+
+}
+
+#home-nossos-projetos{
+  padding-top: 80px;
+  padding-bottom: 100px;
+
+  .title-section{
+    display: inline-block;
+
+    &:after{
+      background-color: $azul-claro;
+    }
+  }
+}
+
+.list-nossos-projetos{
+  li{
+    display: inline-block;
+    background-color: $branco;
+    text-align: center;
+  }
+
+  .box-square-white{
+    display: block;
+    text-transform: uppercase;
+    color: $azul-claro;
+    font-family: $ff-montserrat;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow:         3px 3px 5px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    width: 100%;
+    padding-bottom: 24%;
+  }
+}
+
+#home-apoie-nossos-projetos{
+  padding-top: 170px;
+  padding-bottom: 60px;
+
+  .title-section{
+    padding-left: 20px;
+    border-left: 4px solid $branco;
+  }
+}

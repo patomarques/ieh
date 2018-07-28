@@ -1,0 +1,13 @@
+@mixin brightness($percents){
+  filter: brightness($percents);
+  -webkit-filter: brightness($percents);
+  -moz-filter: brightness($percents);
+  -o-filter: brightness($percents);
+  -ms-filter: brightness($percents);
+}
+
+@mixin box-shadow($size1, $size2, $size3, $size4, $color){
+  -webkit-box-shadow: $size1 $size2 $size3 $size4 $color;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    $size1 $size2 $size3 $size4 $color;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         $size1 $size2 $size3 $size4 $color;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}

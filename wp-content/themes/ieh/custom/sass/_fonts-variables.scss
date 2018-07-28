@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+@font-face {
+  font-family: 'myriad-pro';
+  src: url('../font/myriad-pro/myriad-pro-bold-semiExtended.ttf') format('truetype');
+  src: local('../font/myriad-pro/myriadPro-Bold.otf'), url('../font/myriad-pro/myriadPro-BlackSemiCn.otf') format('otf');
+}
+
+$ff-montserrat: 'Montserrat', sans-serif;
+$ff-myriad: 'myriad-pro';
+
+
