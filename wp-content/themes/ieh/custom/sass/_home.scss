@@ -112,7 +112,7 @@
 
   .title-section{
     display: inline-block;
-
+    font-weight: 400;
     &:after{
       background-color: $azul-claro;
     }
@@ -144,7 +144,194 @@
   padding-bottom: 60px;
 
   .title-section{
-    padding-left: 20px;
-    border-left: 4px solid $branco;
+    font-size: 50px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    margin: 0 0 40px 10px;
+
+
+    &:after{
+      display: block;
+      content: '';
+      border-left: 4px solid $branco;
+      height: calc(100% - 40px);
+      position: absolute;
+      top: 0;
+      margin-left: -30px;
+    }
+  }
+
+  .subtext-title{
+    color: $branco;
+    font-family: $ff-montserrat;
+    font-size: 22px;
+    text-align: justify;
+  }
+}
+
+#home-ieh-em-numeros{
+  background-image: linear-gradient(139deg, #f2f2f2 8.33%, #ffffff 8.33%, #ffffff 50%, #f2f2f2 50%, #f2f2f2 58.33%, #ffffff 58.33%, #ffffff 100%);
+  background-size: 18.29px 15.90px;
+
+  &:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 8px;
+    background-color: $verde-lodo;
+    top: 0;
+    position: relative;
+  }
+
+  .title-section{
+    color: $verde-lodo;
+    font-size: 50px;
+    font-weight: 400;
+
+    .first-word{
+
+    }
+
+    &:after{
+      background-color: $verde-lodo;
+    }
+  }
+
+  .list-ieh-numeros{
+    li{
+      line-height: 160px;
+
+      &:nth-child(1){
+        .numero{
+          font-size: 80px;
+        }
+        .box-numeros{
+          margin-left: 8%;
+        }
+        .text{
+          position: absolute;
+          margin-top: 45px;
+          font-size: 18px;
+        }
+      }
+
+      &:nth-child(2){
+        position: relative;
+        .pre-text{
+          text-align: right !important;
+          right: 0;
+          padding-right: 5px;
+          font-weight: 400;
+          font-size: 20px;
+        }
+        .icon{
+          display: inline-block;
+          position: absolute;
+          margin: 45px 0 0 5px;
+        }
+        .text{
+          display: inline-block;
+          position: absolute;
+          margin: 55px 0 0 80px;
+        }
+      }
+
+      &:nth-child(3){
+        .box-numeros{
+          margin-left: 10%;
+
+          .numero{
+            font-size: 80px;
+            position: relative;
+            margin-top: -5px;
+          }
+
+        }
+        .icon{
+          width: 100px;
+          height: 100px;
+          margin: 0 10px -20px 10px;
+        }
+        .text{
+          position: absolute;
+          margin-top: 55px;
+        }
+      }
+
+    }
+    .numero{
+      color: $azul-claro;
+      font-size: 60px;
+      font-weight: 700 !important;
+      font-family: $ff-montserrat;
+      display: inline-block;
+    }
+
+    .pre-text,
+    .text{
+      display: inline-block;
+      font-family: $ff-montserrat;
+      line-height: 20px;
+      font-size: 20px;
+    }
+  }
+}
+
+.content-mapa{
+  position: relative;
+  .box-numeros{
+    text-align: right;
+    position: absolute;
+    width: 100%;
+    .numero{
+      color: $azul-claro;
+      font-family: $ff-montserrat;
+      font-size: 80px;
+      font-weight: 700;
+      display: inline-block;
+
+    }
+
+    .text{
+      display: inline-block;
+      text-align: left;
+      font-family: $ff-montserrat;
+      font-size: 20px;
+      line-height: 26px;
+      color: $verde-lodo;
+      margin-left: 10px;
+    }
+  }
+
+  .box-mapa{
+    padding-top: 50px;
+  }
+
+  .text-area-atuacao{
+    padding-top: 30px;
+    text-align: justify;
+    display: block;
+  }
+}
+
+
+#home-depoimentos{
+  padding-top: 200px;
+  padding-bottom: 100px;
+  background-color: $cinza-clarinho;
+}
+
+#home-apoiadores{
+  background-image: linear-gradient(149deg, $cinza-stripe2 4.55%, $cinza-strpe1 4.55%, $cinza-strpe1 50%, $cinza-stripe2 50%, $cinza-stripe2 54.55%, $cinza-strpe1 54.55%, $cinza-strpe1 100%);
+  background-size: 42.72px 25.67px;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .title-section{
+    font-family: $ff-montserrat;
+    text-transform: capitalize;
+    text-align: center;
+    color: $branco;
   }
 }

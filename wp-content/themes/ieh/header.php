@@ -76,20 +76,20 @@
                         <ul class="list-inline icons-social-top">
                             <li class="list-inline-item">
                                 <a href="" class="icon-link icon-fb icon-white" title="Facebook">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icon/social-fb.png"
+                                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/social-fb.png"
                                          alt="" class="social-icon">
                                 </a>
                             </li>
                             <li class="list-inline-item">
                                 <a href="" class="icon-link icon-ig icon-white" title="Instagram">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icon/social-ig.png"
+                                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/social-ig.png"
                                          class="social-icon">
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <label class="switch">
+                                <label class="switch-chose">
                                     <input type="checkbox">
-                                    <span class="slider round"></span>
+                                    <span class="slider-chose round"></span>
                                     <span class="pt">PT</span>
                                     <span class="es">ES</span>
                                 </label>

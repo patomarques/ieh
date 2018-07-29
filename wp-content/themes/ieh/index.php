@@ -32,7 +32,7 @@ get_header(); ?>
                         <a href="#" class="box-content-quem-somos">
                             <div class="box-info">
                                 <span class="text-subtitle"><i class="icon-plus"></i> Sobre Nós</span>
-                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/box-quem-somo-img1.png" alt="" class="img-bg-content">
+                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
 
                             </div>
                         </a>
@@ -41,7 +41,7 @@ get_header(); ?>
                         <a href="#" class="box-content-quem-somos">
                             <div class="box-info">
                                 <span class="text-subtitle"><i class="icon-plus"></i> A Coordenação</span>
-                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/box-quem-somo-img2.png" alt="" class="img-bg-content">
+                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
                             </div>
                         </a>
                     </li>
@@ -49,7 +49,7 @@ get_header(); ?>
                         <a href="#" class="box-content-quem-somos">
                             <div class="box-info">
                                 <span class="text-subtitle"><i class="icon-plus"></i> Missão</span>
-                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/box-quem-somo-img3.png" alt="" class="img-bg-content">
+                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
                             </div>
                         </a>
                     </li>
@@ -57,7 +57,7 @@ get_header(); ?>
                         <a href="#" class="box-content-quem-somos">
                             <div class="box-info">
                                 <span class="text-subtitle"><i class="icon-plus"></i> Transparência</span>
-                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/box-quem-somo-img4.png" alt="" class="img-bg-content">
+                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
                             </div>
                         </a>
                     </li>
@@ -152,40 +152,40 @@ get_header(); ?>
 <section id="home-apoie-nossos-projetos" class="fullscreen-bg bg-azul-claro">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4">
-                <h2 class="title-section">Apoie <br>Nossos <br>Projetos</h2>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                <h2 class="title-section c-white">Apoie <br>Nossos <br>Projetos</h2>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
-                <p class="subtext-title">Lorem ipsum dolor sit amet consectetur adipiscing elit, cubilia porta ridiculus inceptos sapien id pulvinar, mi eget placerat ornare potenti himenaeos. Vestibulum eleifend consequat urna dui inceptos conubia ullamcorper, fringilla purus sapien ligula fusce id, mi aliquam eget etiam nulla efficitur.</p>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+                <p class="subtext-title">Lorem ipsum dolor sit amet consectetur adipiscing elit, cubilia porta ridiculus inceptos sapien id pulvinar, mi eget placerat ornare potenti himenaeos. Vestibulum eleifend consequat urna dui inceptos conubia ullamcorper, fringilla purus sapien ligula fusce id, mi aliquam eget etiam nulla efficitur. dolor sit amet consectetur adipiscing elit, cubilia porta ridiculus inceptos sapien id pulvinar, mi eget placerat ornare potenti himenaeos.</p>
 
-                <button class="btn btn-modal btn-fale-conosco">Fale Conosco</button>
+                <div class="form-group text-right">
+                    <button class="btn btn-call-modal btn-fale-conosco" data-target="#modal-fale-conosco" data-toogle="modal">Fale Conosco</button>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<div class="modal-fale-conosco hidden">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h3 class="title-minor">Fale Conosco</h3>
+<div class="modal modal-fale-conosco">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <h3 class="title-minor">Fale Conosco</h3>
 
-                <p class="text-modal text-justify">Sinta-se a vontade para nos mandar uma mensagem atráves do email
-                    <a href="mailto:comunicacao@ieh.org.br">comunicacao@ieh.org.br</a>, ou preencha o formulário abaixo com os seus dados e te retornaremos assim que possível.</p>
+            <p class="text-modal text-justify">Sinta-se a vontade para nos mandar uma mensagem atráves do email
+                <a href="mailto:comunicacao@ieh.org.br">comunicacao@ieh.org.br</a>, ou preencha o formulário abaixo com os seus dados e te retornaremos assim que possível.</p>
 
-                <?php echo do_shortcode('[contact-form-7 id="31" title="Fale Conosco"]'); ?>
-            </div>
+            <?php echo do_shortcode('[contact-form-7 id="31" title="Fale Conosco"]'); ?>
         </div>
     </div>
 </div>
 
-<section id="home-bg-img-parallax-bg" class="fullscreen"></section>
+<section id="home-bg-img-parallax-2" class="bg-home-parallax"></section>
 
 <section id="home-ieh-em-numeros" class="bg-listrado-transversal">
-    <div class="container">
+    <div class="container content-block">
         <div class="row">
             <div class="col-xs-12 text-left">
-                <h2 class="title-section"><span class="negrito">IEH</span><br>em Números</h2>
+                <h2 class="title-section"><span class="negrito first-word">IEH</span><br>em Números</h2>
             </div>
         </div>
         <div class="row">
@@ -194,35 +194,37 @@ get_header(); ?>
                     <li>
                         <div class="box-numeros">
                             <span class="numero">30</span>
-                            <span class="icone">ampulheta</span>
-                            <span class="text">anos de atuação no mercado</span>
+                            <span class="icon icon-ampulheta"></span>
+                            <span class="text">anos <br>de atuação <br>no mercado</span>
                         </div>
                     </li>
                     <li>
                         <div class="box-numeros">
-                            <span class="pre-text">Mais <br>de</span>
+                            <span class="pre-text">Mais<br>de</span>
                             <span class="numero">120</span>
-                            <span class="icon">pessoas</span>
+                            <span class="icon icon-user-group"></span>
                             <span class="text">profissionais <br>associados</span>
                         </div>
                     </li>
                     <li>
                         <div class="box-numeros">
                             <span class="numero">21</span>
-                            <span class="icone">anotação</span>
-                            <span class="text">convênios <br>e contratos</span>
+                            <span class="icon icon-anotation"></span>
+                            <span class="text">convênios<br>e contratos</span>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                 <div class="content-mapa">
                     <div class="box-numeros">
                         <span class="numero">27</span>
-                        <span class="text">áreas atendidas</span>
+                        <span class="text">áreas<br>atendidas</span>
                     </div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/mapa-brasil.png" alt="Mapa do Brasil - Área de atuação">
 
+                    <div class="box-mapa">
+                        <?php echo do_shortcode('	[freehtml5map id="0"]'); ?>
+                    </div>
                     <span class="text-area-atuacao"><strong>AM </strong>(Manaus), <b>PA</b> (Belém), <b>CE</b> (Fortaleza, Icapuí, Caucaia, Trairí, São Gonçalo do Amarante, Paracuru, Paraíbaba e Itapipoca), <b>RN</b>, <b>PB</b> (Soledade e Fagundes), <b>PE</b> (Recife, Desterro, Aldeia e Jatobá), <b>AL</b> (Pariconha, Delmiro Golveia, Olho D'Agua do Casado e Piranhas), <b>SE</b> (Canindé do São Francisco e Poço Redondo), <b>BA</b> (Paulo Afonso e Glória), <b>MG</b> (Belo Horizonte), <b>DF</b> (Brasília) e <b>PR</b> (Curitiba).</span>
                 </div>
             </div>
@@ -233,7 +235,7 @@ get_header(); ?>
 <?php
     $args_depo = array(
         'posts_per_page' => 10, // Number of recent posts thumbnails to display
-        'post_status' => 'depoimentos', // Show only the published posts
+        'post_type' => 'depoimentos', // Show only the published posts
         'orderby' => "date",
         'order' => "DESC"
     );
@@ -244,13 +246,48 @@ get_header(); ?>
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <ul class="list-depoimentos">
+                <div class="slider">
                     <?php while ($depoimentos->have_posts()) : $depoimentos->the_post(); ?>
-                    <li>
+                    <div class="slider-item">
                         <div class="box-depoimentos">
                             <p class="text-depoimento"><?php echo get_the_content(); ?></p>
-                            <span class="author-depo"><?php echo get_post_meta(get_the_ID(), 'autor', TRUE); ?></span>
+                            <span class="author-depo"><?php echo get_post_meta(get_the_ID(), 'author', TRUE); ?></span>
                         </div>
+                    </div>
+                    <?php endwhile; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php
+$args_parca = array(
+    'posts_per_page' => 10, // Number of recent posts thumbnails to display
+    'post_type' => 'parceiros-apoiadores', // Show only the published posts
+    'orderby' => "date",
+    'order' => "DESC"
+);
+
+$parceiros = new WP_Query($args_parca);
+?>
+
+<section id="home-apoiadores" class="bg-stripped-transversal">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <h2 class="title-section">Alguns de nossos parceiros e apoiadores</h2>
+
+                <ul class="list-parceiros-apoiadores list-unstyled">
+                    <?php while ($parceiros->have_posts()) : $parceiros->the_post(); ?>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <?php if(has_post_thumbnail()){ ?>
+                            <img src="<?php echo the_post_thumbnail(); ?>" alt="<?php echo get_the_title(); ?>">
+                            <?php }else{ ?>
+                                <p><?php echo get_the_title(); ?></p>
+                            <?php } ?>
+                        </a>
                     </li>
                     <?php endwhile; ?>
                 </ul>
@@ -258,5 +295,6 @@ get_header(); ?>
         </div>
     </div>
 </section>
+
 <?php
 get_footer();

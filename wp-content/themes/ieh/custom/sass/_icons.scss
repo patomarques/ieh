@@ -1,4 +1,44 @@
 .icon-plus{
-  background-image: url('../img/icon/add.png');
+  background-image: url('../img/icons/add.png');
+}
 
+.icon{
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+}
+
+.icon-ampulheta{
+  background-image: url('../img/icons/hourglass.png');
+}
+
+.icon-user-group{
+  background-image: url('../img/icons/user-group.png');
+}
+
+.icon-anotation{
+  background: url('../img/icons/notes.png') no-repeat;
+  width: 85px;
+  height: 85px;
+  background-size: 100%;
+}
+
+
+.icon-arrow-left,
+.icon-arrow-right{
+  @extend .icon;
+  @include scale(0.5, 0.5);
+  position: absolute;
+}
+
+.icon-arrow-left{
+  float: left;
+  background: url("../img/icons/back.png") no-repeat;
+  margin-left: -10%;
+}
+
+.icon-arrow-right{
+  float: right;
+  background: url("../img/icons/next.png") no-repeat;
+  margin-right: -10%;
 }

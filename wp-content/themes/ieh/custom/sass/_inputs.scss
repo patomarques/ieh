@@ -1,0 +1,11 @@
+.input-text,
+.input-textarea{
+  border-radius: 0 !important;
+  border: 2px solid $preto;
+  padding: 12px 20px !important;
+  font-family: $ff-montserrat;
+}
+
+.input-textarea{
+  height: 140px;
+}
