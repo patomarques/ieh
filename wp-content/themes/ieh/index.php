@@ -24,14 +24,13 @@ get_header(); ?>
                 <h2 class="title-section c-azul-claro">Quem <br>Somos</h2>
 
                 <p class="text-content c-gray-5d text-justify">
-                    Fundado em 1990, o Instituto de Ecologia Humana - IEH, nasce com o compromisso de coletivizar a compreensão da questão ambiental, entendendo que o processo de formação dos recursos humanos é um ato continuo e indissociável de uma prática que busca contribuir para uma sociedade mais humana. <a href="<?php echo get_site_url(); ?>/quem-somos" class="btn-saiba-mais"><span class="asterix">*</span>Saiba mais</a></p>
-
+                    Fundado em 1990, o Instituto de Ecologia Humana - IEH, nasce com o compromisso de coletivizar a compreensão da questão ambiental, entendendo que o processo de formação dos recursos humanos é um ato continuo e indissociável de uma prática que busca contribuir para uma sociedade mais humana. <a href="<?php echo get_site_url(); ?>/quem-somos" class="btn-saiba-mais"><span class="label-button">Saiba mais</span></a></p>
 
                 <ul class="list-unstyled list-quem-somos">
                     <li>
                         <a href="#" class="box-content-quem-somos">
                             <div class="box-info">
-                                <span class="text-subtitle"><i class="icon-plus"></i> Sobre Nós</span>
+                                <span class="text-subtitle"><button class="button-plus"></button> Sobre Nós</span>
                                 <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
 
                             </div>
@@ -40,7 +39,7 @@ get_header(); ?>
                     <li>
                         <a href="#" class="box-content-quem-somos">
                             <div class="box-info">
-                                <span class="text-subtitle"><i class="icon-plus"></i> A Coordenação</span>
+                                <span class="text-subtitle"><button class="button-plus"></button> A Coordenação</span>
                                 <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
                             </div>
                         </a>
@@ -48,7 +47,7 @@ get_header(); ?>
                     <li>
                         <a href="#" class="box-content-quem-somos">
                             <div class="box-info">
-                                <span class="text-subtitle"><i class="icon-plus"></i> Missão</span>
+                                <span class="text-subtitle"><button class="button-plus"></button> Missão</span>
                                 <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
                             </div>
                         </a>
@@ -56,7 +55,7 @@ get_header(); ?>
                     <li>
                         <a href="#" class="box-content-quem-somos">
                             <div class="box-info">
-                                <span class="text-subtitle"><i class="icon-plus"></i> Transparência</span>
+                                <span class="text-subtitle"><button class="button-plus"></button> Transparência</span>
                                 <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
                             </div>
                         </a>
@@ -263,9 +262,9 @@ get_header(); ?>
 
 <?php
 $args_parca = array(
-    'posts_per_page' => 10, // Number of recent posts thumbnails to display
+    'posts_per_page' => -1, // Number of recent posts thumbnails to display
     'post_type' => 'parceiros-apoiadores', // Show only the published posts
-    'orderby' => "ordem",
+    'orderby' => "meta_value_ordem",
     'order' => "ASC"
 );
 
@@ -278,9 +277,9 @@ $parceiros = new WP_Query($args_parca);
             <div class="col-xs-12 col-sm-12">
                 <h2 class="title-section">Alguns de nossos parceiros e apoiadores</h2>
 
-                <ul class="list-parceiros-apoiadores list-unstyled">
+                <ul class="list-parceiros-apoiadores list-unstyled list-inline">
                     <?php while ($parceiros->have_posts()) : $parceiros->the_post(); ?>
-                    <li>
+                    <li class="list-inline-item">
                         <div class="box-img-apoio">
                             <?php if(has_post_thumbnail()){ ?>
                             <?php echo the_post_thumbnail(); ?>

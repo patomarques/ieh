@@ -1,19 +1,43 @@
 .btn-saiba-mais{
   border: 2px solid $azul-claro;
-  padding: 5px 15px;
+  padding: 6px 5px 6px 30px;
   font-family: $ff-montserrat;
   color: $azul-claro;
-  text-transform: lowercase;
   position: absolute;
   font-size: 14px;
-  margin: 4px 0 0 30px;
+  margin: 4px 0 0 10px;
+  text-transform: uppercase;
+
+  .label-button{
+    border-left: 2px solid $azul-claro;
+    padding: 8px;
+  }
 
   @extend .transition;
 
-  &:hover{
+  &:after{
+    content: '*';
+    font-size: 36px;
+    position: absolute;
+    color: $azul-claro;
+    display: inline-block;
+    left: 0;
+    padding-left: 5px;
+    line-height: 1;
+    margin: -1px 0 0 2px;
+  }
 
+  &:hover{
     background-color: $azul-claro !important;
     color: $branco !important;
+
+    &:after{
+      color: $branco;
+    }
+
+    .label-button{
+      border-left: 2px solid $branco;
+    }
   }
 }
 
@@ -58,5 +82,48 @@
   &:hover{
     background-color: $cinza-5d !important;
     color: $branco !important;
+  }
+}
+
+.button-plus{
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border:none !important;
+  left: 0;
+  margin-left: 20px;
+
+  &:before,
+  &:after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    transition: transform 0.25s ease-out;
+  }
+
+  /* Vertical line */
+  &:before{
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    margin-left: -1px;
+  }
+
+  /* horizontal line */
+  &:after{
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    margin-top: -1px;
+  }
+
+  &:hover{
+    cursor: pointer;
+
+    &:before{ transform: rotate(90deg); }
+    &:after{ transform: rotate(180deg); }
   }
 }
