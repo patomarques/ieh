@@ -15,10 +15,10 @@
     <section id="footer-site">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/logo-cinza.png" alt="IEH - Logo" class="logo-footer">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-right logo-footer-content">
+                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/logo-branca.png" alt="IEH - Logo" class="logo-footer">
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 text-left">
                     <div class="box-footer-content">
                         <ul class="list-info-contact list-unstyled">
                             <li><span class="info-text">IEH - Instituto de Ecologia Humana</span></li>
@@ -28,7 +28,7 @@
                             <li>
                                 <ul class="list-info-text">
                                     <li><span class="text-address">Recife</span></li>
-                                    <li><span class="text-address"><span class="little-ball ball1">&#9679;</span>Pernambuco</span><span class="little-ball ball2">&#9679;</span></li>
+                                    <li><span class="text-address"><span class="little-ball ball1 c-white">&#9679;</span>Pernambuco</span><span class="little-ball ball2 c-white">&#9679;</span></li>
                                     <li><span class="text-address">Brasil</span></li>
                                 </ul>
                             </li>
@@ -40,7 +40,7 @@
     </section>
 	<footer id="colophon" class="site-footer <?php echo wp_bootstrap_starter_bg_class(); ?> text-center" role="contentinfo">
 
-    &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
+    <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?> &copy; <?php echo date('Y'); ?>
     </footer>
 
 <?php wp_footer(); ?>

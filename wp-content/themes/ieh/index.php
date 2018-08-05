@@ -265,8 +265,8 @@ get_header(); ?>
 $args_parca = array(
     'posts_per_page' => 10, // Number of recent posts thumbnails to display
     'post_type' => 'parceiros-apoiadores', // Show only the published posts
-    'orderby' => "date",
-    'order' => "DESC"
+    'orderby' => "ordem",
+    'order' => "ASC"
 );
 
 $parceiros = new WP_Query($args_parca);
@@ -281,13 +281,13 @@ $parceiros = new WP_Query($args_parca);
                 <ul class="list-parceiros-apoiadores list-unstyled">
                     <?php while ($parceiros->have_posts()) : $parceiros->the_post(); ?>
                     <li>
-                        <a href="javascript:void(0)">
+                        <div class="box-img-apoio">
                             <?php if(has_post_thumbnail()){ ?>
-                            <img src="<?php echo the_post_thumbnail(); ?>" alt="<?php echo get_the_title(); ?>">
+                            <?php echo the_post_thumbnail(); ?>
                             <?php }else{ ?>
                                 <p><?php echo get_the_title(); ?></p>
                             <?php } ?>
-                        </a>
+                        </div>
                     </li>
                     <?php endwhile; ?>
                 </ul>

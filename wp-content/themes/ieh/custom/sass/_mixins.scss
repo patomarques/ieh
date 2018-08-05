@@ -1,3 +1,10 @@
+@mixin border-radius($degrees){
+  border-radius: $degrees;
+  -moz-border-radius: $degrees;
+  -webkit-border-radius: $degrees;
+  -moz-outline-radius: $degrees;
+}
+
 @mixin rotate($degrees){
   transform: rotate($degrees);
 }
@@ -17,7 +24,29 @@
 }
 
 @mixin box-shadow($size1, $size2, $size3, $size4, $color){
+  //0px 0px 0px 0px #000000
   -webkit-box-shadow: $size1 $size2 $size3 $size4 $color;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow:    $size1 $size2 $size3 $size4 $color;  /* Firefox 3.5 - 3.6 */
   box-shadow:         $size1 $size2 $size3 $size4 $color;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.transition{
+  transition: all 0.5s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: .2s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

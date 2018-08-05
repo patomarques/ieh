@@ -1,6 +1,6 @@
 #footer-site{
   background-color: $footer-bg;
-  padding: 80px 0;
+  padding: 80px 0 40px;
 
   .info-text,
   .text-address{
@@ -8,7 +8,11 @@
   }
 }
 footer{
-  background-color: transparent !important;
+  background-color: $azul-claro !important;
+  color: $branco !important;
+  font-family: $ff-montserrat;
+  font-size: 16px !important;
+  padding: 10px;
 }
 
 .list-info-text{
@@ -19,6 +23,10 @@ footer{
   li{
     display: inline-block;
     margin: 0;
+
+    .text-address{
+      font-weight: 700;
+    }
 
     &:nth-child(2){
       margin: 0 14px;
@@ -51,6 +59,26 @@ footer{
 
 .logo-footer{
   width: 100%;
-  max-width: 350px;
-  opacity: 0.7;
+  max-width: 230px;
+  opacity: 1;
+  margin-right: 20px;
+}
+
+.logo-footer-content{
+  //&:after{
+  //  content: '';
+  //  display: block;
+  //  width: 150px;
+  //  height: 1px;
+  //  background-color: $branco;
+  //  position: absolute;
+  //  @include rotate(90deg);
+  //  right: 0;
+  //  top: 100px;
+  //}
+}
+
+.list-info-contact{
+  font-family: $ff-montserrat;
+  font-size: 16px;
 }

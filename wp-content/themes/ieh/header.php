@@ -60,14 +60,14 @@
 
 <?php if (is_front_page() && !get_theme_mod('header_banner_visibility')): ?>
 
-<section class="content-full-background bg-home-parallax">
+<section id="background-img-home" class="content-full-background bg-home-parallax">
     <div class="home-begin-content">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
 
                     <div class="text-left logo-margin-bottom">
-                        <a href="" class="logo-home">
+                        <a href="<?php echo get_site_url(); ?>" class="logo-home">
                             <img src="<?php echo get_template_directory_uri(); ?>/custom/img/logo-branca.png" alt=""
                                  class="logo-home-img">
                         </a>
@@ -100,38 +100,47 @@
                     <div class="box-text-home text-right">
                         <h2 class="text-home text-larger c-white">Desde 1990, <br>em busca <br>de educar e <br>construir laços.</h2>
                     </div>
-
-                    <div class="menu-home-content">
-                        <ul class="navbar-nav-home-menu list-unstyled list-inline">
-                            <li>
-                                <a href="#" class="link-menu">QUEM <br>SOMOS</a>
-                            </li>
-                            <li>
-                                <a href="#" class="link-menu">O QUE <br>FAZEMOS</a>
-                            </li>
-                            <li>
-                                <a href="#" class="link-menu">NOSSOS <br>PROJETOS</a>
-                            </li>
-                            <li>
-                                <a href="#" class="link-menu">APOIE <br>NOSSOS <br>PROJETOS</a>
-                            </li>
-                            <li>
-                                <a href="#" class="link-menu">IEH EM <br>NÚMEROS</a>
-                            </li>
-                            <li>
-                                <a href="#" class="link-menu">DEPOIMENTOS</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
-            </div>
-        </div>
-
-
 
             </div>
         </div>
     </div>
+
+    <div class="menu-home-content" id="menu-home-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-left" id="logo-fixed-content">
+                    <a href="<?php echo get_site_url(); ?>" class="logo-home-fixed">
+                        <img src="<?php echo get_template_directory_uri(); ?>/custom/img/logo-cinza.png" alt=""
+                             class="logo-home-img">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-12" id="menu-fixed-col">
+                    <ul class="navbar-nav-home-menu list-unstyled list-inline">
+                        <li>
+                            <a href="<?php echo get_site_url(); ?>/quem-somos/" class="link-menu">QUEM <br>SOMOS</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo get_site_url(); ?>/o-que-fazemos/" class="link-menu">O QUE <br>FAZEMOS</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo get_site_url(); ?>/nossos-projetos/" class="link-menu">NOSSOS <br>PROJETOS</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo get_site_url(); ?>/apoie-nossos-projetos/" class="link-menu">APOIE <br>NOSSOS <br>PROJETOS</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo get_site_url(); ?>/" class="link-menu">IEH EM <br>NÚMEROS</a>
+                        </li>
+                        <li>
+                            <a href="<?php echo get_site_url(); ?>/" class="link-menu">DEPOIMENTOS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </section>
 <!--        <a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a>-->
 

@@ -335,3 +335,16 @@
     color: $branco;
   }
 }
+
+
+.list-parceiros-apoiadores{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  li{
+    display: inline-block;
+    .box-img-apoio{
+      min-width: 200px;
+    }
+  }
+}
