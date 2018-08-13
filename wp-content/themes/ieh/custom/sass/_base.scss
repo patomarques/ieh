@@ -54,7 +54,6 @@ a{
 .bg-home-parallax {
   /* The image used */
   background-image: url("../img/bg/bg-ieh.png");
-  @extend .parallax-effect;
 }
 
 #home-o-que-fazemos{
@@ -110,7 +109,10 @@ a{
   @extend .transition;
 
   &:hover{
-    opacity: 0.5;
+    background-color: $azul-claro;
+    .text-box{
+      color: $branco !important;
+    }
   }
 
   .square-content{
@@ -130,8 +132,9 @@ a{
       font-family: $ff-montserrat;
       color: $azul-claro;
       text-align: center;
-      line-height: 20px;
-      font-size: 14px;
+      line-height: 22px;
+      font-size: 16px;
+
     }
   }
 }
@@ -337,4 +340,104 @@ label{
   width: 64px;
   height: 64px;
   display: block;
+}
+
+.page-content{
+  margin-top: 0;
+  padding-bottom: 100px;
+}
+
+.content-text-bottom{
+    bottom: 0;
+    margin: 0 0 20% 0 !important;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+
+.page-content{
+  font-family: $ff-montserrat;
+  font-size: 30px;
+  color: $cinza-5d;
+  text-align: justify;
+}
+
+.margin-bottom{
+  margin-bottom: 100px;
+}
+
+.row-nossos-projetos{
+  margin-bottom: 50px;
+
+  &:after{
+    content: '';
+    width: 100%;
+    display: block;
+    height: 1px;
+    background-color: $cinza-clarinho;
+    position: relative;
+    margin-top: 50px;
+  }
+
+  ul{
+    list-style: none;
+
+    li{
+      position: relative;
+      font-size: 22px;
+      margin-bottom: 10px;
+      &:before{
+        content: '';
+        background-color: $azul-claro;
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        top: 0;
+        left: 0;
+        position: absolute;
+        margin: 14px 0 0 -26px;
+        border: none;
+      }
+    }
+  }
+  
+  a{
+    color: $azul-claro;
+  }
+}
+
+
+.full-content{
+  width: 100%;
+
+}
+
+.page-quem-somos{
+  .coluna-direita{
+    width: 50%;
+    display: inline-block;
+    position: relative;
+    left: 0;
+
+  }
+  .coluna-esquerda{
+    display: inline-block;
+    width: 49%;
+    float: right;
+
+    .box-logo{
+      margin: 50px;
+      width: 220px;
+    }
+    img{
+      width: 100%;
+    }
+
+    .text-after-logo{
+
+      word-spacing: 5px;
+      font-size: 16px;
+      margin-top: 10px;
+      text-align: justify;
+    }
+  }
 }

@@ -58,9 +58,7 @@
     </div>
 </header>
 
-<?php if (is_front_page() && !get_theme_mod('header_banner_visibility')): ?>
-
-<section id="background-img-home" class="content-full-background bg-home-parallax">
+<section id="background-img-home" class="content-full-background parallax-effect <?php if (is_front_page() ){ echo "bg-home-parallax"; } ?>">
     <div class="home-begin-content">
         <div class="container">
             <div class="row">
@@ -97,8 +95,8 @@
                         </ul>
                     </div>
 
-                    <div class="box-text-home text-right">
-                        <h2 class="text-home text-larger c-white">Desde 1990, <br>em busca <br>de educar e <br>construir laços.</h2>
+                    <div id="box-text-home" class="box-text-home text-right">
+                        <h2 id="text-home" class="text-home text-larger c-white">Desde 1990, <br>em busca <br>de educar e <br>construir laços.</h2>
                     </div>
                 </div>
 
@@ -144,4 +142,4 @@
 </section>
 <!--        <a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a>-->
 
-<?php endif; ?>
+<?//php endif; ?>

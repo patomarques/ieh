@@ -173,6 +173,31 @@
   font-family: "Montserrat", sans-serif;
   font-size: 26px; }
 
+.title-default {
+  text-transform: uppercase;
+  font-size: 50px;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  margin-top: 120px; }
+  .title-default:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin: 15px auto 20px;
+    position: relative; }
+
+.title-nossos-projetos:after {
+  background-color: #41b6d6; }
+
+.list-subtitle {
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  font-size: 54px;
+  letter-spacing: 10px;
+  text-align: left; }
+
 .icon-plus {
   background-image: url("../img/icons/add.png"); }
 
@@ -210,6 +235,11 @@
   float: right;
   background: url("../img/icons/next.png") no-repeat;
   margin-right: -10%; }
+
+.icon-projetos {
+  max-width: 120px;
+  display: block;
+  margin: 20px auto 0; }
 
 .header-home {
   display: none; }
@@ -265,7 +295,8 @@
       font-weight: 700;
       font-family: "Montserrat", sans-serif;
       letter-spacing: 2px;
-      opacity: 1 !important; }
+      opacity: 1 !important;
+      line-height: 12px; }
       .navbar-nav-home-menu li a:hover {
         color: #41b6d6; }
     .navbar-nav-home-menu li:nth-child(4) {
@@ -420,7 +451,7 @@ a:hover {
   text-decoration: none !important;
   opacity: 0.7; }
 
-.parallax-effect, .bg-home-parallax {
+.parallax-effect {
   /* Set a specific height */
   width: 100%;
   height: 100%;
@@ -474,7 +505,9 @@ a:hover {
   align-items: center;
   justify-content: center; }
   .item:hover {
-    opacity: 0.5; }
+    background-color: #41b6d6; }
+    .item:hover .text-box {
+      color: #ffffff !important; }
   .item .square-content {
     align-items: center;
     padding: 20px; }
@@ -489,8 +522,8 @@ a:hover {
       font-family: "Montserrat", sans-serif;
       color: #41b6d6;
       text-align: center;
-      line-height: 20px;
-      font-size: 14px; }
+      line-height: 22px;
+      font-size: 16px; }
 
 .square-grid {
   display: flex;
@@ -634,6 +667,79 @@ label {
   height: 64px;
   display: block; }
 
+.page-content {
+  margin-top: 0;
+  padding-bottom: 100px; }
+
+.content-text-bottom {
+  bottom: 0;
+  margin: 0 0 20% 0 !important;
+  letter-spacing: 5px;
+  font-weight: 400; }
+
+.page-content {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  color: #5d5d5d;
+  text-align: justify; }
+
+.margin-bottom {
+  margin-bottom: 100px; }
+
+.row-nossos-projetos {
+  margin-bottom: 50px; }
+  .row-nossos-projetos:after {
+    content: '';
+    width: 100%;
+    display: block;
+    height: 1px;
+    background-color: #ebe8e5;
+    position: relative;
+    margin-top: 50px; }
+  .row-nossos-projetos ul {
+    list-style: none; }
+    .row-nossos-projetos ul li {
+      position: relative;
+      font-size: 22px;
+      margin-bottom: 10px; }
+      .row-nossos-projetos ul li:before {
+        content: '';
+        background-color: #41b6d6;
+        width: 8px;
+        height: 8px;
+        display: inline-block;
+        top: 0;
+        left: 0;
+        position: absolute;
+        margin: 14px 0 0 -26px;
+        border: none; }
+  .row-nossos-projetos a {
+    color: #41b6d6; }
+
+.full-content {
+  width: 100%; }
+
+.page-quem-somos .coluna-direita {
+  width: 50%;
+  display: inline-block;
+  position: relative;
+  left: 0; }
+
+.page-quem-somos .coluna-esquerda {
+  display: inline-block;
+  width: 49%;
+  float: right; }
+  .page-quem-somos .coluna-esquerda .box-logo {
+    margin: 50px;
+    width: 220px; }
+  .page-quem-somos .coluna-esquerda img {
+    width: 100%; }
+  .page-quem-somos .coluna-esquerda .text-after-logo {
+    word-spacing: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    text-align: justify; }
+
 .box-text-home {
   right: 0;
   position: absolute;
@@ -713,7 +819,7 @@ label {
     letter-spacing: 3px; }
     #home-o-que-fazemos .title-section:after {
       background-color: #ffffff; }
-  #home-o-que-fazemos .text-content {
+  #home-o-que-fazemos header .text-content {
     font-size: 26px; }
 
 #home-nossos-projetos {

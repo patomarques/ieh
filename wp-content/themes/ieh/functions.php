@@ -317,7 +317,21 @@ function create_posttype() {
             'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'order' )
         )
     );
+
+    register_post_type( 'nossos-projetos',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Nossos Projetos' ),
+                'singular_name' => __( 'Nosso Projetos' )
+            ),
+            'description' => 'Projetos Realizados pelo IEH',
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'nossos-projetos'),
+            'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
+        )
+    );
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
-
