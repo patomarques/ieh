@@ -378,6 +378,12 @@ label{
     margin-top: 50px;
   }
 
+  &:last-child{
+    &:after{
+      height: 0;
+    }
+  }
+
   ul{
     list-style: none;
 
