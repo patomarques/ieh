@@ -6,6 +6,7 @@ html{
 
 body{
   font-family: $ff-montserrat;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar
   {
@@ -412,14 +413,26 @@ label{
 }
 
 
+.content-full,
 .full-content{
   width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+
 
 }
 
 .page-quem-somos{
+
+  .title-default{
+    &:after{
+      background-color: $verde-lodo;
+    }
+  }
+
   .coluna-direita{
-    width: 50%;
+    width: 40%;
     display: inline-block;
     position: relative;
     left: 0;
@@ -428,10 +441,11 @@ label{
   .coluna-esquerda{
     display: inline-block;
     width: 49%;
-    float: right;
-
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 10px;
     .box-logo{
-      margin: 50px;
+      margin: 0;
       width: 220px;
     }
     img{
@@ -446,4 +460,40 @@ label{
       text-align: justify;
     }
   }
+}
+
+
+.line-mt{
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.content-sobre-nos{
+  color: $cinza-5d;
+
+  .block-left-image{
+    max-height: 400px;
+    overflow: hidden;
+  }
+  .block-right-text{
+    .content-text{
+      padding-left: 20px;
+      padding-right: 10%;
+      h4{
+        font-size: 28px;
+        display: block;
+        font-weight: 700;
+        color: $cinza-5d;
+        padding: 0 0 30px;
+        margin: 0;
+      }
+
+      p{
+        font-size: 24px;
+        line-height: 34px;
+      }
+
+    }
+  }
+
 }
