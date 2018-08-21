@@ -150,6 +150,27 @@
             </div>
         </div>
     </section>
+
+    <section class="bg-dotted-green section-transparencia section-content">
+        <div class="row">
+            <div class="col-sm-12 col-md-5 text-right">
+                <h3 class="title-section c-white">Transparência</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-sm-12 col-md-5 block-left-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos-interna.png" alt="" class="img-responsive">
+            </div>
+            <div class="col-sm-12 col-sm-12 col-md-7 block-right-text c-white">
+                <div class="content-text content-text-block-3">
+                    <?php
+                    $missaoTexto =  get_post_meta(get_the_ID(), 'transparencia_texto', TRUE);
+                    echo apply_filters('meta_content', $missaoTexto);
+                    ?>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
     <script type="text/javascript">

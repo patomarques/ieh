@@ -555,7 +555,7 @@ label{
     h3{
       font-size: 30px;
       margin: 0;
-      padding: 0 0 40px 0;
+      padding: 0 0 20px 0;
       font-weight: 700;
     }
     h4,h5{
@@ -575,4 +575,27 @@ label{
 
 #page-content.page-quem-somos{
   padding-bottom: 0 !important;
+}
+
+.section-transparencia{
+  padding-bottom: 80px;
+  .title-section{
+    margin: 120px 0 80px 80px;
+    font-size: 63px;
+    letter-spacing: 12px;
+    font-weight: 500;
+  }
+  h4{
+    padding-top: 40px;
+  }
+  .content-text-block-3{
+    line-height: 42px;
+  }
+}
+
+.bg-dotted-green{
+  background-color: $verde-shu;
+  background-image: radial-gradient(circle, $verde-sha 15%, transparent 10%), radial-gradient(circle, $verde-sha 15%, transparent 10%);
+  background-size: 25px 25px;
+  background-position: 0 0, 63px 87px;
 }
