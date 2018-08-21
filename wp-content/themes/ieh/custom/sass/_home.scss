@@ -321,13 +321,15 @@ header  .text-content{
   background-color: $cinza-clarinho;
 }
 
-#home-apoiadores{
+.bg-stripped-transversal{
   background-image: linear-gradient(149deg, $cinza-stripe2 4.55%, $cinza-strpe1 4.55%, $cinza-strpe1 50%, $cinza-stripe2 50%, $cinza-stripe2 54.55%, $cinza-strpe1 54.55%, $cinza-strpe1 100%);
   background-size: 42.72px 25.67px;
 
   padding-top: 50px;
   padding-bottom: 50px;
+}
 
+#home-apoiadores{
   .title-section{
     text-transform: capitalize;
     text-align: center;

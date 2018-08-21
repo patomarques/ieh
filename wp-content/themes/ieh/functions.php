@@ -336,9 +336,9 @@ function create_posttype() {
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
 
-add_filter( 'meta_content', 'wptexturize'        );
-add_filter( 'meta_content', 'convert_smilies'    );
-add_filter( 'meta_content', 'convert_chars'      );
-add_filter( 'meta_content', 'wpautop'            );
-add_filter( 'meta_content', 'shortcode_unautop'  );
+add_filter( 'meta_content', 'wptexturize' );
+add_filter( 'meta_content', 'convert_smilies' );
+add_filter( 'meta_content', 'convert_chars' );
+add_filter( 'meta_content', 'wpautop' );
+add_filter( 'meta_content', 'shortcode_unautop' );
 add_filter( 'meta_content', 'prepend_attachment' );

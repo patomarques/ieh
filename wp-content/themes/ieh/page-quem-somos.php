@@ -84,55 +84,69 @@
         </div>
     </div>
 
-    <div class="full-content bg-azul-claro">
-        <div class="coluna-left">
-            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos-interna.png" alt="" class="img-responsive">
+    <div class="full-content bg-azul-claro content-a-coordenacao section-content">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title-section c-white">A Coordenação</h2>
+            </div>
         </div>
-        <div class="coluna-right">
-            <div class="row">
-                <div class="col-sm-12">
-                    <ul class="list-unstyled list-coordenacao">
-                        <li>
-                            <div class="box-membrxs">
-                                <p class="cargo">PRESIDENTE</p>
-                                <p class="nome negrito">Profa. Maria José de Araújo Lima</p>
-                                <p class="resumo">Bióloga pela UFPE; Mestre em Educação pela
-                                    UFMG; Especialista em Ordenamento de Territó-
-                                    rio pelo Instituto de Altos Estudos Mediterrâneos
-                                    de Zaragoza - IAMAZ Europa; Doutora em Geo-
-                                    grafia pela USP; Professora Universitária.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="box-membrxs">
-                                <p class="cargo">COORDENADORA ADMINISTRATIVA E FINANCEIRA</p>
-                                <p class="nome">Dra. Márcia Lima de Azevedo Monteiro</p>
-                                <p class="resumo">Médica, Mestre em Fisiologia pela UFPE; Doutora
-                                    em Neuropsiquiatria pela UFPE.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="box-membrxs">
-                                <p class="cargo"></p>
-                                <p class="nome">Associados</p>
-                                <p class="resumo">O Instituto de Ecologia Humana (IEH) tem 120
-                                    profissionais sócio-colaboradores, que partici-
-                                    pam da execução dos projetos na condição de
-                                    assessores técnicos.</p>
-                            </div>
-                        </li>
-                    </ul>
-
-
-                </div>
+        <div class="row">
+            <div class="col-sm-12 col-sm-12 col-md-5 block-left-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos-interna.png" alt="" class="img-responsive">
+            </div>
+            <div class="col-sm-12 col-sm-12 col-md-7 block-right-text">
+                <ul class="list-unstyled list-coordenacao">
+                    <li>
+                        <div class="box-membrxs">
+                            <p class="cargo">PRESIDENTE</p>
+                            <p class="nome negrito">Profa. Maria José de Araújo Lima</p>
+                            <p class="resumo">Bióloga pela UFPE; Mestre em Educação pela
+                                UFMG; Especialista em Ordenamento de Territó-
+                                rio pelo Instituto de Altos Estudos Mediterrâneos
+                                de Zaragoza - IAMAZ Europa; Doutora em Geo-
+                                grafia pela USP; Professora Universitária.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box-membrxs">
+                            <p class="cargo">COORDENADORA ADMINISTRATIVA E FINANCEIRA</p>
+                            <p class="nome negrito">Dra. Márcia Lima de Azevedo Monteiro</p>
+                            <p class="resumo">Médica, Mestre em Fisiologia pela UFPE; Doutora
+                                em Neuropsiquiatria pela UFPE.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box-membrxs">
+                            <p class="cargo"></p>
+                            <p class="nome negrito">Associados</p>
+                            <p class="resumo">O Instituto de Ecologia Humana (IEH) tem 120
+                                profissionais sócio-colaboradores, que partici-
+                                pam da execução dos projetos na condição de
+                                assessores técnicos.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 
-    <section class="bg-stripped-transversal full-content section-missao">
+    <section class="bg-stripped-transversal section-missao section-content" >
         <div class="row">
-            <div class="col-sm-12 col-md-5">
-                <h3 class="title">MISSÃO</h3>
+            <div class="col-sm-12 col-md-5 text-right">
+                <h3 class="title-section c-white">MISSÃO</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-sm-12 col-md-5 block-left-image">
+                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos-interna.png" alt="" class="img-responsive">
+            </div>
+            <div class="col-sm-12 col-sm-12 col-md-7 block-right-text c-white">
+                <div class="content-text content-text-block-3">
+                    <?php
+                        $missaoTexto =  get_post_meta(get_the_ID(), 'missao_texto', TRUE);
+                        echo apply_filters('meta_content', $missaoTexto);
+                    ?>
+                </div>
             </div>
         </div>
     </section>

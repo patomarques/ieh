@@ -11,21 +11,21 @@ body{
   &::-webkit-scrollbar
   {
     width: 9px;  /* for vertical scrollbars */
-    height: 12px; /* for horizontal scrollbars */
-    background-color: transparent;
+    height: 9px; /* for horizontal scrollbars */
+    background: transparent !important;
 
   }
 
   &::-webkit-scrollbar-track
   {
     webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    background-color: transparent;
+    background: transparent !important;
 
   }
 
   &::-webkit-scrollbar-thumb
   {
-    background: rgba(0, 0, 0, 0.5);
+    background: $cinza-5d;
     @include border-radius(10px);
   }
 }
@@ -66,11 +66,7 @@ a{
   position: relative;
   max-height: 500px;
   display: flex;
-
   overflow: hidden;
-
-
-
 }
 
 .content-block{
@@ -83,8 +79,6 @@ a{
   margin: 2px;
   display: inline-block;
   font-size: 12px;
-
-
 }
 
 .text-uppercase{
@@ -496,4 +490,89 @@ label{
     }
   }
 
+}
+
+.content-a-coordenacao{
+  color: $branco;
+  padding-bottom: 80px;
+
+  .box-membrxs{
+    margin-bottom: 40px;
+  }
+  .title-section{
+    font-weight: 400;
+    font-size: 60px;
+    padding: 80px 0 0 80px;
+    letter-spacing: 8px;
+  }
+
+  .block-right-text{
+    padding-right: 7%;
+  }
+
+  p{
+    margin-bottom: 10px;
+  }
+
+  .cargo{
+    padding-top: 10px;
+    font-size: 20px;
+  }
+
+  .nome{
+    font-size: 26px;
+  }
+
+  .resumo{
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.section-content{
+  .block-left-image{
+    max-height: 350px;
+    overflow: hidden;
+  }
+  .block-right-text{
+    padding-right: 7%;
+    padding-left: 30px;
+
+    p{
+      padding-bottom: 50px;
+      margin-bottom: 0;
+    }
+  }
+
+  .content-text{
+    font-size: 26px;
+    color: $branco;
+
+    h1,h2,h3,h4,h5,h6{
+      color: $branco;
+    }
+
+    h3{
+      font-size: 30px;
+      margin: 0;
+      padding: 0 0 40px 0;
+      font-weight: 700;
+    }
+    h4,h5{
+      font-size: 24px;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.section-missao{
+  .title-section{
+    padding:80px 0 0 0;
+    font-size: 60px;
+    font-weight: 400;
+  }
+}
+
+#page-content.page-quem-somos{
+  padding-bottom: 0 !important;
 }

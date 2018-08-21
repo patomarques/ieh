@@ -40,7 +40,7 @@
     </section>
 	<footer id="colophon" class="site-footer <?php echo wp_bootstrap_starter_bg_class(); ?> text-center" role="contentinfo">
 
-    <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?> &copy; <?php echo date('Y'); ?>
+<!--    <a href="--><?php //echo home_url(); ?><!--">IEH</a> &copy; --><?php //echo date('Y'); ?>
     </footer>
 
 <?php wp_footer(); ?>
