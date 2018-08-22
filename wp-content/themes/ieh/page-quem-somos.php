@@ -34,7 +34,7 @@
         </div>
     </div>
 
-    <div class="lines-fullsize bg-azul-claro line-mt"></div>
+    <div class="lines-fullsize bg-azul-claro line-mt mb-0"></div>
 
     <div class="content-full content-sobre-nos">
         <div class="row">

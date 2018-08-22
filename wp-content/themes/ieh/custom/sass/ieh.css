@@ -264,7 +264,7 @@
   opacity: 0.7; }
 
 .logo-home-img {
-  max-width: 180px;
+  max-width: 250px;
   position: absolute; }
 
 .menu-fixed {
@@ -769,7 +769,10 @@ label {
   margin-bottom: 80px; }
 
 .content-sobre-nos {
+  background-color: #f2f4f3;
   color: #5d5d5d; }
+  .content-sobre-nos .title-sobre-nos {
+    padding-top: 80px; }
   .content-sobre-nos .block-left-image {
     max-height: 400px;
     overflow: hidden; }
@@ -801,6 +804,8 @@ label {
     padding-right: 7%; }
   .content-a-coordenacao p {
     margin-bottom: 10px; }
+  .content-a-coordenacao .list-coordenacao p {
+    padding-bottom: 10px !important; }
   .content-a-coordenacao .cargo {
     padding-top: 10px;
     font-size: 20px; }
@@ -832,8 +837,9 @@ label {
     padding: 0 0 20px 0;
     font-weight: 700; }
   .section-content .content-text h4, .section-content .content-text h5 {
-    font-size: 24px;
-    padding-bottom: 5px; }
+    font-size: 30px;
+    padding-bottom: 5px;
+    padding-top: 80px; }
 
 .section-missao .title-section {
   padding: 80px 0 0 0;
@@ -860,6 +866,27 @@ label {
   background-image: radial-gradient(circle, #056653 15%, transparent 10%), radial-gradient(circle, #056653 15%, transparent 10%);
   background-size: 25px 25px;
   background-position: 0 0, 63px 87px; }
+
+.mb-0 {
+  margin-bottom: 0 !important; }
+
+.page-o-que-fazemos .title-section {
+  font-size: 60px;
+  letter-spacing: 5px;
+  word-spacing: 2px;
+  display: inline-block; }
+  .page-o-que-fazemos .title-section:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #000000 !important;
+    margin-top: 10px;
+    position: relative;
+    padding: 0 5px; }
+
+.page-o-que-fazemos p {
+  font-size: 26px; }
 
 .box-text-home {
   right: 0;

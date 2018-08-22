@@ -1,23 +1,36 @@
 <?php get_header(); ?>
 
-    <section id="page-content" class="page-content">
+    <section id="page-content" class="page-content page-o-que-fazemos">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-                    <h1 class="title"><?php echo the_title(); ?></h1>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-lg-1 text-right">
+                    <h1 class="title-section">O Que<br>Fazemos</h1>
                 </div>
             </div>
-
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-lg-1 text-justify">
                     <?php
-                    while ( have_posts() ) : the_post(); ?>
-
-                        <div class="page-content-text"><?php echo the_content(); ?></div>
-
-                    <?php endwhile; // End of the loop.?>
+                        $introTexto =  get_post_meta(get_the_ID(), 'intro', TRUE);
+                        echo apply_filters('meta_content', $introTexto);
+                    ?>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-11">
 
+                </div>
+                <?php
+                    echo wp_get_attachment_image(get_post_meta(get_the_ID(), 'primeira_imagem', TRUE), 'full');
+                ?>
+
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-lg-1 text-justify">
+                    <?php
+                    $objetivos =  get_post_meta(get_the_ID(), 'objetivos', TRUE);
+                    echo apply_filters('meta_content', $objetivos);
+                    ?>
+                </div>
             </div>
 
 <!--            --><?php
