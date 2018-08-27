@@ -223,7 +223,7 @@ function wp_bootstrap_starter_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'wp_bootstrap_starter_scripts' );
-
+//
 function wp_call_scripts(){
     wp_enqueue_style( 'slick-js-css', get_template_directory_uri() . '/bower_components/slick-carousel/slick/slick.css' );
     wp_enqueue_style( 'slick-js-theme-css', get_template_directory_uri() . '/bower_components/slick-carousel/slick/slick-theme.css' );
@@ -281,9 +281,12 @@ if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
 /* Disable WordPress Admin Bar for all users but admins. */
 show_admin_bar(false);
 
-wp_enqueue_style( 'style-custom', get_template_directory_uri() . '/custom/sass/ieh.css');
-/*wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/bower_components/components-font-awesome/css/fontawesome-all.css');*/
-wp_enqueue_script('js-custom', get_template_directory_uri() . '/custom/js/main.js', array(), '', true );
+function call_custom_funtions(){
+    wp_enqueue_style( 'style-custom', get_template_directory_uri() . '/custom/sass/ieh.css');
+    /*wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/bower_components/components-font-awesome/css/fontawesome-all.css');*/
+    wp_enqueue_script('js-custom', get_template_directory_uri() . '/custom/js/main.js', array(), '', true );
+}
+add_action( 'init', 'call_custom_funtions' );
 
 // Our custom post type function
 function create_posttype() {

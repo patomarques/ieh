@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+/* Template Name: Nossos Projetos */
+get_header();
+?>
 
     <div class="lines-fullsize bg-cinza-claro"></div>
     <div class="lines-fullsize bg-azul-claro"></div>
@@ -33,7 +36,12 @@
 
                 <div class="row row-nossos-projetos">
                     <div class="col-xs-12 col-sm-12 col-md-4 text-center">
-                        <img src="<?php echo get_field('icone')['url']; ?>" class="icon-projetos">
+                        <?php
+//                        var_dump(get_post_meta(get_the_ID(), 'icone'));
+//                        die();
+                        ?>
+<!--                        <img src="--><?php //echo get_post_meta(get_the_ID(), 'icone')['url']; ?><!--" class="icon-projetos">-->
+                        <img src="<?php echo get_template_directory_uri() . "/custom/img/icons/upload.png"; ?>" class="icon-projetos">
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-7">
                         <p class="list-subtitle c-azul-claro"><?php echo get_the_title(); ?></p>

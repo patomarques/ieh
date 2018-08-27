@@ -128,10 +128,10 @@
                             <a href="<?php echo get_site_url(); ?>/apoie-nossos-projetos/" class="link-menu">APOIE <br>NOSSOS <br>PROJETOS</a>
                         </li>
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/" class="link-menu">IEH EM <br>NÚMEROS</a>
+                            <a href="javascript:void(0)" class="link-menu">IEH EM <br>NÚMEROS</a>
                         </li>
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/" class="link-menu">DEPOIMENTOS</a>
+                            <a href="javascript:void(0)" class="link-menu">DEPOIMENTOS</a>
                         </li>
                     </ul>
                 </div>
