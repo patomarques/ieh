@@ -5,7 +5,7 @@ html{
 }
 
 body{
-  font-family: $ff-montserrat;
+  font-family: $ff-montserrat !important;
   overflow-x: hidden;
 
   &::-webkit-scrollbar
@@ -636,3 +636,5 @@ label{
     font-size: 26px;
   }
 }
+
+

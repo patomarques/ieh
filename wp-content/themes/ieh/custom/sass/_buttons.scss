@@ -42,19 +42,24 @@
 }
 
 .btn-white{
-  padding: 10px 20px;
+  padding: 15px 20px;
   text-transform: uppercase;
   background-color: $branco;
-  color: $preto !important;
+  color: $preto;
   font-family: $ff-montserrat;
+  font-size: 18px;
+  font-weight: 700;
   margin: 0 auto;
   text-align: center;
   display: inline-block;
+  border: 2px solid $branco;
 
   @extend .transition;
 
   &:hover{
-    opacity: 0.7;
+    background-color: transparent;
+    color: $branco !important;
+    opacity: 1 !important;
   }
 }
 
@@ -64,7 +69,7 @@
   text-transform: uppercase;
   padding: 10px 28px !important;
   background-color: $branco;
-  color: $preto;
+  color: $azul-claro !important;
   display: inline-block;
   letter-spacing: 2px;
 }

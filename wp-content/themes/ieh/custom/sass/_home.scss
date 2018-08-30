@@ -1,18 +1,21 @@
-.box-text-home{
-  right: 0;
-  position: absolute;
-  margin-top: 20%;
-}
+.home-begin-content{
+  .box-text-home{
+    right: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
-
-.text-home{
-  font-family: $ff-montserrat;
-  font-size: 5em;
-  text-align: right;
-  font-weight: 500;
-  z-index: 0;
-  margin: 0;
-  padding: 0;
+    .text-home{
+      font-family: $ff-montserrat;
+      font-size: 5em;
+      text-align: right;
+      font-weight: 300;
+      z-index: 0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.1;
+    }
+  }
 }
 
 .lines-fullsize{
@@ -425,4 +428,54 @@ header  .text-content{
       }
     }
   }
+}
+
+
+.box-content-quem-somos{
+
+  .arrow-down{
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 15px solid $azul-claro;
+    position: absolute;
+    margin-left: 9px;
+  }
+}
+
+/**
+** @mediaqueries (responsive)
+ */
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media (max-width: $screen-xs-max) {
+  .home-begin-content{
+    .box-text-home{
+      .text-home{
+        font-size: 4em;
+      }
+    }
+  }
+
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  .icon-arrow-left{
+    margin: 8% -2% 0;
+  }
+
+  .icon-arrow-right{
+    margin: 8% -2% 0;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+
 }

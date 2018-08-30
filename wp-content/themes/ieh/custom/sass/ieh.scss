@@ -1,3 +1,10 @@
+$screen-xs-min: 320px;
+$screen-xs-max: 350px;
+$screen-xs-min: 576px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
 @import '_mixins';
 
 @import '_colors-variables';

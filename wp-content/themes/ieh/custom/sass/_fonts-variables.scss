@@ -1,12 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900');
 
-@font-face {
-  font-family: 'myriad-pro';
-  src: url('../font/myriad-pro/myriad-pro-bold-semiExtended.ttf') format('truetype');
-  src: local('../font/myriad-pro/myriadPro-Bold.otf'), url('../font/myriad-pro/myriadPro-BlackSemiCn.otf') format('otf');
-}
+//@font-face {
+//  font-family: 'myriad-pro';
+//  src: url('../font/myriad-pro/myriad-pro-bold-semiExtended.ttf') format('truetype');
+//  src: local('../font/myriad-pro/myriadPro-Bold.otf'), url('../font/myriad-pro/myriadPro-BlackSemiCn.otf') format('otf');
+//}
+//
+//@font-face {
+//  font-family: 'myriad-pro-thin';
+//  src: url('../font/myriad-pro/myriad-pro-bold-semiExtended.ttf') format('truetype');
+//  src: local('../font/myriad-pro/myriadPro-Bold.otf'), url('../font/myriad-pro/myriadPro-BlackSemiCn.otf') format('otf');
+//}
 
 $ff-montserrat: 'Montserrat', sans-serif;
-$ff-myriad: 'myriad-pro';
+$ff-myriad: 'Montserrat', sans-serif;
 
 
