@@ -31,6 +31,7 @@ get_header(); ?>
                         <a href="#" class="box-content-quem-somos">
                             <div class="box-info">
                                 <span class="text-subtitle"><button class="button-plus"></button> Sobre Nós</span>
+                                <div class="arrow-down"></div>
                                 <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
 
                             </div>
@@ -40,6 +41,7 @@ get_header(); ?>
                         <a href="#" class="box-content-quem-somos">
                             <div class="box-info">
                                 <span class="text-subtitle"><button class="button-plus"></button> A Coordenação</span>
+                                <div class="arrow-down"></div>
                                 <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
                             </div>
                         </a>
@@ -48,6 +50,7 @@ get_header(); ?>
                         <a href="#" class="box-content-quem-somos">
                             <div class="box-info">
                                 <span class="text-subtitle"><button class="button-plus"></button> Missão</span>
+                                <div class="arrow-down"></div>
                                 <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
                             </div>
                         </a>
@@ -56,6 +59,7 @@ get_header(); ?>
                         <a href="#" class="box-content-quem-somos">
                             <div class="box-info">
                                 <span class="text-subtitle"><button class="button-plus"></button> Transparência</span>
+                                <div class="arrow-down"></div>
                                 <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
                             </div>
                         </a>
@@ -109,7 +113,7 @@ get_header(); ?>
                 <p class="subtext-title">Lorem ipsum dolor sit amet consectetur adipiscing elit, cubilia porta ridiculus inceptos sapien id pulvinar, mi eget placerat ornare potenti himenaeos. Vestibulum eleifend consequat urna dui inceptos conubia ullamcorper, fringilla purus sapien ligula fusce id, mi aliquam eget etiam nulla efficitur. dolor sit amet consectetur adipiscing elit, cubilia porta ridiculus inceptos sapien id pulvinar, mi eget placerat ornare potenti himenaeos.</p>
 
                 <div class="form-group text-right">
-                    <button class="btn btn-call-modal btn-fale-conosco" data-target="#modal-fale-conosco" data-toogle="modal">Fale Conosco</button>
+                    <button class="btn-call-modal btn-white" data-target="#modal-fale-conosco" data-toogle="modal">Fale Conosco</button>
                 </div>
             </div>
         </div>

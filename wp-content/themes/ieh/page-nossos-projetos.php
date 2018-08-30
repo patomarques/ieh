@@ -37,11 +37,12 @@ get_header();
                 <div class="row row-nossos-projetos">
                     <div class="col-xs-12 col-sm-12 col-md-4 text-center">
                         <?php
-//                        var_dump(get_post_meta(get_the_ID(), 'icone'));
-//                        die();
+//                            var_dump(get_post_meta(get_the_ID(), 'icone')[0]);
+//                            die();
                         ?>
-<!--                        <img src="--><?php //echo get_post_meta(get_the_ID(), 'icone')['url']; ?><!--" class="icon-projetos">-->
-                        <img src="<?php echo get_template_directory_uri() . "/custom/img/icons/upload.png"; ?>" class="icon-projetos">
+                        <?php// echo get_the_post_thumbnail(get_post_meta(get_the_ID(), 'icone')[0]); ?>
+<!--                        <img src="--><?php //echo get_the_post_thumbnail(get_post_meta(get_the_ID(), 'icone')[0]); ?><!--" class="icon-projetos">-->
+                        <!--<img src="<?php /*echo get_template_directory_uri() . "/custom/img/icons/upload.png"; */?>" class="icon-projetos">-->
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-7">
                         <p class="list-subtitle c-azul-claro"><?php echo get_the_title(); ?></p>

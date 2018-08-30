@@ -22,6 +22,11 @@
 
 <body <?php body_class(); ?>>
 
+<?php
+    global $post;
+    $post_slug  = $post->post_name;
+?>
+
 <header class="header-home">
     <div>
         <nav>
@@ -58,6 +63,55 @@
     </div>
 </header>
 
+<aside>
+    <nav>
+        <ul>
+            <li>
+                <a href="<?php echo get_site_url(); ?>/quem-somos/" class="link-menu <?php if($post_slug == 'quem-somos'){ echo "menu-actived"; } ?>">QUEM SOMOS</a>
+            </li>
+            <li>
+                <a href="<?php echo get_site_url(); ?>/o-que-fazemos/" class="link-menu <?php if($post_slug == 'o-que-fazemos'){ echo "menu-actived"; } ?>">O QUE FAZEMOS</a>
+            </li>
+            <li>
+                <a href="<?php echo get_site_url(); ?>/nossos-projetos/" class="link-menu <?php if($post_slug == 'nossos-projetos'){ echo "menu-actived"; } ?>">NOSSOS PROJETOS</a>
+            </li>
+            <li>
+                <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-apoie-nossos-projetos" class="link-menu">APOIE NOSSOS PROJETOS</a>
+            </li>
+            <li>
+                <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-ieh-em-numeros" class="link-menu">IEH EM NÚMEROS</a>
+            </li>
+            <li>
+                <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-depoimentos" class="link-menu">DEPOIMENTOS</a>
+            </li>
+            <li class="text-center">
+                <ul class="list-inline icons-social-top">
+                    <li class="list-inline-item">
+                        <a href="https://pt-br.facebook.com/institutodeecologiahumana" class="icon-link icon-fb icon-white" title="Facebook">
+                            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/social-fb.png"
+                                 alt="" class="social-icon">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/ieh.insta/" class="icon-link icon-ig icon-white" title="Instagram">
+                            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/social-ig.png"
+                                 class="social-icon">
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <label class="switch-chose">
+                            <input type="checkbox">
+                            <span class="slider-chose round"></span>
+                            <span class="pt">PT</span>
+                            <span class="es">ES</span>
+                        </label>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</aside>
+
 <section id="background-img-home" class="content-full-background parallax-effect <?php if (is_front_page() ){ echo "bg-home-parallax"; } ?>">
     <div class="home-begin-content">
         <div class="container">
@@ -71,15 +125,15 @@
                         </a>
                     </div>
                     <div class="text-right content-top-right">
-                        <ul class="list-inline icons-social-top">
+                        <ul class="list-inline icons-social-top d-none d-lg-block">
                             <li class="list-inline-item">
-                                <a href="" class="icon-link icon-fb icon-white" title="Facebook">
+                                <a href="https://pt-br.facebook.com/institutodeecologiahumana" class="icon-link icon-fb icon-white" title="Facebook">
                                     <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/social-fb.png"
                                          alt="" class="social-icon">
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="" class="icon-link icon-ig icon-white" title="Instagram">
+                                <a href="https://www.instagram.com/ieh.insta/" class="icon-link icon-ig icon-white" title="Instagram">
                                     <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/social-ig.png"
                                          class="social-icon">
                                 </a>
@@ -92,9 +146,19 @@
                                     <span class="es">ES</span>
                                 </label>
                             </li>
+
+                        </ul>
+                        <ul class="list-inline d-lg-none d-xl-none">
+                            <li class="list-inline-item">
+                                <div id="menu-bars-x">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </li>
                         </ul>
                     </div>
-
                     <div id="box-text-home" class="box-text-home text-right">
                         <h2 id="text-home" class="text-home text-larger c-white">Desde 1990, <br>em busca <br>de educar e <br>construir laços.</h2>
                     </div>
@@ -104,7 +168,7 @@
         </div>
     </div>
 
-    <div class="menu-home-content" id="menu-home-content">
+    <div class="menu-home-content d-none d-lg-block" id="menu-home-content">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 text-left" id="logo-fixed-content">
@@ -113,25 +177,27 @@
                              class="logo-home-img">
                     </a>
                 </div>
+
                 <div class="col-xs-12 col-sm-12 col-md-10 col-lg-12" id="menu-fixed-col">
+
                     <ul class="navbar-nav-home-menu list-unstyled list-inline">
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/quem-somos/" class="link-menu">QUEM <br>SOMOS</a>
+                            <a href="<?php echo get_site_url(); ?>/quem-somos/" class="link-menu <?php if($post_slug == 'quem-somos'){ echo "menu-actived"; } ?>">QUEM <br>SOMOS</a>
                         </li>
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/o-que-fazemos/" class="link-menu">O QUE <br>FAZEMOS</a>
+                            <a href="<?php echo get_site_url(); ?>/o-que-fazemos/" class="link-menu <?php if($post_slug == 'o-que-fazemos'){ echo "menu-actived"; } ?>">O QUE <br>FAZEMOS</a>
                         </li>
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/nossos-projetos/" class="link-menu">NOSSOS <br>PROJETOS</a>
+                            <a href="<?php echo get_site_url(); ?>/nossos-projetos/" class="link-menu <?php if($post_slug == 'nossos-projetos'){ echo "menu-actived"; } ?>">NOSSOS <br>PROJETOS</a>
                         </li>
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/apoie-nossos-projetos/" class="link-menu">APOIE <br>NOSSOS <br>PROJETOS</a>
+                            <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-apoie-nossos-projetos" class="link-menu">APOIE <br>NOSSOS <br>PROJETOS</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" class="link-menu">IEH EM <br>NÚMEROS</a>
+                            <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-ieh-em-numeros" class="link-menu">IEH EM <br>NÚMEROS</a>
                         </li>
                         <li>
-                            <a href="javascript:void(0)" class="link-menu">DEPOIMENTOS</a>
+                            <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-depoimentos" class="link-menu">DEPOIMENTOS</a>
                         </li>
                     </ul>
                 </div>
