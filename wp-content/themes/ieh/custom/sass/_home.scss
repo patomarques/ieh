@@ -167,7 +167,6 @@ header  .text-content{
   .subtext-title{
     color: $branco;
     font-family: $ff-montserrat;
-    font-size: 22px;
     text-align: justify;
   }
 }
@@ -251,7 +250,7 @@ header  .text-content{
 
         }
         .icon{
-          width: 100px;
+          width: 80px;
           height: 100px;
           margin: 0 10px -20px 10px;
         }
@@ -449,17 +448,60 @@ header  .text-content{
  */
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
-@media (max-width: $screen-xs-max) {
+@media (min-width: $screen-xs-min) {
+ #background-img-home{
+   height: 70%;
+ }
+
   .home-begin-content{
     .box-text-home{
+      margin-top: 50px;
       .text-home{
         font-size: 4em;
       }
     }
   }
 
+  .box-content-quem-somos{
+    width: 100%;
+    padding-bottom: 70%;
+    margin: 5%;
+  }
+
+  .item .square-content .text-box{
+    font-size: 22px;
+  }
 }
-/* Small devices (tablets, 768px and up) */
+/* Small devices to up */
+@media (min-width: $screen-xs-min) {
+  #home-ieh-em-numeros {
+    .list-ieh-numeros {
+      li{
+        .fa-plus{
+          margin:-25px 0 0 -5px;
+          position: absolute;
+        }
+      }
+    }
+  }
+
+  .content-mapa{
+    .box-mapa{
+      padding-top: 100px;
+    }
+
+    .text-area-atuacao{
+      font-size: 24px;
+    }
+  }
+
+  .logo-footer{
+    margin: 0;
+    padding: 0 30px 30px;
+    max-width: 100%;
+  }
+}
+
 @media (min-width: $screen-sm-min) {
   .icon-arrow-left{
     margin: 8% -2% 0;

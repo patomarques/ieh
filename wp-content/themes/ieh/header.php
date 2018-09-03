@@ -102,8 +102,8 @@
                         <label class="switch-chose">
                             <input type="checkbox">
                             <span class="slider-chose round"></span>
-                            <span class="pt">PT</span>
-                            <span class="es">ES</span>
+                            <span class="lang pt">PT</span>
+                            <span class="lang es">ES</span>
                         </label>
                     </li>
                 </ul>

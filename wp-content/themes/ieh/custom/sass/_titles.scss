@@ -65,3 +65,24 @@
   color: $cinza-5d;
   letter-spacing: 12px;
 }
+
+/**
+** @mediaqueries (responsive)
+ */
+@media (min-width: $screen-xs-min) {
+  .subtext-title{
+    font-size: 28px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+
+}
+
+@media (min-width: $screen-md-min) {
+
+}
+
+@media (min-width: $screen-lg-min) {
+
+}

@@ -210,6 +210,13 @@
   color: #5d5d5d;
   letter-spacing: 12px; }
 
+/**
+** @mediaqueries (responsive)
+ */
+@media (min-width: 320px) {
+  .subtext-title {
+    font-size: 28px; } }
+
 .icon-plus {
   background-image: url("../img/icons/add.png"); }
 
@@ -474,6 +481,8 @@ aside {
   z-index: 2;
   opacity: 0;
   visibility: hidden; }
+  aside.open .switch-chose .lang {
+    margin-bottom: -10px; }
 
 .open {
   opacity: 1;
@@ -624,7 +633,9 @@ nav {
 /**
 ** @mediaqueries (responsive)
  */
-@media (max-width: 350px) {
+@media (min-width: 320px) {
+  .logo-home-img {
+    max-width: 180px; }
   aside nav ul {
     margin-top: 80px; }
     aside nav ul li {
@@ -633,16 +644,19 @@ nav {
         font-size: 2.2em;
         letter-spacing: -3px;
         word-spacing: 10px;
-        line-height: 40px; } }
+        line-height: 40px; }
+  aside.open .switch-chose .lang {
+    margin-bottom: 10px !important; } }
 
 body,
 html {
   height: 100%;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  max-width: 100%; }
 
 body {
   font-family: "Montserrat", sans-serif !important;
-  overflow-x: hidden; }
+  overflow-x: hidden !important; }
   body::-webkit-scrollbar {
     width: 9px;
     /* for vertical scrollbars */
@@ -1217,7 +1231,6 @@ label {
   #home-apoie-nossos-projetos .subtext-title {
     color: #ffffff;
     font-family: "Montserrat", sans-serif;
-    font-size: 22px;
     text-align: justify; }
 
 #home-ieh-em-numeros {
@@ -1272,7 +1285,7 @@ label {
         margin-top: -5px; }
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .icon, #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .icon-arrow-left,
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .icon-arrow-right {
-      width: 100px;
+      width: 80px;
       height: 100px;
       margin: 0 10px -20px 10px; }
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .text {
@@ -1382,11 +1395,34 @@ label {
  */
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
-@media (max-width: 350px) {
-  .home-begin-content .box-text-home .text-home {
-    font-size: 4em; } }
+@media (min-width: 320px) {
+  #background-img-home {
+    height: 70%; }
+  .home-begin-content .box-text-home {
+    margin-top: 50px; }
+    .home-begin-content .box-text-home .text-home {
+      font-size: 4em; }
+  .box-content-quem-somos {
+    width: 100%;
+    padding-bottom: 70%;
+    margin: 5%; }
+  .item .square-content .text-box {
+    font-size: 22px; } }
 
-/* Small devices (tablets, 768px and up) */
+/* Small devices to up */
+@media (min-width: 320px) {
+  #home-ieh-em-numeros .list-ieh-numeros li .fa-plus {
+    margin: -25px 0 0 -5px;
+    position: absolute; }
+  .content-mapa .box-mapa {
+    padding-top: 100px; }
+  .content-mapa .text-area-atuacao {
+    font-size: 24px; }
+  .logo-footer {
+    margin: 0;
+    padding: 0 30px 30px;
+    max-width: 100%; } }
+
 @media (min-width: 768px) {
   .icon-arrow-left {
     margin: 8% -2% 0; }
@@ -1443,5 +1479,9 @@ footer {
 .list-info-contact {
   font-family: "Montserrat", sans-serif;
   font-size: 16px; }
+
+/**
+** @mediaqueries (responsive)
+ */
 
 /*# sourceMappingURL=ieh.css.map */

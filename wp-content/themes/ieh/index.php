@@ -138,7 +138,7 @@ get_header(); ?>
 <section id="home-ieh-em-numeros" class="bg-listrado-transversal">
     <div class="container content-block">
         <div class="row">
-            <div class="col-xs-12 text-left">
+            <div class="col-sm-12 text-left">
                 <h2 class="title-section"><span class="negrito first-word">IEH</span><br>em Números</h2>
             </div>
         </div>
@@ -154,7 +154,12 @@ get_header(); ?>
                     </li>
                     <li>
                         <div class="box-numeros">
-                            <span class="pre-text">Mais<br>de</span>
+                            <span class="pre-text">
+                                <span class="d-none d-sm-block">
+                                    Mais<br>de
+                                </span>
+                                <span class="d-block d-sm-none"><i class="fa fa-plus"></i></span>
+                            </span>
                             <span class="numero">120</span>
                             <span class="icon icon-user-group"></span>
                             <span class="text">profissionais <br>associados</span>
