@@ -48,9 +48,11 @@ a{
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: center;
+  //background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .bg-home-parallax {
@@ -64,9 +66,10 @@ a{
 
 #home-bg-img-parallax-2{
   background-image: url("../img/bg/bg-img2.png");
-  position: relative;
-  max-height: 500px;
-  display: flex;
+  height: 60%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -128,7 +131,7 @@ a{
       font-family: $ff-montserrat;
       color: $azul-claro;
       text-align: center;
-      line-height: 22px;
+      line-height: 16px;
       font-size: 16px;
 
     }
@@ -182,7 +185,7 @@ SquareGrid{
 
 @media (min-width: 750px){
   SquareGrid{
-    --columns: 3;
+    --columns: 2;
   }
 }
 
@@ -635,5 +638,15 @@ label{
 
   p{
     font-size: 26px;
+  }
+}
+
+
+#page-quem-somos {
+  .content-text{
+    h5{
+      padding-top: 30px !important;
+      padding-bottom: 15px;
+    }
   }
 }

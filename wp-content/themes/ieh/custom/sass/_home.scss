@@ -333,7 +333,7 @@ header  .text-content{
 
 #home-apoiadores{
   .title-section{
-    text-transform: capitalize;
+    text-transform: none;
     text-align: center;
     color: $branco;
     font-weight: 500;
@@ -449,31 +449,29 @@ header  .text-content{
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 @media (min-width: $screen-xs-min) {
- #background-img-home{
-   height: 70%;
- }
+  #background-img-home {
+    height: 70%;
+  }
 
-  .home-begin-content{
-    .box-text-home{
+  .home-begin-content {
+    .box-text-home {
       margin-top: 50px;
-      .text-home{
+      .text-home {
         font-size: 4em;
       }
     }
   }
 
-  .box-content-quem-somos{
+  .box-content-quem-somos {
     width: 100%;
     padding-bottom: 70%;
     margin: 5%;
   }
 
-  .item .square-content .text-box{
+  .item .square-content .text-box {
     font-size: 22px;
   }
-}
-/* Small devices to up */
-@media (min-width: $screen-xs-min) {
+
   #home-ieh-em-numeros {
     .list-ieh-numeros {
       li{
@@ -495,10 +493,67 @@ header  .text-content{
     }
   }
 
+  #home-quem-somos{
+    .btn-saiba-mais{
+      display: inline-block;
+      position: relative;
+
+    }
+  }
+
   .logo-footer{
     margin: 0;
     padding: 0 30px 30px;
     max-width: 100%;
+  }
+
+  #home-apoie-nossos-projetos{
+    .title-section{
+      font-size: 44px;
+    }
+  }
+
+  .slick-slider{
+    &:after{
+      margin: 0 -5px 25px 0;
+    }
+  }
+
+  #home-ieh-em-numeros {
+    .list-ieh-numeros {
+      li{
+        &:nth-child(1) .box-numeros{
+          .numero{
+            font-size: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  #home-ieh-em-numeros {
+    .list-ieh-numeros {
+      .numero{
+        font-size: 50px;
+      }
+      li{
+        &:nth-child(1) .box-numeros{
+          .numero{
+            font-size: 60px;
+          }
+
+        }
+        &:nth-child(3) {
+          .box-numeros{
+            margin-left: 0;
+
+            .numero{
+
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -510,14 +565,69 @@ header  .text-content{
   .icon-arrow-right{
     margin: 8% -2% 0;
   }
+
+  .box-content-quem-somos{
+    float:left;
+    position: relative;
+    width: 48%;
+    padding-bottom : 38%; /* = width for a 1:1 aspect ratio */
+    margin:1%;
+
+    overflow:hidden;
+  }
+
+  #background-img-home {
+    height: 100%;
+  }
+
+  .home-begin-content {
+    .box-text-home {
+      .text-home {
+        font-size: 5em;
+      }
+    }
+  }
+
+  .item{
+    .square-content{
+      .img-icon{
+        margin: 0 auto;
+      }
+      .text-box{
+        font-size: 16px;
+      }
+    }
+
+  }
+
 }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-md-min) {
+  .item{
+    .square-content{
+      .img-icon{
+        margin-bottom: 20px;
+      }
+      .text-box{
+        font-size: 24px;
+      }
+    }
 
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: $screen-lg-min) {
+  .item{
+    .square-content{
+      .img-icon{
+        margin: 0 auto 10px;
+      }
+      .text-box{
+        font-size: 16px;
+      }
+    }
 
+  }
 }

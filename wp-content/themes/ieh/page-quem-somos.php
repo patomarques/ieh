@@ -45,7 +45,7 @@
 
         <div class="row">
             <div class="col-sm-12 col-sm-12 col-md-5 block-left-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos-interna.png" alt="" class="img-responsive">
+                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/page-quem-somos/img001.png" alt="" class="img-responsive">
             </div>
             <div class="col-sm-12 col-sm-12 col-md-7 block-right-text">
                 <div class="content-text">
@@ -92,7 +92,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12 col-sm-12 col-md-5 block-left-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos-interna.png" alt="" class="img-responsive">
+                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/page-quem-somos/img002.png" alt="" class="img-responsive">
             </div>
             <div class="col-sm-12 col-sm-12 col-md-7 block-right-text">
                 <ul class="list-unstyled list-coordenacao">
@@ -138,7 +138,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12 col-sm-12 col-md-5 block-left-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos-interna.png" alt="" class="img-responsive">
+                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/page-quem-somos/img003.png" alt="" class="img-responsive">
             </div>
             <div class="col-sm-12 col-sm-12 col-md-7 block-right-text c-white">
                 <div class="content-text content-text-block-3">
@@ -159,7 +159,7 @@
         </div>
         <div class="row">
             <div class="col-sm-12 col-sm-12 col-md-5 block-left-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos-interna.png" alt="" class="img-responsive">
+                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/page-quem-somos/img004.png" alt="" class="img-responsive">
             </div>
             <div class="col-sm-12 col-sm-12 col-md-7 block-right-text c-white">
                 <div class="content-text content-text-block-3">

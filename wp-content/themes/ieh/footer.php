@@ -38,8 +38,7 @@
             </div>
         </div>
     </section>
-	<footer id="colophon" class="site-footer <?php echo wp_bootstrap_starter_bg_class(); ?> text-center" role="contentinfo">
-
+	<footer id="colophon" class="site-footer <?php echo wp_bootstrap_starter_bg_class(); ?> text-center hidden" role="contentinfo">
 <!--    <a href="--><?php //echo home_url(); ?><!--">IEH</a> &copy; --><?php //echo date('Y'); ?>
     </footer>
 

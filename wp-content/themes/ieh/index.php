@@ -20,7 +20,7 @@ get_header(); ?>
 <section id="home-quem-somos" class="content-section">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-8 offset-md-1 col-lg-8 offset-lg-2">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                 <h2 class="title-section c-azul-claro">Quem <br>Somos</h2>
 
                 <p class="text-content c-gray-5d text-justify">
@@ -32,7 +32,7 @@ get_header(); ?>
                             <div class="box-info">
                                 <span class="text-subtitle"><button class="button-plus"></button> Sobre Nós</span>
                                 <div class="arrow-down"></div>
-                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
+                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/home-quem-somos/home-qs-1.jpg" alt="" class="img-bg-content">
 
                             </div>
                         </a>
@@ -42,7 +42,7 @@ get_header(); ?>
                             <div class="box-info">
                                 <span class="text-subtitle"><button class="button-plus"></button> A Coordenação</span>
                                 <div class="arrow-down"></div>
-                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
+                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/home-quem-somos/home-qs-2.jpg" alt="" class="img-bg-content">
                             </div>
                         </a>
                     </li>
@@ -51,7 +51,7 @@ get_header(); ?>
                             <div class="box-info">
                                 <span class="text-subtitle"><button class="button-plus"></button> Missão</span>
                                 <div class="arrow-down"></div>
-                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
+                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/home-quem-somos/home-qs-3.jpg" alt="" class="img-bg-content">
                             </div>
                         </a>
                     </li>
@@ -60,7 +60,7 @@ get_header(); ?>
                             <div class="box-info">
                                 <span class="text-subtitle"><button class="button-plus"></button> Transparência</span>
                                 <div class="arrow-down"></div>
-                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos.png" alt="" class="img-bg-content">
+                                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/home-quem-somos/home-qs-4.jpg" alt="" class="img-bg-content">
                             </div>
                         </a>
                     </li>
@@ -75,7 +75,7 @@ get_header(); ?>
 <section id="home-o-que-fazemos" class="fullscreen-bg-content">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-8 offset-md-2 col-lg-8 offset-lg-2 text-right">
+            <div class="col-xs-12 col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-right">
                 <h2 class="title-section c-white">O Que <br>Fazemos</h2>
 
                 <p class="text-content c-white text-justify">Há 22 anos o <a href="<?php echo get_site_url(); ?>" class="link c-white text-negrito">Instituto de Ecologia Humana</a> já realizou cerca de 40 eventos, promoveu 120 cursos; propiciou estágios a 100 estudantes universitários, capacitou cerca de 600 educadores, coordenou 40 projetos, dentre eles 15 projetos de pesquisa, todos com metodologia interdisciplinar e realizou cerca de 15 avaliações de projetos. Coordenou e participou das publicações de cerca de 70 títulos. Realizou o encontro da Arte com a Ciência ao concretizar duas exposições sobre a temática ambiental.</p>
@@ -120,7 +120,7 @@ get_header(); ?>
     </div>
 </section>
 
-<div class="modal modal-fale-conosco">
+<div class="modal modal-fale-conosco" id="modal-fale-conosco">
     <div class="modal-dialog">
         <div class="modal-content">
             <h3 class="title-minor">Fale Conosco</h3>
@@ -133,7 +133,7 @@ get_header(); ?>
     </div>
 </div>
 
-<section id="home-bg-img-parallax-2" class="bg-home-parallax"></section>
+<section id="home-bg-img-parallax-2" class="fullscreen-bg-content"></section>
 
 <section id="home-ieh-em-numeros" class="bg-listrado-transversal">
     <div class="container content-block">
@@ -143,7 +143,7 @@ get_header(); ?>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-lg-offset-1">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5 col-lg-offset-1">
                 <ul class="list-unstyled list-ieh-numeros">
                     <li>
                         <div class="box-numeros">
@@ -174,7 +174,7 @@ get_header(); ?>
                     </li>
                 </ul>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                 <div class="content-mapa">
                     <div class="box-numeros">
                         <span class="numero">27</span>

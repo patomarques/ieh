@@ -13,14 +13,13 @@ jQuery(document).ready(function($){
     }
     //watcherToFixedMenu();
 
-    $('a[href*=#]').click(function(event){
+    $('a[href*=#].link-menu').click(function(event){
         $('html, body').animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top - 100
-        }, 500);
+            scrollTop: $( $.attr(this, 'href') ).offset().top - 80
+        }, 2000);
         event.preventDefault();
     });
 
-//    $('aside').toggleClass('open');
     $(function() {
         $('.toggle-overlay').click(function() {
             $('aside').toggleClass('open');
@@ -31,11 +30,40 @@ jQuery(document).ready(function($){
         $(this).toggleClass('open');
         $('aside').toggleClass('open');
     });
-    //$('.fm-scale').css('display', 'hidden !important');
 
-    // $('.button_container').on('click', function(){
-    //    console.log('nada');
-    //    $('html').toggle('container-screen');
+
+    $("a[href='#back-to-top']").click(function() {
+        // $("html, body").animate({ scrollTop: 0 }, "slow");
+        // return false;
+        $('html, body').animate({
+            scrollTop: $("#page-content").offset().top
+        }, 600);
+
+    });
+
+    //console.log($('.home').length);
+    if($('.home').length == 0){
+        $(".square-content").click(function(e) {
+            e.preventDefault();
+            var scrollToSection = $(this).data('scroll');
+
+            $('html, body').animate({
+                scrollTop: $("#" + scrollToSection).offset().top - 120
+            }, 600);
+            return false;
+        });
+    }
+
+
+
+
+    // $('#btn-call-modal').on('click', function(e){
+    //     e.preventDefault();
+    //     console.log('yay');
+    //     $('#modal-fale-conosco').on('shown.bs.modal', function () {
+    //         //$('#myInput').trigger('focus')
+    //     })
+    //     return false;
     // });
 });
 

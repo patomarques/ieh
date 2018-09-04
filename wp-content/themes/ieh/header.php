@@ -178,7 +178,7 @@
                     </a>
                 </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-12" id="menu-fixed-col">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="menu-fixed-col">
 
                     <ul class="navbar-nav-home-menu list-unstyled list-inline">
                         <li>

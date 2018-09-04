@@ -32,22 +32,24 @@ get_header();
             $nossos_projetos = new WP_Query($args_projetos);
             ?>
 
-            <?php while ( $nossos_projetos->have_posts() ) : $nossos_projetos->the_post(); ?>
+            <?php while ( $nossos_projetos->have_posts() ) : $nossos_projetos->the_post();
 
-                <div class="row row-nossos-projetos">
+                $image = get_field('icone');
+                $slugProject = get_post_field( 'post_name', get_post() );
+            ?>
+                <div class="row row-nossos-projetos" id="<?php echo $slugProject; ?>">
                     <div class="col-xs-12 col-sm-12 col-md-4 text-center">
-                        <?php
-//                            var_dump(get_post_meta(get_the_ID(), 'icone')[0]);
-//                            die();
-                        ?>
-                        <?php// echo get_the_post_thumbnail(get_post_meta(get_the_ID(), 'icone')[0]); ?>
-<!--                        <img src="--><?php //echo get_the_post_thumbnail(get_post_meta(get_the_ID(), 'icone')[0]); ?><!--" class="icon-projetos">-->
-                        <!--<img src="<?php /*echo get_template_directory_uri() . "/custom/img/icons/upload.png"; */?>" class="icon-projetos">-->
+
+                        <img src="<?php echo $image['url']; ?>" class="icon-projetos">
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-7">
                         <p class="list-subtitle c-azul-claro"><?php echo get_the_title(); ?></p>
                         <?php echo get_the_content(); ?>
-                        <?php //echo get_post_meta(get_the_ID(), 'author', TRUE); ?>
+
+
+                    </div>
+                    <div class="col-sm-12 text-right">
+                        <a href="#back-to-top" class="back-to-top" title="Ir para o topo"><i class="fa fa-angle-up text-right"></i></a>
                     </div>
                 </div>
             <?php endwhile; ?>

@@ -683,9 +683,10 @@ a:hover {
   height: 100%;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
 
 .bg-home-parallax {
   /* The image used */
@@ -696,9 +697,10 @@ a:hover {
 
 #home-bg-img-parallax-2 {
   background-image: url("../img/bg/bg-img2.png");
-  position: relative;
-  max-height: 500px;
-  display: flex;
+  height: 60%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden; }
 
 .content-block {
@@ -748,7 +750,7 @@ a:hover {
       font-family: "Montserrat", sans-serif;
       color: #41b6d6;
       text-align: center;
-      line-height: 22px;
+      line-height: 16px;
       font-size: 16px; }
 
 .square-grid {
@@ -780,7 +782,7 @@ SquareGrid {
 
 @media (min-width: 750px) {
   SquareGrid {
-    --columns: 3; } }
+    --columns: 2; } }
 
 @media (min-width: 1200px) {
   SquareGrid {
@@ -1101,6 +1103,10 @@ label {
 .page-o-que-fazemos p {
   font-size: 26px; }
 
+#page-quem-somos .content-text h5 {
+  padding-top: 30px !important;
+  padding-bottom: 15px; }
+
 .home-begin-content .box-text-home {
   right: 0;
   position: absolute;
@@ -1343,7 +1349,7 @@ label {
   padding-bottom: 50px; }
 
 #home-apoiadores .title-section {
-  text-transform: capitalize;
+  text-transform: none;
   text-align: center;
   color: #ffffff;
   font-weight: 500; }
@@ -1407,10 +1413,7 @@ label {
     padding-bottom: 70%;
     margin: 5%; }
   .item .square-content .text-box {
-    font-size: 22px; } }
-
-/* Small devices to up */
-@media (min-width: 320px) {
+    font-size: 22px; }
   #home-ieh-em-numeros .list-ieh-numeros li .fa-plus {
     margin: -25px 0 0 -5px;
     position: absolute; }
@@ -1418,19 +1421,62 @@ label {
     padding-top: 100px; }
   .content-mapa .text-area-atuacao {
     font-size: 24px; }
+  #home-quem-somos .btn-saiba-mais {
+    display: inline-block;
+    position: relative; }
   .logo-footer {
     margin: 0;
     padding: 0 30px 30px;
-    max-width: 100%; } }
+    max-width: 100%; }
+  #home-apoie-nossos-projetos .title-section {
+    font-size: 44px; }
+  .slick-slider:after {
+    margin: 0 -5px 25px 0; }
+  #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .box-numeros .numero {
+    font-size: 60px; }
+  #home-ieh-em-numeros .list-ieh-numeros .numero {
+    font-size: 50px; }
+  #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .box-numeros .numero {
+    font-size: 60px; }
+  #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .box-numeros {
+    margin-left: 0; } }
 
 @media (min-width: 768px) {
   .icon-arrow-left {
     margin: 8% -2% 0; }
   .icon-arrow-right {
-    margin: 8% -2% 0; } }
+    margin: 8% -2% 0; }
+  .box-content-quem-somos {
+    float: left;
+    position: relative;
+    width: 48%;
+    padding-bottom: 38%;
+    /* = width for a 1:1 aspect ratio */
+    margin: 1%;
+    overflow: hidden; }
+  #background-img-home {
+    height: 100%; }
+  .home-begin-content .box-text-home .text-home {
+    font-size: 5em; }
+  .item .square-content .img-icon {
+    margin: 0 auto; }
+  .item .square-content .text-box {
+    font-size: 16px; } }
 
 /* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .item .square-content .img-icon {
+    margin-bottom: 20px; }
+  .item .square-content .text-box {
+    font-size: 24px; } }
+
 /* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .item .square-content .img-icon {
+    margin: 0 auto 10px; }
+  .item .square-content .text-box {
+    font-size: 16px; } }
+
 #footer-site {
   background-color: #41b6d6;
   padding: 80px 0 40px; }
@@ -1442,8 +1488,7 @@ footer {
   background-color: #41b6d6 !important;
   color: #ffffff !important;
   font-family: "Montserrat", sans-serif;
-  font-size: 16px !important;
-  padding: 10px; }
+  font-size: 16px !important; }
 
 .list-info-text {
   margin: 0;
