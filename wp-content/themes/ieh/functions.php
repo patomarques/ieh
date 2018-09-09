@@ -161,6 +161,14 @@ add_action( 'widgets_init', 'wp_bootstrap_starter_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+function call_custom_funtions(){
+    wp_enqueue_style( 'style-custom', get_template_directory_uri() . '/custom/sass/ieh.css');
+    /*wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/bower_components/components-font-awesome/css/fontawesome-all.css');*/
+    wp_enqueue_script('js-custom', get_template_directory_uri() . '/custom/js/main.js', array(), '', true );
+    wp_enqueue_script('menu-fixed-js', get_template_directory_uri() . '/custom/js/menu_fixed.js', array(), '', true );
+}
+add_action( 'init', 'call_custom_funtions' );
+
 function wp_bootstrap_starter_scripts() {
 	// load bootstrap css
 	wp_enqueue_style( 'wp-bootstrap-starter-bootstrap-css', get_template_directory_uri() . '/inc/assets/css/bootstrap.min.css' );
@@ -243,9 +251,6 @@ function wp_bootstrap_starter_password_form() {
     return $o;
 }
 add_filter( 'the_password_form', 'wp_bootstrap_starter_password_form' );
-
-
-
 /**
  * Implement the Custom Header feature.
  */
@@ -280,13 +285,6 @@ if ( ! class_exists( 'wp_bootstrap_navwalker' )) {
 
 /* Disable WordPress Admin Bar for all users but admins. */
 show_admin_bar(false);
-
-function call_custom_funtions(){
-    wp_enqueue_style( 'style-custom', get_template_directory_uri() . '/custom/sass/ieh.css');
-    /*wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/bower_components/components-font-awesome/css/fontawesome-all.css');*/
-    wp_enqueue_script('js-custom', get_template_directory_uri() . '/custom/js/main.js', array(), '', true );
-}
-add_action( 'init', 'call_custom_funtions' );
 
 // Our custom post type function
 function create_posttype() {
@@ -332,6 +330,21 @@ function create_posttype() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'nossos-projetos'),
+            'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
+        )
+    );
+
+    register_post_type( 'homepage_content',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Homepage Conteúdos' ),
+                'singular_name' => __( 'Homepage Conteúdo' )
+            ),
+            'description' => 'Conteúdo (imagens, textos...) da página inicial',
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'homepage-content'),
             'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
         )
     );

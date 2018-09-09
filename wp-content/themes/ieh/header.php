@@ -40,11 +40,6 @@
                    href="<?php echo esc_url(home_url('/')); ?>"><?php esc_url(bloginfo('name')); ?></a>
             <?php endif; ?>
 
-
-            <!--                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">-->
-            <!--                        <span class="navbar-toggler-icon"></span>-->
-            <!--                    </button>-->
-
             <?php
             wp_nav_menu(array(
                 'theme_location' => 'primary',
@@ -112,7 +107,7 @@
     </nav>
 </aside>
 
-<section id="background-img-home" class="content-full-background parallax-effect <?php if (is_front_page() ){ echo "bg-home-parallax"; } ?>">
+<section id="background-img-home" class="content-full-background parallax-effect <?php if (is_front_page() ){ echo "bg-home-parallax"; } ?>" style="background-image: url(<?php echo get_template_directory_uri() . "/custom/img/bg/bg-ieh.png";  ?>)">
     <div class="home-begin-content">
         <div class="container">
             <div class="row">

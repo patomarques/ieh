@@ -450,14 +450,18 @@ header  .text-content{
 /* No media query since this is the default in Bootstrap */
 @media (min-width: $screen-xs-min) {
   #background-img-home {
-    height: 70%;
+    height: 100%;
+  }
+
+  .logo-margin-bottom{
+    margin-bottom: 0;
   }
 
   .home-begin-content {
     .box-text-home {
       margin-top: 50px;
       .text-home {
-        font-size: 4em;
+        font-size: 3em;
       }
     }
   }
