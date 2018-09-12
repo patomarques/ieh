@@ -174,7 +174,7 @@
 </div>
 
     <script type="text/javascript">
-        imagem_bg = <?php echo json_encode(get_the_post_thumbnail_url()); ?>;
+        imagem_bg = '';
         text_home = <?php echo json_encode(get_the_title()); ?>;
 
         //set image header background (DOMjs)

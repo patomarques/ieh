@@ -11,7 +11,6 @@ jQuery(document).ready(function($){
             pauseOnHover: true
         });
     }
-    //watcherToFixedMenu();
 
     $('a[href*=#].link-menu').click(function(event){
         $('html, body').animate({
@@ -41,7 +40,6 @@ jQuery(document).ready(function($){
 
     });
 
-    //console.log($('.home').length);
     if($('.home').length == 0){
         $(".square-content").click(function(e) {
             e.preventDefault();
@@ -61,9 +59,29 @@ jQuery(document).ready(function($){
     }
 });
 
+//Remove text 'Maps Html' from Home Maps
+jQuery(window).load(function($) {
+    jQuery('a:contains("HTML5 Maps for WordPress")').remove();
+
+    // Select a div with the id 'mydiv'
+    var mydiv = document.getElementById('content-text-oq-fazemos');
+
+    // Get all offsets
+    var offset = mydiv.getBoundingClientRect();
+
+    // Offset of the div from the right side of the viewport
+    var offsetRight = document.documentElement.clientWidth - offset.right;
+
+    // Offset of the div from the left side of the viewport
+    var offsetLeft = offset.left;
+
+    alert("Right Offset: " + offsetRight);
+    alert("Left Offset: " + offsetLeft);
+});
+
 //set image header background (DOMjs)
 function setImagemHeaderBackground(imagem_bg, text_home, pageClassName){
-    document.getElementById('background-img-home').style.backgroundImage = 'url(' + imagem_bg + ')';
+    //document.getElementById('background-img-home').style.backgroundImage = 'url(' + imagem_bg + ')';
     document.getElementById('text-home').textContent = text_home;
     document.getElementById('background-img-home').classList.add(pageClassName);
     document.getElementById('box-text-home').classList.add('content-text-bottom');

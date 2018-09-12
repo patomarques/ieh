@@ -10,7 +10,7 @@ get_header(); ?>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                     <h2 class="title-section c-azul-claro">Quem <br>Somos</h2>
 
-                    <p class="text-content c-gray-5d text-justify">
+                    <p class="text-content c-gray-5d text-left">
                         Fundado em 1990, o Instituto de Ecologia Humana - IEH, nasce com o compromisso de coletivizar a compreensão da questão ambiental, entendendo que o processo de formação dos recursos humanos é um ato continuo e indissociável de uma prática que busca contribuir para uma sociedade mais humana. <a href="<?php echo get_site_url(); ?>/quem-somos" class="btn-saiba-mais"><span class="label-button">Saiba mais</span></a></p>
 
                     <ul class="list-unstyled list-quem-somos">
@@ -100,27 +100,35 @@ get_header(); ?>
                     <p class="subtext-title">Lorem ipsum dolor sit amet consectetur adipiscing elit, cubilia porta ridiculus inceptos sapien id pulvinar, mi eget placerat ornare potenti himenaeos. Vestibulum eleifend consequat urna dui inceptos conubia ullamcorper, fringilla purus sapien ligula fusce id, mi aliquam eget etiam nulla efficitur. dolor sit amet consectetur adipiscing elit, cubilia porta ridiculus inceptos sapien id pulvinar, mi eget placerat ornare potenti himenaeos.</p>
 
                     <div class="form-group text-right">
-                        <button class="btn-call-modal btn-white" data-target="#modal-fale-conosco" data-toogle="modal">Fale Conosco</button>
+
+                        <button type="button" class="btn-call-modal btn-white" data-target="#modal-fale-conosco" data-toggle="modal">Fale Conosco</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="modal modal-fale-conosco" id="modal-fale-conosco">
-        <div class="modal-dialog">
+    <div class="modal fade modal-fale-conosco" id="modal-fale-conosco" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <h3 class="title-minor">Fale Conosco</h3>
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h4 class="modal-title" id="modalLabel">Fale Conosco</h4>
 
-                <p class="text-modal text-justify">Sinta-se a vontade para nos mandar uma mensagem atráves do email
+                    <p class="text-modal text-justify">Sinta-se a vontade para nos mandar uma mensagem atráves do email
                     <a href="mailto:comunicacao@ieh.org.br">comunicacao@ieh.org.br</a>, ou preencha o formulário abaixo com os seus dados e te retornaremos assim que possível.</p>
 
-                <?php echo do_shortcode('[contact-form-7 id="31" title="Fale Conosco"]'); ?>
+                    <?php echo do_shortcode('[contact-form-7 id="31" title="Fale Conosco"]'); ?>
+                </div>
             </div>
         </div>
     </div>
 
-    <section id="home-bg-img-parallax-2" class="fullscreen-bg-content"></section>
+    <section id="home-bg-img-parallax-2" class="fullscreen-bg-content img-responsive"></section>
 
     <section id="home-ieh-em-numeros" class="bg-listrado-transversal">
         <div class="container content-block">

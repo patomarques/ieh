@@ -132,3 +132,20 @@
     &:after{ transform: rotate(180deg); }
   }
 }
+
+.btn-enviar-contato{
+  background-color: $azul-claro !important;
+  color: $branco !important;
+  border-radius: 25px !important;
+  font-size: 14px !important;
+  margin: 25px 0 0 auto !important;
+  border: $azul-claro 2px solid !important;
+  padding: 10px 25px !important;
+  display: block !important;
+
+  @extend .transition;
+
+  &:hover{
+    border: $branco 2px solid !important;
+  }
+}

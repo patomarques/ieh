@@ -25,6 +25,7 @@
 <?php
     global $post;
     $post_slug  = $post->post_name;
+    $post_id    = $post->ID;
 ?>
 
 <header class="header-home">
@@ -41,19 +42,18 @@
             <?php endif; ?>
 
             <?php
-            wp_nav_menu(array(
-                'theme_location' => 'primary',
-                'container' => 'div',
-                'container_id' => 'main-nav',
-                'container_class' => 'collapse navbar-collapse justify-content-end',
-                'menu_id' => false,
-                'menu_class' => 'navbar-nav',
-                'depth' => 3,
-                'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
-                'walker' => new wp_bootstrap_navwalker()
-            ));
+                wp_nav_menu(array(
+                    'theme_location' => 'primary',
+                    'container' => 'div',
+                    'container_id' => 'main-nav',
+                    'container_class' => 'collapse navbar-collapse justify-content-end',
+                    'menu_id' => false,
+                    'menu_class' => 'navbar-nav',
+                    'depth' => 3,
+                    'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+                    'walker' => new wp_bootstrap_navwalker()
+                ));
             ?>
-
         </nav>
     </div>
 </header>
@@ -107,8 +107,46 @@
     </nav>
 </aside>
 
-<section id="background-img-home" class="content-full-background parallax-effect <?php if (is_front_page() ){ echo "bg-home-parallax"; } ?>" style="background-image: url(<?php echo get_template_directory_uri() . "/custom/img/bg/bg-ieh.png";  ?>)">
+<?php
+    $imagemUrl = "";
+    if (is_front_page() ){
+        $imagemUrl = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'full')[0];
+    }else{
+        $imagemUrl =  get_the_post_thumbnail_url(get_the_ID(), 'full');
+        //print_r( wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()))); //get_the_post_thumbnail_url(get_the_ID());
+        //$url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()),'full' );
+
+         //Here you can manage your image size like medium,thumbnail or custom size
+//echo $url[0];
+    }
+    //echo get_the_ID();
+    //$img = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()));
+  //  print($img);
+    //echo get_the_title();
+
+/*if(have_posts()) :
+    while (have_posts()) : the_post();
+        the_post_thumbnail();
+    endwhile;
+endif;*/
+?>
+<!---->
+<?php
+//echo get_queried_object_id();
+//while ( have_posts() ) : the_post();
+//get_the_post_thumbnail(get_the_ID());
+//echo get_the_post_thumbnail();
+//endwhile; // End of the loop.
+//?>
+
+
+<section id="background-img-home" class="content-full-background parallax-effect bg-home-parallax" style="background-image: url(<?php echo $imagemUrl; ?>)">
     <div class="home-begin-content">
+        <?php
+            if (is_front_page() ){
+                echo wp_get_attachment_image(get_field('imagem_destaque')['id'], 'full', '', array('class' => 'content-full-background parallax-effect bg-home-parallax'));
+            }
+        ?>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">
@@ -183,7 +221,7 @@
                             <a href="<?php echo get_site_url(); ?>/o-que-fazemos/" class="link-menu <?php if($post_slug == 'o-que-fazemos'){ echo "menu-actived"; } ?>">O QUE <br>FAZEMOS</a>
                         </li>
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/nossos-projetos/" class="link-menu <?php if($post_slug == 'nossos-projetos'){ echo "menu-actived"; } ?>">NOSSOS <br>PROJETOS</a>
+                            <a href="<?php echo get_site_url(); ?>/projetos/" class="link-menu <?php if($post_slug == 'projetos'){ echo "menu-actived"; } ?>">NOSSOS <br>PROJETOS</a>
                         </li>
                         <li>
                             <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-apoie-nossos-projetos" class="link-menu">APOIE <br>NOSSOS <br>PROJETOS</a>
@@ -201,6 +239,4 @@
     </div>
 
 </section>
-<!--        <a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a>-->
-
 <?//php endif; ?>

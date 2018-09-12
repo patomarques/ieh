@@ -69,7 +69,7 @@ a{
 
 #home-bg-img-parallax-2{
   background-image: url("../img/bg/bg-img2.png");
-  height: 60%;
+  height: 600px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -198,20 +198,14 @@ SquareGrid{
   }
 }
 
-.modal-fale-conosco{
-  font-family: $ff-montserrat;
-
-  .title-minor{
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  .modal-content{
-    padding: 20px 40px;
-  }
-}
 
 .modal-content{
-  border-radius: 0 !important;
+  .input-text,
+  .input-textarea{
+    width: 100% !important;
+    border-radius: 10px !important;
+    color: $preto !important;
+  }
 }
 
 label{
@@ -321,7 +315,7 @@ label{
     position: absolute;
     left: 0;
     top: 0;
-    margin: -80px 0 0 -10px;
+    margin: -100px 0 0 0;
     overflow: hidden;
   }
 
@@ -331,7 +325,7 @@ label{
     position: absolute;
     right: 0;
     bottom: 0;
-    margin: 0 -30px 20px 0;
+    margin: 0 0 -30px 0;
     overflow: hidden;
     @include rotate(180deg);
   }
@@ -470,6 +464,7 @@ label{
 .content-sobre-nos{
   background-color: $cinza-bg;
   color: $cinza-5d;
+  padding-bottom: 80px;
 
   .title-sobre-nos{
     padding-top: 80px;
@@ -494,6 +489,7 @@ label{
       p{
         font-size: 24px;
         line-height: 34px;
+        margin-bottom: 1em;
       }
 
     }
@@ -553,7 +549,7 @@ label{
     padding-left: 30px;
 
     p{
-      padding-bottom: 50px;
+      padding-bottom: 0;
       margin-bottom: 0;
     }
   }
@@ -620,6 +616,7 @@ label{
 }
 
 .page-o-que-fazemos{
+  padding-bottom: 60px !important;
   .title-section{
     font-size: 60px;
     letter-spacing: 5px;
@@ -640,7 +637,7 @@ label{
   }
 
   p{
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
@@ -652,4 +649,102 @@ label{
       padding-bottom: 15px;
     }
   }
+}
+
+.wpcf7-validation-errors{
+  background-color: $red-error !important;
+  color: $branco;
+  padding: 20px 10px !important;
+  margin: -25px 0  0 0 !important;
+  border: none !important;
+  text-align: center;
+  position: relative;
+  border-radius: 15px;
+}
+
+.imagem-canto{
+  position: relative;
+
+  img{
+    position: absolute;
+  }
+}
+
+.list-objetivos{
+  li{
+    font-size: 20px;
+    margin-bottom: 10px;
+
+    @extend .li-blue-square;
+  }
+}
+
+.li-blue-square{
+  list-style: none;
+  position: relative;
+  &:before{
+    content: '';
+    background-color: #41b6d6;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    top: 0;
+    left: 0;
+      position: absolute;
+    margin: 14px 0 0 -26px;
+    border: none;
+  }
+}
+
+.o-que-fazemos-bloco-imagens{
+  padding: 80px 0;
+  width: 100%;
+  line-height: 0;
+
+  -webkit-column-count: 2;
+  -webkit-column-gap:   0px;
+  -moz-column-count:    2;
+  -moz-column-gap:      0px;
+  column-count:         2;
+  column-gap:           0px;
+
+  .column-img-1,
+  .column-img-2{
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+.box-proporcional-img{
+  width: 100%;
+  //padding-right: 8.333333%;
+
+  img{
+    width: 100%;
+  }
+}
+
+/**
+** @mediaqueries (responsive)
+ */
+@media (min-width: $screen-xs-min) {
+  #home-bg-img-parallax-2{
+    height: 100px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  #home-bg-img-parallax-2{
+    height: 300px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  #home-bg-img-parallax-2{
+    height: 600px;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+
 }

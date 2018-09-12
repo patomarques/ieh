@@ -58,13 +58,12 @@ get_header();
     </section>
 
     <script type="text/javascript">
-        imagem_bg = <?php echo json_encode(get_the_post_thumbnail_url()); ?>;
         text_home = <?php echo json_encode(get_the_title()); ?>;
 
-        //set image header background (DOMjs)
-        window.onload = function(){
-            setImagemHeaderBackground(imagem_bg, 'Projetos', "page-nossos-projetos");
-        }
+        jQuery(window).load(function($) {
+            document.getElementById('text-home').textContent = text_home;
+            document.getElementById('box-text-home').classList.add('content-text-bottom');
+        });
 
     </script>
 
