@@ -3,10 +3,7 @@
 get_header();
 ?>
 
-    <div class="lines-fullsize bg-cinza-claro"></div>
-    <div class="lines-fullsize bg-azul-claro"></div>
-
-    <section id="page-content" class="page-content">
+    <section id="page-content" class="page-content page-nossos-projetos">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
@@ -30,12 +27,22 @@ get_header();
             );
 
             $nossos_projetos = new WP_Query($args_projetos);
+
+//            echo "<pre>";
+//            var_dump($nossos_projetos);
+//            echo "</pre>";
+//            die();
             ?>
 
             <?php while ( $nossos_projetos->have_posts() ) : $nossos_projetos->the_post();
 
-                $image = get_field('icone');
+                $image = get_field('icone', get_the_ID());
+                $imagem = get_field('icon', get_the_ID());
                 $slugProject = get_post_field( 'post_name', get_post() );
+//                echo "<pre>";
+//                var_dump($imagem, $image, $slugProject, get_the_ID(), $icon);
+//                echo "</pre>";
+                //die();
             ?>
                 <div class="row row-nossos-projetos" id="<?php echo $slugProject; ?>">
                     <div class="col-xs-12 col-sm-12 col-md-4 text-center">
@@ -45,8 +52,6 @@ get_header();
                     <div class="col-xs-12 col-sm-12 col-md-7">
                         <p class="list-subtitle c-azul-claro"><?php echo get_the_title(); ?></p>
                         <?php echo get_the_content(); ?>
-
-
                     </div>
                     <div class="col-sm-12 text-right">
                         <a href="#back-to-top" class="back-to-top" title="Ir para o topo"><i class="fa fa-angle-up text-right"></i></a>

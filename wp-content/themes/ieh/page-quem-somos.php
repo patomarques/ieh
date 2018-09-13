@@ -1,10 +1,9 @@
 <?php get_header(); ?>
 
-    <div class="lines-fullsize bg-cinza-claro"></div>
-    <div class="lines-fullsize bg-azul-claro"></div>
+
 
 <div id="page-content" class="page-quem-somos page-content">
-    <div class="container">
+    <section class="container" id='quem-somos'>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                 <h1 class="title-default c-verde-lodo">Quem<br>Somos</h1>
@@ -21,7 +20,7 @@
                 <?php endwhile; // End of the loop.?>
             </div>
         </div>
-    </div>
+    </section>
     <div class="content-full">
         <div class="coluna-direita">
             <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos-interna.png" alt="" class="img-responsive">
@@ -36,7 +35,7 @@
 
     <div class="lines-fullsize bg-azul-claro line-mt mb-0"></div>
 
-    <div class="content-full content-sobre-nos">
+    <section class="content-full content-sobre-nos" id="sobre-nos">
         <div class="row">
             <div class="col-sm-12 col-sm-12 col-md-5 text-right">
                 <h2 class="title-dafault title-sobre-nos">Sobre<br> Nós</h2>
@@ -82,9 +81,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="full-content bg-azul-claro content-a-coordenacao section-content">
+    <section class="full-content bg-azul-claro content-a-coordenacao section-content" id="a-coordenacao">
         <div class="row">
             <div class="col-sm-12">
                 <h2 class="title-section c-white">A Coordenação</h2>
@@ -128,9 +127,9 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
 
-    <section class="bg-stripped-transversal section-missao section-content" >
+    <section class="bg-stripped-transversal section-missao section-content" id="missao" >
         <div class="row">
             <div class="col-sm-12 col-md-5 text-right">
                 <h3 class="title-section c-white">MISSÃO</h3>
@@ -151,7 +150,7 @@
         </div>
     </section>
 
-    <section class="bg-dotted-green section-transparencia section-content">
+    <section class="bg-dotted-green section-transparencia section-content" id="transparencia">
         <div class="row">
             <div class="col-sm-12 col-md-5 text-right">
                 <h3 class="title-section c-white">Transparência</h3>
@@ -176,11 +175,28 @@
     <script type="text/javascript">
         imagem_bg = '';
         text_home = <?php echo json_encode(get_the_title()); ?>;
+        document.getElementById('text-home').textContent = text_home;
+        document.getElementById('background-img-home').classList.add("page-quem-somos");
+        document.getElementById('box-text-home').classList.add('content-text-bottom');
 
-        //set image header background (DOMjs)
-        window.onload = function(){
-            setImagemHeaderBackground(imagem_bg, text_home, "page-quem-somos");
-        }
+        (function($) {
+            $(window).load(function() {
+                var urlToScroll = window.location.href;
+                urlToScroll = urlToScroll.split('/#');
+
+                if(urlToScroll.length > 1){
+                    var scrollToSection = urlToScroll[1];
+
+                    $('html, body').animate({
+                        scrollTop: $("#" + scrollToSection).offset().top - 50
+                    }, 600);
+                    return false;
+                }
+            });
+
+        })( jQuery );
+
     </script>
+
 
 <?php get_footer(); ?>

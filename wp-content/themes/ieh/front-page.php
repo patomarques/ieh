@@ -1,9 +1,6 @@
 <?php
 get_header(); ?>
 
-    <div class="lines-fullsize bg-cinza-claro"></div>
-    <div class="lines-fullsize bg-azul-claro"></div>
-
     <section id="home-quem-somos" class="content-section">
         <div class="container">
             <div class="row">
@@ -11,11 +8,11 @@ get_header(); ?>
                     <h2 class="title-section c-azul-claro">Quem <br>Somos</h2>
 
                     <p class="text-content c-gray-5d text-left">
-                        Fundado em 1990, o Instituto de Ecologia Humana - IEH, nasce com o compromisso de coletivizar a compreensão da questão ambiental, entendendo que o processo de formação dos recursos humanos é um ato continuo e indissociável de uma prática que busca contribuir para uma sociedade mais humana. <a href="<?php echo get_site_url(); ?>/quem-somos" class="btn-saiba-mais"><span class="label-button">Saiba mais</span></a></p>
+                        Fundado em 1990, o Instituto de Ecologia Humana - IEH, nasce com o compromisso de coletivizar a compreensão da questão ambiental, entendendo que o processo de formação dos recursos humanos é um ato continuo e indissociável de uma prática que busca contribuir para uma sociedade mais humana. <a href="<?php echo get_site_url(); ?>/quem-somos#quem-somos" class="btn-saiba-mais"><span class="label-button">Saiba mais</span></a></p>
 
                     <ul class="list-unstyled list-quem-somos">
                         <li>
-                            <a href="#" class="box-content-quem-somos">
+                            <a href="<?php echo get_site_url(); ?>/quem-somos#sobre-nos" class="box-content-quem-somos">
                                 <div class="box-info">
                                     <span class="text-subtitle"><button class="button-plus"></button> Sobre Nós</span>
                                     <div class="arrow-down"></div>
@@ -25,7 +22,7 @@ get_header(); ?>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="box-content-quem-somos">
+                            <a href="<?php echo get_site_url(); ?>/quem-somos#a-coordenacao" class="box-content-quem-somos">
                                 <div class="box-info">
                                     <span class="text-subtitle"><button class="button-plus"></button> A Coordenação</span>
                                     <div class="arrow-down"></div>
@@ -34,7 +31,7 @@ get_header(); ?>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="box-content-quem-somos">
+                            <a href="<?php echo get_site_url(); ?>/quem-somos#missao" class="box-content-quem-somos">
                                 <div class="box-info">
                                     <span class="text-subtitle"><button class="button-plus"></button> Missão</span>
                                     <div class="arrow-down"></div>
@@ -43,7 +40,7 @@ get_header(); ?>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="box-content-quem-somos">
+                            <a href="<?php echo get_site_url(); ?>/quem-somos#transparencia" class="box-content-quem-somos">
                                 <div class="box-info">
                                     <span class="text-subtitle"><button class="button-plus"></button> Transparência</span>
                                     <div class="arrow-down"></div>
