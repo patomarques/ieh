@@ -527,8 +527,35 @@ header  .text-content{
     .box-text-home {
       margin-top: 50px;
       .text-home {
-        font-size: 3em;
+        font-size: 4em;
       }
+    }
+  }
+
+  .page-o-que-fazemos{
+    .title-section{
+      font-size: 40px;
+      font-weight: 700;
+      text-shadow: 1px 1px $preto;
+    }
+  }
+
+  #content-text-oq-fazemos{
+    p{
+      font-size: 22px;
+      text-align: right;
+    }
+  }
+
+  .list-objetivos{
+    li{
+      text-align: left;
+    }
+  }
+
+  .bloco-texto-apos-imagens{
+    p{
+      text-align: center;
     }
   }
 
@@ -552,13 +579,21 @@ header  .text-content{
 
   #home-o-que-fazemos{
     .text-content{
-      font-size: 22px;
+      font-size: 18px;
     }
   }
 
 
-  .item .square-content .text-box {
-    font-size: 22px;
+  .item  {
+    .square-content{
+      .text-box{
+        font-size: 16px;
+        line-height: 22px;
+      }
+      .img-icon{
+        margin: 0 auto;
+      }
+    }
   }
 
   #home-ieh-em-numeros {
@@ -591,7 +626,17 @@ header  .text-content{
 
   #home-apoie-nossos-projetos{
     .title-section{
-      font-size: 44px;
+      font-size: 40px;
+    }
+
+    .subtext-title{
+      font-size: 20px;
+      text-align: left;
+    }
+
+    .btn-white{
+      display: block;
+      text-align: center;
     }
   }
 
@@ -636,6 +681,23 @@ header  .text-content{
         }
       }
     }
+
+    .text-area-atuacao{
+      font-size: 18px;
+    }
+  }
+
+  .slick-dots{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
+
+  .btn-saiba-mais{
+    margin: 10px 0;
+    display: block;
   }
 }
 
@@ -673,14 +735,14 @@ header  .text-content{
   .item{
     .square-content{
       .img-icon{
-        margin: 0 auto;
+        margin: 0 auto 10px;
       }
       .text-box{
-        font-size: 16px;
+        font-size: 20px;
       }
     }
-
   }
+
 
   #home-o-que-fazemos{
     .text-content{
@@ -690,6 +752,24 @@ header  .text-content{
     }
   }
 
+  #content-text-oq-fazemos{
+    p{
+      text-align: justify;
+      font-size: 24px;
+    }
+  }
+
+  .bloco-texto-apos-imagens{
+    p{
+      text-align: justify;
+    }
+  }
+
+  .slick-slider{
+    &:after{
+      margin:0 -5px -50px 0;
+    }
+  }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -716,6 +796,12 @@ header  .text-content{
   .slick-slider{
     &:after{
       margin: 0 0 -30px 0;
+    }
+  }
+
+  .list-objetivos{
+    li{
+      text-align: justify;
     }
   }
 

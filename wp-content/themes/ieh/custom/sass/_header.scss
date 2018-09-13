@@ -48,9 +48,8 @@
 
   li{
     text-transform: uppercase;
-    font-size: 2em;
     position: relative;
-    margin: 0 20px;
+
     text-align: center;
     line-height: 22px;
     vertical-align: middle;
@@ -548,10 +547,28 @@ nav {
 }
 
 @media (min-width: $screen-md-min) {
+  .navbar-nav-home-menu {
+    li {
+      margin: 0 14px;
+      a{
+        font-size: 16px;
+      }
+    }
 
+  }
 }
 
 @media (min-width: $screen-lg-min) {
+  .navbar-nav-home-menu{
+    li{
+
+      margin: 0 20px;
+      a{
+        font-size: 22px;
+        line-height: 24px;
+      }
+    }
+  }
 
 }
 

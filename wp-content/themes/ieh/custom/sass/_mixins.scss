@@ -1,3 +1,12 @@
+@mixin count-gap($count, $gap){
+  -webkit-column-count: $count;
+  -webkit-column-gap:   $gap;
+  -moz-column-count:    $count;
+  -moz-column-gap:      $gap;
+  column-count:         $count;
+  column-gap:           $gap;
+}
+
 @mixin border-radius($degrees){
   border-radius: $degrees;
   -moz-border-radius: $degrees;

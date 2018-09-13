@@ -59,25 +59,32 @@ jQuery(document).ready(function($){
     }
 });
 
-//Remove text 'Maps Html' from Home Maps
-jQuery(window).load(function($) {
-    jQuery('a:contains("HTML5 Maps for WordPress")').remove();
+(function($) {
 
-    // Select a div with the id 'mydiv'
-    var mydiv = document.getElementById('content-text-oq-fazemos');
+    $(window).load(function() {
+        //Remove text 'Maps Html' from Home Maps
+        jQuery('a:contains("HTML5 Maps for WordPress")').remove();
 
-    // Get all offsets
-    var offset = mydiv.getBoundingClientRect();
+        if($('.page-o-que-fazemos').length > 0 && $(window).width() > 800){
+            // Select a div with the id 'mydiv'
+            var divReference = document.getElementById('content-text-oq-fazemos');
 
-    // Offset of the div from the right side of the viewport
-    var offsetRight = document.documentElement.clientWidth - offset.right;
+            // Get all offsets
+            var offset = divReference.getBoundingClientRect();
 
-    // Offset of the div from the left side of the viewport
-    var offsetLeft = offset.left;
+            // Offset of the div from the right side of the viewport
+            var offsetRight = document.documentElement.clientWidth - offset.right;
 
-    alert("Right Offset: " + offsetRight);
-    alert("Left Offset: " + offsetLeft);
-});
+            // Offset of the div from the left side of the viewport
+            var offsetLeft = offset.left;
+
+            //alert("Right Offset: " + offsetRight);
+            //alert("Left Offset: " + offsetLeft);
+            $('.box-proporcional-img').css('padding-right', offsetRight);
+        }
+
+    });
+})( jQuery );
 
 //set image header background (DOMjs)
 function setImagemHeaderBackground(imagem_bg, text_home, pageClassName){
@@ -85,4 +92,8 @@ function setImagemHeaderBackground(imagem_bg, text_home, pageClassName){
     document.getElementById('text-home').textContent = text_home;
     document.getElementById('background-img-home').classList.add(pageClassName);
     document.getElementById('box-text-home').classList.add('content-text-bottom');
+}
+
+function whynot(){
+    alert('cxll');
 }

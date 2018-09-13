@@ -50,7 +50,8 @@
   position: absolute;
   font-size: 14px;
   margin: 4px 0 0 10px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  max-width: 150px; }
   .btn-saiba-mais .label-button {
     border-left: 2px solid #41b6d6;
     padding: 8px; }
@@ -312,9 +313,7 @@
   display: block; }
   .navbar-nav-home-menu li {
     text-transform: uppercase;
-    font-size: 2em;
     position: relative;
-    margin: 0 20px;
     text-align: center;
     line-height: 22px;
     vertical-align: middle;
@@ -663,6 +662,19 @@ nav {
         line-height: 40px; }
   aside.open .switch-chose .lang {
     margin-bottom: 10px !important; } }
+
+@media (min-width: 992px) {
+  .navbar-nav-home-menu li {
+    margin: 0 14px; }
+    .navbar-nav-home-menu li a {
+      font-size: 16px; } }
+
+@media (min-width: 1200px) {
+  .navbar-nav-home-menu li {
+    margin: 0 20px; }
+    .navbar-nav-home-menu li a {
+      font-size: 22px;
+      line-height: 24px; } }
 
 body,
 html {
@@ -1041,37 +1053,22 @@ label {
 .section-content .content-text {
   font-size: 26px;
   color: #ffffff; }
+  .section-content .content-text p {
+    margin-bottom: 50px; }
   .section-content .content-text h1, .section-content .content-text h2, .section-content .content-text h3, .section-content .content-text h4, .section-content .content-text h5, .section-content .content-text h6 {
     color: #ffffff; }
   .section-content .content-text h3 {
     font-size: 30px;
     margin: 0;
-    padding: 0 0 20px 0;
+    padding: 20px 0;
     font-weight: 700; }
-  .section-content .content-text h4, .section-content .content-text h5 {
+  .section-content .content-text h5 {
+    font-size: 22px;
+    padding-bottom: 20px;
+    padding-top: 20px; }
+  .section-content .content-text h4 {
     font-size: 30px;
-    padding-bottom: 5px;
-    padding-top: 80px; }
-
-.section-missao .title-section {
-  padding: 80px 0 0 0;
-  font-size: 60px;
-  font-weight: 400; }
-
-#page-content.page-quem-somos {
-  padding-bottom: 0 !important; }
-
-.section-transparencia {
-  padding-bottom: 80px; }
-  .section-transparencia .title-section {
-    margin: 120px 0 80px 80px;
-    font-size: 63px;
-    letter-spacing: 12px;
-    font-weight: 500; }
-  .section-transparencia h4 {
-    padding-top: 40px; }
-  .section-transparencia .content-text-block-3 {
-    line-height: 42px; }
+    padding: 20px 0; }
 
 .bg-dotted-green {
   background-color: #057261;
@@ -1100,6 +1097,9 @@ label {
       padding: 0 5px; }
   .page-o-que-fazemos p {
     font-size: 24px; }
+
+.page-quem-somos {
+  padding: 0; }
 
 #page-quem-somos .content-text h5 {
   padding-top: 30px !important;
@@ -1143,19 +1143,22 @@ label {
   padding: 80px 0;
   width: 100%;
   line-height: 0;
-  -webkit-column-count: 2;
+  overflow: hidden;
+  -webkit-column-count: 1;
   -webkit-column-gap: 0px;
-  -moz-column-count: 2;
+  -moz-column-count: 1;
   -moz-column-gap: 0px;
-  column-count: 2;
+  column-count: 1;
   column-gap: 0px; }
   .o-que-fazemos-bloco-imagens .column-img-1,
   .o-que-fazemos-bloco-imagens .column-img-2 {
     width: 100% !important;
-    height: auto !important; }
+    height: auto !important;
+    max-height: 540px; }
 
 .box-proporcional-img {
-  width: 100%; }
+  width: 100%;
+  margin: 50px 0; }
   .box-proporcional-img img {
     width: 100%; }
 
@@ -1164,15 +1167,36 @@ label {
  */
 @media (min-width: 320px) {
   #home-bg-img-parallax-2 {
-    height: 100px; } }
+    height: 150px; }
+  .o-que-fazemos-bloco-imagens {
+    -webkit-column-count: 1;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 1;
+    -moz-column-gap: 0px;
+    column-count: 1;
+    column-gap: 0px; } }
 
 @media (min-width: 768px) {
   #home-bg-img-parallax-2 {
-    height: 300px; } }
+    height: 300px; }
+  .o-que-fazemos-bloco-imagens {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 2;
+    -moz-column-gap: 0px;
+    column-count: 2;
+    column-gap: 0px; } }
 
 @media (min-width: 992px) {
   #home-bg-img-parallax-2 {
-    height: 600px; } }
+    height: 600px; }
+  .o-que-fazemos-bloco-imagens {
+    -webkit-column-count: 2;
+    -webkit-column-gap: 0px;
+    -moz-column-count: 2;
+    -moz-column-gap: 0px;
+    column-count: 2;
+    column-gap: 0px; } }
 
 .home .home-begin-content .box-text-home {
   top: 50%;
@@ -1518,7 +1542,18 @@ label {
   .home-begin-content .box-text-home {
     margin-top: 50px; }
     .home-begin-content .box-text-home .text-home {
-      font-size: 3em; }
+      font-size: 4em; }
+  .page-o-que-fazemos .title-section {
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 1px 1px #000000; }
+  #content-text-oq-fazemos p {
+    font-size: 22px;
+    text-align: right; }
+  .list-objetivos li {
+    text-align: left; }
+  .bloco-texto-apos-imagens p {
+    text-align: center; }
   #home-quem-somos .btn-saiba-mais {
     display: inline-block;
     position: relative; }
@@ -1529,9 +1564,12 @@ label {
     padding-bottom: 70%;
     margin: 5%; }
   #home-o-que-fazemos .text-content {
-    font-size: 22px; }
+    font-size: 18px; }
   .item .square-content .text-box {
-    font-size: 22px; }
+    font-size: 16px;
+    line-height: 22px; }
+  .item .square-content .img-icon {
+    margin: 0 auto; }
   #home-ieh-em-numeros .list-ieh-numeros li .fa-plus {
     margin: -25px 0 0 -5px;
     position: absolute; }
@@ -1544,7 +1582,13 @@ label {
     padding: 0 30px 30px;
     max-width: 100%; }
   #home-apoie-nossos-projetos .title-section {
-    font-size: 44px; }
+    font-size: 40px; }
+  #home-apoie-nossos-projetos .subtext-title {
+    font-size: 20px;
+    text-align: left; }
+  #home-apoie-nossos-projetos .btn-white {
+    display: block;
+    text-align: center; }
   .slick-slider:after {
     margin: 0 -5px 25px 0; }
   #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .box-numeros .numero {
@@ -1554,7 +1598,18 @@ label {
   #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .box-numeros .numero {
     font-size: 60px; }
   #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .box-numeros {
-    margin-left: 0; } }
+    margin-left: 0; }
+  #home-ieh-em-numeros .text-area-atuacao {
+    font-size: 18px; }
+  .slick-dots {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    position: relative; }
+  .btn-saiba-mais {
+    margin: 10px 0;
+    display: block; } }
 
 @media (min-width: 768px) {
   .icon-arrow-left {
@@ -1574,13 +1629,20 @@ label {
   .home-begin-content .box-text-home .text-home {
     font-size: 5em; }
   .item .square-content .img-icon {
-    margin: 0 auto; }
+    margin: 0 auto 10px; }
   .item .square-content .text-box {
-    font-size: 16px; }
+    font-size: 20px; }
   #home-o-que-fazemos .text-content {
     font-size: 28px;
     letter-spacing: 0;
-    word-spacing: 0; } }
+    word-spacing: 0; }
+  #content-text-oq-fazemos p {
+    text-align: justify;
+    font-size: 24px; }
+  .bloco-texto-apos-imagens p {
+    text-align: justify; }
+  .slick-slider:after {
+    margin: 0 -5px -50px 0; } }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -1593,7 +1655,9 @@ label {
   .icon-arrow-right {
     margin: 0 -5% 0 -20%; }
   .slick-slider:after {
-    margin: 0 0 -30px 0; } }
+    margin: 0 0 -30px 0; }
+  .list-objetivos li {
+    text-align: justify; } }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
@@ -1653,6 +1717,118 @@ footer {
 .list-info-contact {
   font-family: "Montserrat", sans-serif;
   font-size: 16px; }
+
+/**
+** @mediaqueries (responsive)
+ */
+@media (min-width: 320px) {
+  .page-quem-somos .title-default {
+    margin-top: 80px;
+    font-size: 50px; }
+  .page-quem-somos .coluna-direita {
+    width: 100%;
+    margin-bottom: 20px; }
+  .page-quem-somos .coluna-esquerda {
+    display: block;
+    width: 100%;
+    /* margin-left: 50px; */
+    position: relative;
+    margin-top: 10px; }
+  .page-content {
+    font-size: 20px;
+    text-align: left; }
+  .block-left-image {
+    margin-bottom: 20px; }
+  .content-sobre-nos .block-right-text .content-text h4 {
+    line-height: 28px; }
+  .content-a-coordenacao .title-section {
+    padding: 0;
+    letter-spacing: 0;
+    font-size: 30px;
+    margin-left: 10px; }
+  .section-missao .title-section {
+    padding: 0;
+    text-align: left;
+    font-size: 40px;
+    margin-left: 10px; }
+  .section-transparencia .title-section {
+    margin: 30px auto;
+    font-size: 30px;
+    letter-spacing: 0;
+    font-weight: 500;
+    display: block;
+    position: relative;
+    text-align: center; }
+  .section-transparencia .content-text ul li {
+    font-size: 18px; } }
+
+@media (min-width: 768px) {
+  .page-quem-somos .coluna-direita {
+    width: 40%; }
+  .page-quem-somos .coluna-esquerda {
+    display: inline-block;
+    width: 49%;
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 10px; }
+    .page-quem-somos .coluna-esquerda .box-logo {
+      margin: 0;
+      width: 220px; }
+  .section-missao .title-section {
+    font-size: 80px;
+    margin-left: 40px; }
+  .section-missao .content-text {
+    text-align: left; }
+    .section-missao .content-text p {
+      font-size: 20px; }
+  .section-transparencia .title-section {
+    font-size: 50px;
+    margin-left: 20px; } }
+
+@media (min-width: 992px) {
+  .page-quem-somos .page-content-text {
+    text-align: justify; }
+  .page-quem-somos .content-text p {
+    text-align: justify; }
+  .page-quem-somos .content-a-coordenacao .title-section {
+    font-weight: 400;
+    font-size: 60px;
+    padding: 80px 0 0 80px;
+    letter-spacing: 8px; }
+  .page-quem-somos .section-missao .title-section {
+    padding: 80px 0 0 0;
+    font-size: 60px;
+    font-weight: 400; }
+  .page-quem-somos #page-content.page-quem-somos {
+    padding-bottom: 0 !important; }
+  .page-quem-somos .section-transparencia {
+    padding-bottom: 80px; }
+    .page-quem-somos .section-transparencia .title-section {
+      margin: 120px 0 80px 80px;
+      font-size: 63px;
+      letter-spacing: 12px;
+      font-weight: 500; }
+    .page-quem-somos .section-transparencia h4 {
+      padding-top: 40px; }
+    .page-quem-somos .section-transparencia .content-text-block-3 {
+      line-height: 42px; }
+    .page-quem-somos .section-transparencia .content-text ul li {
+      font-size: 22px; } }
+
+.section-missao .content-text p {
+  font-size: 20px;
+  line-height: 34px; }
+
+/**
+** @mediaqueries (responsive)
+ */
+@media (min-width: 320px) {
+  .page-nossos-projetos .title-default {
+    font-size: 46px;
+    margin-top: 100px; }
+  .page-nossos-projetos .list-subtitle {
+    font-size: 40px;
+    letter-spacing: 0; } }
 
 /**
 ** @mediaqueries (responsive)

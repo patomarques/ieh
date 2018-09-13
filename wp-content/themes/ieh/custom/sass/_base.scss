@@ -558,6 +558,10 @@ label{
     font-size: 26px;
     color: $branco;
 
+    p{
+      margin-bottom: 50px;
+    }
+
     h1,h2,h3,h4,h5,h6{
       color: $branco;
     }
@@ -565,44 +569,25 @@ label{
     h3{
       font-size: 30px;
       margin: 0;
-      padding: 0 0 20px 0;
+      padding: 20px 0;
       font-weight: 700;
     }
-    h4,h5{
+    h5{
+      font-size: 22px;
+      padding-bottom: 20px;
+      padding-top: 20px;
+    }
+
+    h4{
       font-size: 30px;
-      padding-bottom: 5px;
-      padding-top: 80px;
+      padding: 20px 0;
     }
   }
 }
 
-.section-missao{
-  .title-section{
-    padding:80px 0 0 0;
-    font-size: 60px;
-    font-weight: 400;
-  }
-}
 
-#page-content.page-quem-somos{
-  padding-bottom: 0 !important;
-}
 
-.section-transparencia{
-  padding-bottom: 80px;
-  .title-section{
-    margin: 120px 0 80px 80px;
-    font-size: 63px;
-    letter-spacing: 12px;
-    font-weight: 500;
-  }
-  h4{
-    padding-top: 40px;
-  }
-  .content-text-block-3{
-    line-height: 42px;
-  }
-}
+
 
 .bg-dotted-green{
   background-color: $verde-shu;
@@ -642,6 +627,9 @@ label{
 }
 
 
+.page-quem-somos{
+  padding: 0;
+}
 #page-quem-somos {
   .content-text{
     h5{
@@ -700,24 +688,21 @@ label{
   padding: 80px 0;
   width: 100%;
   line-height: 0;
-
-  -webkit-column-count: 2;
-  -webkit-column-gap:   0px;
-  -moz-column-count:    2;
-  -moz-column-gap:      0px;
-  column-count:         2;
-  column-gap:           0px;
+  overflow: hidden;
+  @include count-gap(1, 0px);
 
   .column-img-1,
   .column-img-2{
     width: 100% !important;
     height: auto !important;
+    max-height: 540px;
+
   }
 }
 
 .box-proporcional-img{
   width: 100%;
-  //padding-right: 8.333333%;
+  margin: 50px 0;
 
   img{
     width: 100%;
@@ -729,7 +714,10 @@ label{
  */
 @media (min-width: $screen-xs-min) {
   #home-bg-img-parallax-2{
-    height: 100px;
+    height: 150px;
+  }
+  .o-que-fazemos-bloco-imagens{
+    @include count-gap(1, 0px);
   }
 }
 
@@ -737,14 +725,25 @@ label{
   #home-bg-img-parallax-2{
     height: 300px;
   }
+  .o-que-fazemos-bloco-imagens{
+    @include count-gap(2, 0px);
+  }
 }
 
 @media (min-width: $screen-md-min) {
   #home-bg-img-parallax-2{
     height: 600px;
   }
+  .o-que-fazemos-bloco-imagens{
+      @include count-gap(2, 0px);
+  }
 }
 
 @media (min-width: $screen-lg-min) {
-
+  //.o-que-fazemos-bloco-imagens{
+  //  .column-img-1,
+  //  .column-img-2{
+  //    @include count-gap(2, 0px);
+  //  }
+  //}
 }
