@@ -86,7 +86,7 @@
 
     a{
       color: $branco;
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 700;
       font-family: $ff-montserrat;
       letter-spacing: 2px;
@@ -95,15 +95,6 @@
 
       @extend .transition;
 
-      //&:after{
-      //  content: '';
-      //  display: block;
-      //  width: 80px;
-      //  height: 2px;
-      //  background-color: transparent;
-      //  margin: 20px auto 0;
-      //}
-      
       &:hover{
         color: $azul-claro;
 
@@ -564,7 +555,7 @@ nav {
 
       margin: 0 20px;
       a{
-        font-size: 22px;
+        font-size: 19px;
         line-height: 24px;
       }
     }

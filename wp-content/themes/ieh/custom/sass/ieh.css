@@ -334,7 +334,7 @@
       display: none; }
     .navbar-nav-home-menu li a {
       color: #ffffff;
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 700;
       font-family: "Montserrat", sans-serif;
       letter-spacing: 2px;
@@ -673,7 +673,7 @@ nav {
   .navbar-nav-home-menu li {
     margin: 0 20px; }
     .navbar-nav-home-menu li a {
-      font-size: 22px;
+      font-size: 19px;
       line-height: 24px; } }
 
 body,
@@ -1155,6 +1155,9 @@ label {
     width: 100% !important;
     height: auto !important;
     max-height: 540px; }
+    .o-que-fazemos-bloco-imagens .column-img-1 img,
+    .o-que-fazemos-bloco-imagens .column-img-2 img {
+      width: 100%; }
 
 .box-proporcional-img {
   width: 100%;

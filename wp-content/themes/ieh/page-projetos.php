@@ -70,6 +70,23 @@ get_header();
             document.getElementById('box-text-home').classList.add('content-text-bottom');
         });
 
+        (function($) {
+            $(window).load(function() {
+                var urlToScroll = window.location.href;
+                urlToScroll = urlToScroll.split('/#');
+
+                if(urlToScroll.length > 1){
+                    var scrollToSection = urlToScroll[1];
+
+                    $('html, body').animate({
+                        scrollTop: $("#" + scrollToSection).offset().top - 140
+                    }, 600);
+                    return false;
+                }
+            });
+
+        })( jQuery );
+
     </script>
 
 <?php get_footer(); ?>

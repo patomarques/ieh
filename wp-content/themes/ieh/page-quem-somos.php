@@ -3,7 +3,8 @@
 
 
 <div id="page-content" class="page-quem-somos page-content">
-    <section class="container" id='quem-somos'>
+    <section class="container" id='quem-somos
+'>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                 <h1 class="title-default c-verde-lodo">Quem<br>Somos</h1>
