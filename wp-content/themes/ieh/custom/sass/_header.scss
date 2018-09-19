@@ -511,8 +511,8 @@ nav {
           padding: 5px 0;
           a {
             font-size: 2em;
-            letter-spacing: -3px;
-            word-spacing: 10px;
+            letter-spacing: 0;
+            word-spacing: 0;
             line-height: 40px;
           }
         }
@@ -534,6 +534,22 @@ nav {
 }
 
 @media (min-width: $screen-sm-min) {
+  aside {
+    nav {
+      ul {
+        margin-top: 80px;
+        li {
+          a {
+            font-size: 3em;
+            letter-spacing: 0;
+            word-spacing: 0;
+            line-height: 60px;
+          }
+        }
+      }
+
+    }
+  }
 
 }
 

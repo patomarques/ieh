@@ -58,12 +58,8 @@
 
     <script type="text/javascript">
         text_home = <?php echo json_encode(get_the_title()); ?>;
-
-        jQuery(window).load(function($) {
-            document.getElementById('text-home').textContent = text_home;
-            document.getElementById('box-text-home').classList.add('content-text-bottom');
-        });
-
+        document.getElementById('text-home').textContent = text_home;
+        document.getElementById('box-text-home').classList.add('content-text-bottom');
     </script>
 
 <?php get_footer(); ?>

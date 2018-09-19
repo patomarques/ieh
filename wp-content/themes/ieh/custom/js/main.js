@@ -53,10 +53,10 @@ jQuery(document).ready(function($){
     }
 
     //watch height size of screen and set backgroung img home
-    var windowHeight = window.innerHeight;
-    if($('#background-img-home').length > 0){
-        $('#background-img-home').css('height', windowHeight);
-    }
+    // var windowHeight = window.innerHeight;
+    // if($('#background-img-home').length > 0){
+    //     $('#background-img-home').css('height', windowHeight);
+    // }
 });
 
 (function($) {
@@ -84,16 +84,18 @@ jQuery(document).ready(function($){
         }
 
     });
+
+    if($('#background-img-home').length > 0){
+        var windowHeight = window.innerHeight;
+        $('#background-img-home').css('height', windowHeight);
+    }
 })( jQuery );
+
+
 
 //set image header background (DOMjs)
 function setImagemHeaderBackground(imagem_bg, text_home, pageClassName){
-    //document.getElementById('background-img-home').style.backgroundImage = 'url(' + imagem_bg + ')';
     document.getElementById('text-home').textContent = text_home;
     document.getElementById('background-img-home').classList.add(pageClassName);
     document.getElementById('box-text-home').classList.add('content-text-bottom');
-}
-
-function whynot(){
-    alert('cxll');
 }
