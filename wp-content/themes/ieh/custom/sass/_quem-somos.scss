@@ -1,0 +1,190 @@
+/**
+** @mediaqueries (responsive)
+ */
+@media (min-width: $screen-xs-min) {
+  .page-quem-somos{
+
+    .title-default{
+      margin-top: 80px;
+      font-size: 50px;
+    }
+    .coluna-direita{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .coluna-esquerda{
+      display: block;
+      width: 100%;
+      /* margin-left: 50px; */
+      position: relative;
+      margin-top: 10px;
+    }
+  }
+
+  .page-content{
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .block-left-image{
+    margin-bottom: 20px;
+  }
+
+  .content-sobre-nos .block-right-text .content-text h4{
+    line-height: 28px;
+  }
+
+  .content-a-coordenacao{
+   .title-section{
+     padding: 0;
+     letter-spacing: 0;
+     font-size: 30px;
+     margin-left: 10px;
+   }
+  }
+
+  .section-missao{
+    .title-section{
+      padding: 0;
+      text-align: left;
+      font-size: 40px;
+      margin-left: 10px;
+    }
+  }
+
+  .section-transparencia{
+    .title-section{
+      margin: 30px auto;
+      font-size: 30px;
+      letter-spacing: 0;
+      font-weight: 500;
+      display: block;
+      position: relative;
+      text-align: center;
+    }
+
+    .content-text{
+      ul{
+        li{
+          font-size: 18px;
+        }
+      }
+    }
+
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .page-quem-somos {
+    .coluna-direita{
+      width: 40%;
+    }
+    .coluna-esquerda {
+      display: inline-block;
+      width: 49%;
+      margin-left: 50px;
+      position: absolute;
+      margin-top: 10px;
+      .box-logo {
+        margin: 0;
+        width: 220px;
+      }
+    }
+  }
+
+  .section-missao{
+    .title-section{
+      font-size: 80px;
+      margin-left: 40px;
+    }
+
+    .content-text{
+      text-align: left;
+
+      p{
+        font-size: 20px;
+      }
+    }
+  }
+
+  .section-transparencia{
+    .title-section{
+      font-size: 50px;
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .page-quem-somos{
+    .page-content-text{
+      text-align: justify;
+    }
+
+    .content-text{
+      p{
+        text-align: justify;
+      }
+
+    }
+
+    .content-a-coordenacao{
+      .title-section{
+        font-weight: 400;
+        font-size: 60px;
+        padding: 80px 0 0 80px;
+        letter-spacing: 8px;
+      }
+    }
+
+    .section-missao{
+      .title-section{
+        padding:80px 0 0 0;
+        font-size: 60px;
+        font-weight: 400;
+      }
+    }
+
+    #page-content.page-quem-somos{
+      padding-bottom: 0 !important;
+    }
+
+    .section-transparencia{
+      padding-bottom: 80px;
+      .title-section{
+        margin: 120px 0 80px 80px;
+        font-size: 63px;
+        letter-spacing: 12px;
+        font-weight: 500;
+      }
+      h4{
+        padding-top: 40px;
+      }
+      .content-text-block-3{
+        line-height: 42px;
+      }
+
+      .content-text{
+        ul{
+          li{
+            font-size: 22px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+
+}
+
+.section-missao{
+  .content-text{
+    p{
+      font-size: 20px;
+      line-height: 34px;
+    }
+  }
+}

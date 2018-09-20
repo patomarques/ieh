@@ -1,0 +1,29 @@
+
+/**
+** @mediaqueries (responsive)
+ */
+@media (min-width: $screen-xs-min) {
+  .page-nossos-projetos{
+    .title-default{
+      font-size: 46px;
+      margin-top: 100px;
+    }
+
+    .list-subtitle{
+      font-size: 40px;
+      letter-spacing: 0;
+    }
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+
+}
+
+@media (min-width: $screen-md-min) {
+
+}
+
+@media (min-width: $screen-lg-min) {
+
+}
