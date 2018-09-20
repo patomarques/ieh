@@ -703,9 +703,17 @@ header  .text-content{
     margin: 10px 0;
     display: block;
   }
+
+  .box-content-quem-somos .box-info{
+    letter-spacing: 0;
+  }
 }
 
 @media (min-width: $screen-sm-min) {
+  .box-content-quem-somos .box-info{
+    letter-spacing: 3px;
+  }
+
   .icon-arrow-left{
     margin: 8% -2% 0;
   }
