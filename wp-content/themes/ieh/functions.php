@@ -358,21 +358,6 @@ function create_posttype() {
             'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
         )
     );
-
-    register_post_type( 'homepage_content',
-        // CPT Options
-        array(
-            'labels' => array(
-                'name' => __( 'Homepage Conteúdos' ),
-                'singular_name' => __( 'Homepage Conteúdo' )
-            ),
-            'description' => 'Conteúdo (imagens, textos...) da página inicial',
-            'public' => true,
-            'has_archive' => true,
-            'rewrite' => array('slug' => 'homepage-content'),
-            'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
-        )
-    );
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
