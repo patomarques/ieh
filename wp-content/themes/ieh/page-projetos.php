@@ -2,6 +2,11 @@
 /* Template Name: Nossos Projetos */
 get_header();
 ?>
+    <script type="text/javascript">
+        text_home = <?php echo json_encode(get_the_title()); ?>;
+        document.getElementById('text-home').textContent = text_home;
+        document.getElementById('box-text-home').classList.add('content-text-bottom');
+    </script>
 
     <section id="page-content" class="page-content page-nossos-projetos">
         <div class="container">
@@ -63,10 +68,6 @@ get_header();
     </section>
 
     <script type="text/javascript">
-        text_home = <?php echo json_encode(get_the_title()); ?>;
-        document.getElementById('text-home').textContent = text_home;
-        document.getElementById('box-text-home').classList.add('content-text-bottom');
-
         (function($) {
             $(window).load(function() {
                 var urlToScroll = window.location.href;
@@ -83,7 +84,6 @@ get_header();
             });
 
         })( jQuery );
-
     </script>
 
 <?php get_footer(); ?>

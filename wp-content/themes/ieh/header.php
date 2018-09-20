@@ -27,7 +27,16 @@
     $post_slug  = $post->post_name;
     $post_id    = $post->ID;
 ?>
-
+<script>
+    (function($) {
+    //set backgrond baner-im-home height
+    if($('#background-img-home').length > 0){
+        console.log('exist');
+        var windowHeight = window.innerHeight;
+        $('#background-img-home').css('height', windowHeight);
+    }
+    })( jQuery );
+</script>
 <header class="header-home">
     <div>
         <nav>
@@ -113,7 +122,6 @@
         $imagemUrl = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'full')[0];
     }else{
         $imagemUrl =  get_the_post_thumbnail_url(get_the_ID(), 'full');
-
     }
 ?>
 
