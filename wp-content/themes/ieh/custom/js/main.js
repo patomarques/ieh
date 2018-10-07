@@ -32,12 +32,9 @@ jQuery(document).ready(function($){
 
 
     $("a[href='#back-to-top']").click(function() {
-        // $("html, body").animate({ scrollTop: 0 }, "slow");
-        // return false;
         $('html, body').animate({
             scrollTop: $("#page-content").offset().top
         }, 600);
-
     });
 
     if($('.home').length == 0){
@@ -51,12 +48,6 @@ jQuery(document).ready(function($){
             return false;
         });
     }
-
-    //watch height size of screen and set backgroung img home
-    // var windowHeight = window.innerHeight;
-    // if($('#background-img-home').length > 0){
-    //     $('#background-img-home').css('height', windowHeight);
-    // }
 });
 
 (function($) {
@@ -78,11 +69,8 @@ jQuery(document).ready(function($){
             // Offset of the div from the left side of the viewport
             var offsetLeft = offset.left;
 
-            //alert("Right Offset: " + offsetRight);
-            //alert("Left Offset: " + offsetLeft);
             $('.box-proporcional-img').css('padding-right', offsetRight);
         }
-
     });
 
     if($('#background-img-home').length > 0){
@@ -90,8 +78,6 @@ jQuery(document).ready(function($){
         $('#background-img-home').css('height', windowHeight);
     }
 })( jQuery );
-
-
 
 //set image header background (DOMjs)
 function setImagemHeaderBackground(imagem_bg, text_home, pageClassName){
