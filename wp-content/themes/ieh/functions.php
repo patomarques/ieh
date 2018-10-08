@@ -368,3 +368,16 @@ add_filter( 'meta_content', 'convert_chars' );
 add_filter( 'meta_content', 'wpautop' );
 add_filter( 'meta_content', 'shortcode_unautop' );
 add_filter( 'meta_content', 'prepend_attachment' );
+
+add_action( 'wp_ajax_nopriv_language_set_session', 'language_set_session' );
+
+function language_set_session($lang) {
+    // Make your response and echo it.
+    if ( isset( $_SESSION['site_language'] ) ) {
+        $_SESSION['site_language'] = $lang;
+    } else {
+        $_SESSION['site_language'] = $lang;
+    }
+    // Don't forget to stop execution afterward.
+    return true;
+}

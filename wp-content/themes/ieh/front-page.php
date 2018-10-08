@@ -5,26 +5,40 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-                    <h2 class="title-section c-azul-claro">Quem <br>Somos</h2>
+                    <h2 class="title-section c-azul-claro" v-show="language == 'pt'">Quem <br>Somos</h2>
+                    <h2 class="title-section c-azul-claro" v-show="language == 'en'">About <br>Us</h2>
 
-                    <p class="text-content c-gray-5d text-left">
-                        Fundado em 1990, o Instituto de Ecologia Humana - IEH, nasce com o compromisso de coletivizar a compreensão da questão ambiental, entendendo que o processo de formação dos recursos humanos é um ato continuo e indissociável de uma prática que busca contribuir para uma sociedade mais humana. <a href="<?php echo get_site_url(); ?>/quem-somos#quem-somos" class="btn-saiba-mais"><span class="label-button">Saiba mais</span></a></p>
+                    <p class="text-content c-gray-5d text-left" v-show="language == 'pt'">
+                        <span class="text-content">Fundado em 1990, o Instituto de Ecologia Humana - IEH, nasce com o compromisso de coletivizar a compreensão da questão ambiental, entendendo que o processo de formação dos recursos humanos é um ato continuo e indissociável de uma prática que busca contribuir para uma sociedade mais humana.</span>
+                        <a href="<?php echo get_site_url(); ?>/quem-somos#quem-somos" class="btn-saiba-mais"><span class="label-button">Saiba mais</span></a>
+                    </p>
+                    <p class="text-content c-gray-5d text-left" v-show="language == 'en'">
+                        <span class="text-content">Founded in 1990, the Institute of Human Ecology - IEH, is born with the commitment to collectivize the understanding of the environmental issue, understanding that the process of training human resources is a continuous and inseparable act of a practice that seeks to contribute to a more humane society .</span>
+                        <a href="<?php echo get_site_url(); ?>/about-us#about-us" class="btn-saiba-mais"><span class="label-button">See more</span></a>
+                    </p>
 
                     <ul class="list-unstyled list-quem-somos">
                         <li>
                             <a href="<?php echo get_site_url(); ?>/quem-somos#sobre-nos" class="box-content-quem-somos">
                                 <div class="box-info">
-                                    <span class="text-subtitle"><button class="button-plus"></button> Sobre Nós</span>
+                                    <span class="text-subtitle">
+                                        <button class="button-plus"></button>
+                                        <span v-show="language == 'pt'">Sobre Nós</span>
+                                        <span v-show="language == 'en'">About Us</span>
+                                    </span>
                                     <div class="arrow-down"></div>
                                     <img src="<?php echo get_template_directory_uri(); ?>/custom/img/home-quem-somos/home-qs-1.jpg" alt="" class="img-bg-content">
-
                                 </div>
                             </a>
                         </li>
                         <li>
                             <a href="<?php echo get_site_url(); ?>/quem-somos#a-coordenacao" class="box-content-quem-somos">
                                 <div class="box-info">
-                                    <span class="text-subtitle"><button class="button-plus"></button> A Coordenação</span>
+                                    <span class="text-subtitle">
+                                        <button class="button-plus"></button>
+                                        <span v-show="language == 'pt'">A Coordenação</span>
+                                        <span v-show="language == 'en'">The Coordination</span>
+                                    </span>
                                     <div class="arrow-down"></div>
                                     <img src="<?php echo get_template_directory_uri(); ?>/custom/img/home-quem-somos/home-qs-2.jpg" alt="" class="img-bg-content">
                                 </div>
@@ -33,7 +47,11 @@ get_header(); ?>
                         <li>
                             <a href="<?php echo get_site_url(); ?>/quem-somos#missao" class="box-content-quem-somos">
                                 <div class="box-info">
-                                    <span class="text-subtitle"><button class="button-plus"></button> Missão</span>
+                                    <span class="text-subtitle">
+                                        <button class="button-plus"></button>
+                                        <span v-show="language == 'pt'">Missão</span>
+                                        <span v-show="language == 'en'">Mission</span>
+                                    </span>
                                     <div class="arrow-down"></div>
                                     <img src="<?php echo get_template_directory_uri(); ?>/custom/img/home-quem-somos/home-qs-3.jpg" alt="" class="img-bg-content">
                                 </div>
@@ -42,7 +60,11 @@ get_header(); ?>
                         <li>
                             <a href="<?php echo get_site_url(); ?>/quem-somos#transparencia" class="box-content-quem-somos">
                                 <div class="box-info">
-                                    <span class="text-subtitle"><button class="button-plus"></button> Transparência</span>
+                                    <span class="text-subtitle">
+                                        <button class="button-plus"></button>
+                                        <span v-show="language == 'pt'">Transparência</span>
+                                        <span v-show="language == 'en'">Transparency</span>
+                                    </span>
                                     <div class="arrow-down"></div>
                                     <img src="<?php echo get_template_directory_uri(); ?>/custom/img/home-quem-somos/home-qs-4.jpg" alt="" class="img-bg-content">
                                 </div>
@@ -59,13 +81,27 @@ get_header(); ?>
     <section id="home-o-que-fazemos" class="fullscreen-bg-content">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-right">
+
+                <div class="col-xs-12 col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-right" v-show="language == 'pt'">
                     <h2 class="title-section c-white">O Que <br>Fazemos</h2>
 
-                    <p class="text-content c-white text-justify">Há 22 anos o <a href="<?php echo get_site_url(); ?>" class="link c-white text-negrito">Instituto de Ecologia Humana</a> já realizou cerca de 40 eventos, promoveu 120 cursos; propiciou estágios a 100 estudantes universitários, capacitou cerca de 600 educadores, coordenou 40 projetos, dentre eles 15 projetos de pesquisa, todos com metodologia interdisciplinar e realizou cerca de 15 avaliações de projetos. Coordenou e participou das publicações de cerca de 70 títulos. Realizou o encontro da Arte com a Ciência ao concretizar duas exposições sobre a temática ambiental.</p>
+                    <p class="text-content c-white text-justify">
+                        Há 22 anos o <a href="<?php echo get_site_url(); ?>" class="link c-white text-negrito">Instituto de Ecologia Humana</a> já realizou cerca de 40 eventos, promoveu 120 cursos; propiciou estágios a 100 estudantes universitários, capacitou cerca de 600 educadores, coordenou 40 projetos, dentre eles 15 projetos de pesquisa, todos com metodologia interdisciplinar e realizou cerca de 15 avaliações de projetos. Coordenou e participou das publicações de cerca de 70 títulos. Realizou o encontro da Arte com a Ciência ao concretizar duas exposições sobre a temática ambiental.
+                    </p>
 
                     <div class="button-content text-center">
                         <a href="<?php echo get_site_url(); ?>/o-que-fazemos#objetivos" class="btn-white">Ver Objetivos</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-right" v-show="language == 'en'">
+                    <h2 class="title-section c-white">What <br>We Do</h2>
+
+                    <p class="text-content c-white text-justify">
+                        For 22 years the <a href="<?php echo get_site_url(); ?>" class="link c-white text-negrito">Instituto de Ecologia Humana</a> has held about 40 events, promoted 120 courses; provided training for 100 university students, trained about 600 educators, coordinated 40 projects, including 15 research projects, all with interdisciplinary methodology and conducted about 15 project evaluations. Coordinated and participated in publications of about 70 titles. He held the meeting of Art and Science by making two exhibitions on the environmental theme.
+                    </p>
+
+                    <div class="button-content text-center">
+                        <a href="<?php echo get_site_url(); ?>/o-que-fazemos#objetivos" class="btn-white">See Objectives</a>
                     </div>
                 </div>
             </div>
@@ -131,7 +167,9 @@ get_header(); ?>
         <div class="container content-block">
             <div class="row">
                 <div class="col-sm-12 text-left">
-                    <h2 class="title-section"><span class="negrito first-word">IEH</span><br>em Números</h2>
+                    <h2 class="title-section">
+                        <span class="negrito first-word">IEH</span><br>em Números
+                    </h2>
                 </div>
             </div>
             <div class="row">
@@ -141,27 +179,32 @@ get_header(); ?>
                             <div class="box-numeros">
                                 <span class="numero">30</span>
                                 <span class="icon icon-ampulheta"></span>
-                                <span class="text">anos <br>de atuação <br>no mercado</span>
+                                <span class="text" v-show="language == 'pt'">anos <br>de atuação <br>no mercado</span>
+                                <span class="text" v-show="language == 'en'">years<br>of market <br>place</span>
                             </div>
                         </li>
                         <li>
                             <div class="box-numeros">
                             <span class="pre-text">
                                 <span class="d-none d-sm-block">
-                                    Mais<br>de
+                                    <span class="text" v-show="language == 'pt'">Mais<br>de</span>
+                                    <span class="text" v-show="language == 'en'">More<br>than</span>
+
                                 </span>
                                 <span class="d-block d-sm-none"><i class="fa fa-plus"></i></span>
                             </span>
                                 <span class="numero">120</span>
                                 <span class="icon icon-user-group"></span>
-                                <span class="text">profissionais <br>associados</span>
+                                <span class="text" v-show="language == 'pt'">profissionais <br>associados</span>
+                                <span class="text" v-show="language == 'en'">associated <br>professionals</span>
                             </div>
                         </li>
                         <li>
                             <div class="box-numeros">
                                 <span class="numero">21</span>
                                 <span class="icon icon-anotation"></span>
-                                <span class="text">convênios<br>e contratos</span>
+                                <span class="text" v-show="language == 'pt'">convênios<br>e contratos<</span>
+                                <span class="text" v-show="language == 'en'">agreements<br>and contracts</span>
                             </div>
                         </li>
                     </ul>
@@ -170,7 +213,8 @@ get_header(); ?>
                     <div class="content-mapa">
                         <div class="box-numeros">
                             <span class="numero">27</span>
-                            <span class="text">áreas<br>atendidas</span>
+                            <span class="text"  v-show="language == 'pt'">áreas<br>atendidas</span>
+                            <span class="text" v-show="language == 'en'">attendend<br>areas</span>
                         </div>
 
                         <div class="box-mapa">
@@ -227,7 +271,9 @@ $parceiros = new WP_Query($args_parca);
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12">
-                    <h2 class="title-section">Alguns de nossos parceiros e apoiadores</h2>
+                    <h2 class="title-section" v-show="language == 'pt'">Alguns de nossos parceiros e apoiadores</h2>
+                    <h2 class="title-section" v-show="language == 'en'">Some of our partners and supporters</h2>
+
 
                     <ul class="list-parceiros-apoiadores list-unstyled list-inline">
                         <?php while ($parceiros->have_posts()) : $parceiros->the_post(); ?>

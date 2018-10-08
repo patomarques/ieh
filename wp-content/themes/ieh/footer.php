@@ -45,5 +45,6 @@
 <?php wp_footer(); ?>
 
     <script src="<?php echo get_template_directory_uri(); ?>/custom/js/menu_fixed.js"></script>
+</div><!-- end body pseudelement -->
 </body>
 </html>

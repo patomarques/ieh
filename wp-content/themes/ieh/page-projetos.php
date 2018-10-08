@@ -32,11 +32,6 @@ get_header();
             );
 
             $nossos_projetos = new WP_Query($args_projetos);
-
-//            echo "<pre>";
-//            var_dump($nossos_projetos);
-//            echo "</pre>";
-//            die();
             ?>
 
             <?php while ( $nossos_projetos->have_posts() ) : $nossos_projetos->the_post();
