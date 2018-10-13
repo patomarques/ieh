@@ -1,24 +1,33 @@
-<?php get_header(); ?>
+<?php
 
+/* Template Name: Quem Somos */
 
+get_header();
 
+?>
 <div id="page-content" class="page-quem-somos page-content">
-    <section class="container" id='quem-somos
-'>
+    <section class="container" id='quem-somos'>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-                <h1 class="title-default c-verde-lodo">Quem<br>Somos</h1>
+                <h1 class="title-default c-verde-lodo">
+                    <span v-show="language == 'pt'">Quem<br>Somos</span>
+                    <span v-show="language == 'en'">About<br>Us</span>
+                </h1>
             </div>
         </div>
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-                <?php
-                while ( have_posts() ) : the_post(); ?>
-
-                    <div class="page-content-text"><?php echo the_content(); ?></div>
-
-                <?php endwhile; // End of the loop.?>
+                <div class="content" v-show="language == 'pt'">
+                    <div class="page-content-text">
+                        <?php echo get_field('bloco_inicio_texto_pt'); ?>
+                    </div>
+                </div>
+                <div class="content" v-show="language == 'en'">
+                    <div class="page-content-text">
+                        <?php echo get_field('bloco_inicio_texto_en'); ?>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -29,7 +38,10 @@
         <div class="coluna-esquerda">
             <div class="box-logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/custom/img/logo-verde-preto.png" alt="" class="img-responsive logo-colorida">
-                <p class="text-after-logo">A marca existe desde 19xx e foi desenvolvida texto pendente de modificação.</p>
+                <p class="text-after-logo">
+                    <span v-show="language == 'pt'"><?php echo get_field('texto_abaixo_da_logo_pt'); ?></span>
+                    <span v-show="language == 'en'"><?php echo get_field('texto_abaixo_da_logo_en'); ?></span>
+                </p>
             </div>
         </div>
     </div>
@@ -39,7 +51,10 @@
     <section class="content-full content-sobre-nos" id="sobre-nos">
         <div class="row">
             <div class="col-sm-12 col-sm-12 col-md-5 text-right">
-                <h2 class="title-dafault title-sobre-nos">Sobre<br> Nós</h2>
+                <h2 class="title-dafault title-sobre-nos">
+                    <span v-show="language == 'pt'">Sobre<br>Nós</span>
+                    <span v-show="language == 'en'">About<br>Us</span>
+                </h2>
             </div>
         </div>
 
@@ -49,36 +64,8 @@
             </div>
             <div class="col-sm-12 col-sm-12 col-md-7 block-right-text">
                 <div class="content-text">
-                    <?php// echo nl2br(get_post_meta(get_the_ID(), 'sobre_nos_text', TRUE)); ?>
-                    <h4>O que é o Instituto de Ecologia Humana</h4>
-                    <p>O Instituto de Ecologia Humana (IEH) é uma Fundação que congrega pessoas interessadas em estudos
-                        e pesquisas, em âmbito nacional, na área de Ecologia Humana, com ênfase nas questões regionais e
-                        locais. Suas origens remontam a 1984, quando foi formado o Grupo de Ecologia Humana da
-                        Universidade Federal Rural de Penambuco para desenvolver o projeto de pesquisa “Açudagem no
-                        Nordeste e o processo de fixação do homem no meio rural”, idealizado pela Profa. Maria José de
-                        Araújo Lima. Em 1990, o mencionado grupo institucionalizou-se como sociedade civil sem fins
-                        lucrativos, transformando-se em Instituto de Ecologia Humana.</p>
-
-                    <p>O Instituto de Ecologia Humana é uma organização não governamental considerada de utilidade
-                        pública no âmbito do Estado de Pernambuco, tanto a nível estadual como municipal.</p>
-
-                    <p>Os trabalhos realizados pelo Instituto de Ecologia Humana envolveram uma gama diferenciada de
-                        agentes financeiros. Foi fundado e suportado pela Fundação Ford por 5 anos.</p>
-                    <p>Recebeu apoio da UNESCO, dentro do programa Man and Biosfera (MAB); do Catholic Relief Services
-                        (CRS); do Banco Interamericano de Desenvolvimento (BID); do Ministério de Meio Ambiente (MMA);
-                        do Ministério de Educação e Cultura (MEC) e do Instituto Brasileiro de Recursos Naturais e da
-                        Amazônia Legal (IBAMA).</p>
-
-
-                    <p>Realizou projetos por contratos e/ou convênios para o Governo do Ceará e de Pernambuco. Realizou
-                        consultorias no Estado de Mato Grosso, Amazonas, Pará, Acre e Rondônia.</p>
-
-                    <p>Participou de consultorias internacionais. Realizou eventos em parceria com a Universidade
-                        Federal da Paraíba, Universidade Federal Rural de Pernambuco, com a Fundação Joaquim Nabuco.
-                        Realizou a Avaliação do Programa Xingó, desenvolvido pela Companhia Hidrelétrica do São
-                        Francisco (CHESF), na Região dos Lagos. Atualmente é responsável pela Construção do Plano
-                        Sócio-ambiental (PAS) da Chesf, no Complexo Hidroelétrico de Paulo Afonso.</p>
-
+                    <span v-show="language == 'pt'"><?php echo get_field('sobre_nos_text'); ?></span>
+                    <span v-show="language == 'en'"><?php echo get_field('sobre_nos_texto_en'); ?></span>
                 </div>
             </div>
         </div>
@@ -87,7 +74,10 @@
     <section class="full-content bg-azul-claro content-a-coordenacao section-content" id="a-coordenacao">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="title-section c-white">A Coordenação</h2>
+                <h2 class="title-section c-white">
+                    <span v-show="language == 'pt'">A Coordenação</span>
+                    <span v-show="language == 'en'">The Coordination</span>
+                </h2>
             </div>
         </div>
         <div class="row">
@@ -95,37 +85,40 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/custom/img/page-quem-somos/img002.png" alt="" class="img-responsive">
             </div>
             <div class="col-sm-12 col-sm-12 col-md-7 block-right-text">
-                <ul class="list-unstyled list-coordenacao">
-                    <li>
-                        <div class="box-membrxs">
-                            <p class="cargo">PRESIDENTE</p>
-                            <p class="nome negrito">Profa. Maria José de Araújo Lima</p>
-                            <p class="resumo">Bióloga pela UFPE; Mestre em Educação pela
-                                UFMG; Especialista em Ordenamento de Territó-
-                                rio pelo Instituto de Altos Estudos Mediterrâneos
-                                de Zaragoza - IAMAZ Europa; Doutora em Geo-
-                                grafia pela USP; Professora Universitária.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="box-membrxs">
-                            <p class="cargo">COORDENADORA ADMINISTRATIVA E FINANCEIRA</p>
-                            <p class="nome negrito">Dra. Márcia Lima de Azevedo Monteiro</p>
-                            <p class="resumo">Médica, Mestre em Fisiologia pela UFPE; Doutora
-                                em Neuropsiquiatria pela UFPE.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="box-membrxs">
-                            <p class="cargo"></p>
-                            <p class="nome negrito">Associados</p>
-                            <p class="resumo">O Instituto de Ecologia Humana (IEH) tem 120
-                                profissionais sócio-colaboradores, que partici-
-                                pam da execução dos projetos na condição de
-                                assessores técnicos.</p>
-                        </div>
-                    </li>
-                </ul>
+                <span v-show="language == 'pt'"><?php echo get_field('a_coordenacao_texto'); ?></span>
+                <span v-show="language == 'en'"><?php echo get_field('a_coordenação_texto_en'); ?></span>
+
+<!--                <ul class="list-unstyled list-coordenacao">-->
+<!--                    <li>-->
+<!--                        <div class="box-membrxs">-->
+<!--                            <p class="cargo">PRESIDENTE</p>-->
+<!--                            <p class="nome negrito">Profa. Maria José de Araújo Lima</p>-->
+<!--                            <p class="resumo">Bióloga pela UFPE; Mestre em Educação pela-->
+<!--                                UFMG; Especialista em Ordenamento de Territó--->
+<!--                                rio pelo Instituto de Altos Estudos Mediterrâneos-->
+<!--                                de Zaragoza - IAMAZ Europa; Doutora em Geo--->
+<!--                                grafia pela USP; Professora Universitária.</p>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <div class="box-membrxs">-->
+<!--                            <p class="cargo">COORDENADORA ADMINISTRATIVA E FINANCEIRA</p>-->
+<!--                            <p class="nome negrito">Dra. Márcia Lima de Azevedo Monteiro</p>-->
+<!--                            <p class="resumo">Médica, Mestre em Fisiologia pela UFPE; Doutora-->
+<!--                                em Neuropsiquiatria pela UFPE.</p>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <div class="box-membrxs">-->
+<!--                            <p class="cargo"></p>-->
+<!--                            <p class="nome negrito">Associados</p>-->
+<!--                            <p class="resumo">O Instituto de Ecologia Humana (IEH) tem 120-->
+<!--                                profissionais sócio-colaboradores, que partici--->
+<!--                                pam da execução dos projetos na condição de-->
+<!--                                assessores técnicos.</p>-->
+<!--                        </div>-->
+<!--                    </li>-->
+<!--                </ul>-->
             </div>
         </div>
     </section>
@@ -174,9 +167,6 @@
 </div>
 
     <script type="text/javascript">
-        imagem_bg = '';
-        text_home = <?php echo json_encode(get_the_title()); ?>;
-        document.getElementById('text-home').textContent = text_home;
         document.getElementById('background-img-home').classList.add("page-quem-somos");
         document.getElementById('box-text-home').classList.add('content-text-bottom');
 

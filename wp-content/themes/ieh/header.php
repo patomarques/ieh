@@ -29,15 +29,21 @@
     global $post;
     $post_slug  = $post->post_name;
     $post_id    = $post->ID;
+
+    $pagesInverseTitle = array('about-us', 'what-we-do', 'our-projects');
 ?>
 <script>
     (function($) {
         //set backgrond baner-im-home height
-        if($('#background-img-home').length > 0){
-            console.log('exist');
-            var windowHeight = window.innerHeight;
-            $('#background-img-home').css('height', windowHeight);
+        function setBgImgHeader(){
+            if($('#background-img-home').length > 0){
+                $('#background-img-home').css('height', window.innerHeight);
+            }
         }
+
+        $(window).on('resize', function(){
+            setBgImgHeader();
+        });
     })( jQuery );
 </script>
 
@@ -56,7 +62,7 @@
             <?php endif; ?>
 
             <?php
-                wp_nav_menu(array(
+                echo wp_nav_menu(array(
                     'theme_location' => 'primary',
                     'container' => 'div',
                     'container_id' => 'main-nav',
@@ -182,9 +188,33 @@
                             </li>
                         </ul>
                     </div>
+
                     <div id="box-text-home" class="box-text-home text-right">
-                        <h2 id="text-home" class="text-home text-larger c-white" v-show="language == 'pt'">Desde 1990, <br>em busca <br>de educar e <br>construir laços.</h2>
-                        <h2 id="text-home" class="text-home text-larger c-white" v-show="language == 'en'">Since 1990, <br>find educate<br>and construct <br>afetivity.</h2>
+                        <h2 id="text-home" class="text-home text-larger c-white">
+                            <?php if(is_front_page()){ ?>
+                                <span v-show="language == 'pt'">Desde 1990, <br>em busca <br>de educar e <br>construir laços.</span>
+                                <span v-show="language == 'en'">Since 1990, <br>find educate<br>and construct <br>afetivity.</span>
+                            <?php }else{ ?>
+                                <span v-show="language == 'pt'">
+                                    <?php
+                                        if(in_array($post_slug, $pagesInverseTitle)){
+                                            echo get_field('title_alternative');
+                                        }else{
+                                            echo get_the_title();
+                                        }
+                                    ?>
+                                </span>
+                                <span v-show="language == 'en'">
+                                    <?php
+                                        if(in_array($post_slug, $pagesInverseTitle)){
+                                            echo get_the_title();
+                                        }else{
+                                            echo get_field('title_alternative');
+                                        }
+                                    ?>
+                                </span>
+                            <?php } ?>
+                        </h2>
                     </div>
                 </div>
 

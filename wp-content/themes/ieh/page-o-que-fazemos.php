@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php
+/* Template Name: O Que Fazemos */
+get_header();
+?>
 
     <script type="text/javascript">
         text_home = <?php echo json_encode(get_the_title()); ?>;

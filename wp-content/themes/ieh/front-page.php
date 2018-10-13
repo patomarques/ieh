@@ -112,7 +112,10 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h2 class="title-section c-azul-claro">Nossos Projetos</h2>
+                    <h2 class="title-section c-azul-claro">
+                        <span v-show="language == 'pt'">Nossos Projetos</span>
+                        <span v-show="language == 'en'">Our Projects</span>
+                    </h2>
                 </div>
             </div>
             <div class="row">
@@ -127,7 +130,10 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
-                    <h2 class="title-section c-white">Apoie <br>Nossos <br>Projetos</h2>
+                    <h2 class="title-section c-white">
+                        <span v-show="language == 'pt'">Apoie <br>Nossos <br>Projetos</span>
+                        <span v-show="language == 'en'">Support Our <br>Projects</span>
+                    </h2>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
                     <p class="subtext-title">Lorem ipsum dolor sit amet consectetur adipiscing elit, cubilia porta ridiculus inceptos sapien id pulvinar, mi eget placerat ornare potenti himenaeos. Vestibulum eleifend consequat urna dui inceptos conubia ullamcorper, fringilla purus sapien ligula fusce id, mi aliquam eget etiam nulla efficitur. dolor sit amet consectetur adipiscing elit, cubilia porta ridiculus inceptos sapien id pulvinar, mi eget placerat ornare potenti himenaeos.</p>
@@ -150,7 +156,12 @@ get_header(); ?>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <h4 class="modal-title" id="modalLabel">Fale Conosco</h4>
+                    <h4 class="modal-title" id="modalLabel">
+                        <span v-show="language == 'pt'">Fale Conosco</span>
+                        <span v-show="language == 'en'">Contact Us</span>
+
+
+                    </h4>
 
                     <p class="text-modal text-justify">Sinta-se a vontade para nos mandar uma mensagem atráves do email
                     <a href="mailto:comunicacao@ieh.org.br">comunicacao@ieh.org.br</a>, ou preencha o formulário abaixo com os seus dados e te retornaremos assim que possível.</p>
@@ -168,7 +179,8 @@ get_header(); ?>
             <div class="row">
                 <div class="col-sm-12 text-left">
                     <h2 class="title-section">
-                        <span class="negrito first-word">IEH</span><br>em Números
+                        <span class="negrito first-word" v-show="language == 'pt'">IEH<br>em Números</span>
+                        <span class="negrito first-word" v-show="language == 'en'">IEH<br>Statistics</span>
                     </h2>
                 </div>
             </div>
@@ -218,7 +230,7 @@ get_header(); ?>
                         </div>
 
                         <div class="box-mapa">
-                            <?php echo do_shortcode('	[freehtml5map id="0"]'); ?>
+                            <?php echo do_shortcode('[freehtml5map id="0"]'); ?>
                         </div>
                         <span class="text-area-atuacao"><strong>AM </strong>(Manaus), <b>PA</b> (Belém), <b>CE</b> (Fortaleza, Icapuí, Caucaia, Trairí, São Gonçalo do Amarante, Paracuru, Paraíbaba e Itapipoca), <b>RN</b>, <b>PB</b> (Soledade e Fagundes), <b>PE</b> (Recife, Desterro, Aldeia e Jatobá), <b>AL</b> (Pariconha, Delmiro Golveia, Olho D'Agua do Casado e Piranhas), <b>SE</b> (Canindé do São Francisco e Poço Redondo), <b>BA</b> (Paulo Afonso e Glória), <b>MG</b> (Belo Horizonte), <b>DF</b> (Brasília) e <b>PR</b> (Curitiba).</span>
                     </div>
@@ -227,16 +239,17 @@ get_header(); ?>
         </div>
     </section>
 
-<?php
-$args_depo = array(
-    'posts_per_page' => 10, // Number of recent posts thumbnails to display
-    'post_type' => 'depoimentos', // Show only the published posts
-    'orderby' => "date",
-    'order' => "DESC"
-);
+    <?php
+        $args_depo = array(
+            'posts_per_page' => 10, // Number of recent posts thumbnails to display
+            'post_type' => 'depoimentos', // Show only the published posts
+            'orderby' => "date",
+            'order' => "DESC"
+        );
 
-$depoimentos = new WP_Query($args_depo);
-?>
+        $depoimentos = new WP_Query($args_depo);
+    ?>
+
     <section id="home-depoimentos" class="bg-full-content-gray">
         <div class="container">
             <div class="row">

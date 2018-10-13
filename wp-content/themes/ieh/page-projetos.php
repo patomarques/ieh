@@ -12,7 +12,10 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <h1 class="title-default title-nossos-projetos c-azul-claro">Nossos Projetos</h1>
+                    <h1 class="title-default title-nossos-projetos c-azul-claro">
+                        <span v-show="language == 'pt'">Nossos Projetos</span>
+                        <span v-show="language == 'en'">Our Projects</span>
+                    </h1>
                 </div>
             </div>
             <div class="row margin-bottom">
@@ -27,7 +30,7 @@ get_header();
             $args_projetos = array(
                 'posts_per_page' => -1, // Number of recent posts thumbnails to display
                 'post_type' => 'nossos-projetos', // Show only the published posts
-                'orderby' => "meta_value_ordem",
+                'orderby' => "ordem",
                 'order' => "ASC"
             );
 
@@ -36,22 +39,24 @@ get_header();
 
             <?php while ( $nossos_projetos->have_posts() ) : $nossos_projetos->the_post();
 
-                $image = get_field('icone', get_the_ID());
-                $imagem = get_field('icon', get_the_ID());
-                $slugProject = get_post_field( 'post_name', get_post() );
-//                echo "<pre>";
-//                var_dump($imagem, $image, $slugProject, get_the_ID(), $icon);
-//                echo "</pre>";
-                //die();
-            ?>
-                <div class="row row-nossos-projetos" id="<?php echo $slugProject; ?>">
-                    <div class="col-xs-12 col-sm-12 col-md-4 text-center">
+                $image = get_field('icon');
 
-                        <img src="<?php echo $image['url']; ?>" class="icon-projetos">
+                ?>
+                <div class="row row-nossos-projetos" id="<?php echo get_field('scroll-to');?>">
+                    <div class="col-xs-12 col-sm-12 col-md-4 text-center">
+                        <?php if( !empty($image) ): ?>
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-projetos" />
+                        <?php endif; ?>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-7">
-                        <p class="list-subtitle c-azul-claro"><?php echo get_the_title(); ?></p>
-                        <?php echo get_the_content(); ?>
+                        <span class="content-pt" v-show="language == 'pt'">
+                            <p class="list-subtitle c-azul-claro"><?php echo get_the_title(); ?></p>
+                            <?php echo get_the_content(); ?>
+                        </span>
+                        <span class="content-pt" v-show="language == 'en'">
+                            <p class="list-subtitle c-azul-claro"><?php echo get_field('title_english'); ?></p>
+                            <?php echo get_field('content_english'); ?>
+                        </span>
                     </div>
                     <div class="col-sm-12 text-right">
                         <a href="#back-to-top" class="back-to-top" title="Ir para o topo"><i class="fa fa-angle-up text-right"></i></a>

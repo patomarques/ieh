@@ -1,50 +1,26 @@
+<?php
+    $args_projetos = array(
+        'posts_per_page' => -1, // Number of recent posts thumbnails to display
+        'post_type' => 'nossos-projetos', // Show only the published posts
+        'orderby' => "ordem",
+        'order' => "ASC"
+    );
+
+    $projetos = new WP_Query($args_projetos);
+?>
 <SquareGrid>
+    <?php while ($projetos->have_posts()) : $projetos->the_post(); ?>
     <div class="item">
-        <a href="<?php echo get_site_url(); ?>/projetos#exposicoes" class="square-content" data-scroll="exposicoes">
-            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/box-pic/01_exposicoes.png" alt="" class="img-icon">
-            <span class="text-box">Exposições</span>
+        <a href="<?php echo get_site_url(); ?>/projetos#<?php echo get_field('scroll-to');?>" class="square-content" data-scroll="<?php echo get_field('scroll-to');?>">
+            <?php
+            $image = get_field('icon');
+
+            if( !empty($image) ): ?>
+                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-icon" />
+            <?php endif; ?>
+            <span class="text-box" v-show="language == 'pt'"><?php echo get_the_title(); ?></span>
+            <span class="text-box" v-show="language == 'en'"><?php echo get_field('title_english'); ?></span>
         </a>
     </div>
-    <div class="item">
-        <a href="<?php echo get_site_url(); ?>/projetos#arte-e-educacao" class="square-content" data-scroll="arte-e-educacao">
-            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/box-pic/02_arte-educacao.png" alt="" class="img-icon">
-            <span class="text-box">Arte e educação</span>
-        </a>
-    </div>
-    <div class="item">
-        <a href="<?php echo get_site_url(); ?>/projetos#cursos" class="square-content" data-scroll="cursos">
-            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/box-pic/03_cursos.png" alt="" class="img-icon">
-            <span class="text-box">Cursos</span>
-        </a>
-    </div>
-    <div class="item">
-        <a href="<?php echo get_site_url(); ?>/projetos#teatro" class="square-content" data-scroll="teatro">
-            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/box-pic/04_teatro.png" alt="" class="img-icon">
-            <span class="text-box">Teatro</span>
-        </a>
-    </div>
-    <div class="item">
-        <a href="<?php echo get_site_url(); ?>/projetos#simposios" class="square-content" data-scroll="simposios">
-            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/box-pic/05_simposios.png" alt="" class="img-icon">
-            <span class="text-box">Simpósios</span>
-        </a>
-    </div>
-    <div class="item">
-        <a href="<?php echo get_site_url(); ?>/projetos#oficinas" class="square-content" data-scroll="oficinas">
-            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/box-pic/06_oficinas.png" alt="" class="img-icon">
-            <span class="text-box">Oficinas</span>
-        </a>
-    </div>
-    <div class="item">
-        <a href="<?php echo get_site_url(); ?>/projetos#mentoria-de-grupos" class="square-content" data-scroll="mentoria-de-grupos">
-            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/box-pic/07_mentoria-grupos.png" alt="" class="img-icon">
-            <span class="text-box">Mentoria de grupos</span>
-        </a>
-    </div>
-    <div class="item">
-        <a href="<?php echo get_site_url(); ?>/projetos#publicacoes" class="square-content" data-scroll="publicacoes-de-artistas-locais">
-            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/icons/box-pic/08_publicacoes.png" alt="" class="img-icon">
-            <span class="text-box">Publicações de artistas locais</span>
-        </a>
-    </div>
+    <?php endwhile; ?>
 </SquareGrid>
