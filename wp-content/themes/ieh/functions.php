@@ -371,13 +371,24 @@ add_filter( 'meta_content', 'prepend_attachment' );
 
 add_action( 'wp_ajax_nopriv_language_set_session', 'language_set_session' );
 
-function language_set_session($lang) {
+function language_set_session() {
     // Make your response and echo it.
-    if ( isset( $_SESSION['site_language'] ) ) {
-        $_SESSION['site_language'] = $lang;
-    } else {
-        $_SESSION['site_language'] = $lang;
+    if (isset($_POST) && !empty($_POST['data']['lang'])) {
+        if (!session_id()) {
+            session_start();
+        }
+        $_SESSION['site_language'] = $_POST['data']['lang'];
     }
+
     // Don't forget to stop execution afterward.
-    return true;
+    die($_POST['data']['lang']);
+}
+
+function get_id_by_slug($page_slug) {
+    $page = get_page_by_path($page_slug);
+    if ($page) {
+        return $page->ID;
+    } else {
+        return null;
+    }
 }

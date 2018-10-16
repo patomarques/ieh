@@ -18,7 +18,12 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php wp_head(); ?>
-
+    <script>
+        var languageSession = '';
+        <?php if(isset($_SESSION['site_language'])){ ?>
+        languageSession = <?= $_SESSION['site_language'] ?>;
+        <?php } ?>
+    </script>
     <script src="<?php echo get_template_directory_uri(); ?>/node_modules/vue/dist/vue.js"></script>
     <!--<script src="--><?php //get_template_directory_uri(); ?><!--/node_modules/vue/dist/vue.min.js"></script>-->
     <script src="<?php echo get_template_directory_uri(); ?>/custom/js/multilanguage.js"></script>
@@ -80,7 +85,7 @@
 
 <aside id="menu-element">
     <nav>
-        <ul>
+        <ul v-show="language == 'pt'">
             <li>
                 <a href="<?php echo get_site_url(); ?>/quem-somos/" class="link-menu <?php if($post_slug == 'quem-somos'){ echo "menu-actived"; } ?>">QUEM SOMOS</a>
             </li>
@@ -99,6 +104,28 @@
             <li>
                 <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-depoimentos" class="link-menu">DEPOIMENTOS</a>
             </li>
+        </ul>
+        <ul v-show="language == 'en'">
+            <li>
+                <a href="<?php echo get_site_url(); ?>/about-us/" class="link-menu <?php if($post_slug == 'about-us'){ echo "menu-actived"; } ?>">ABOUT US</a>
+            </li>
+            <li>
+                <a href="<?php echo get_site_url(); ?>/what-we-do/" class="link-menu <?php if($post_slug == 'what-we-do'){ echo "menu-actived"; } ?>">WHAT WE DO</a>
+            </li>
+            <li>
+                <a href="<?php echo get_site_url(); ?>/our-projects/" class="link-menu <?php if($post_slug == 'our-projects'){ echo "menu-actived"; } ?>">OUR  PROJECTS</a>
+            </li>
+            <li>
+                <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-apoie-nossos-projetos" class="link-menu">SUPPORT OUR PROJECTS</a>
+            </li>
+            <li>
+                <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-ieh-em-numeros" class="link-menu">IEH STATISTICS</a>
+            </li>
+            <li>
+                <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-depoimentos" class="link-menu">TESTIMONIALS</a>
+            </li>
+        </ul>
+        <ul>
             <li class="text-center">
                 <ul class="list-inline icons-social-top">
                     <li class="list-inline-item">
@@ -113,12 +140,12 @@
                                  class="social-icon">
                         </a>
                     </li>
-                    <li class="list-inline-item">
-                        <label class="switch-chose">
-                            <input type="checkbox" v-model="language" id="language">
+                    <li class="list-inline-item" id="element-language-chosen">
+                        <label class="switch-chose" @click="changeLanguage()">
+                            <input type="checkbox" v-model="input_lang" name="language">
                             <span class="slider-chose round"></span>
                             <span class="lang pt">PT</span>
-                            <span class="lang es">ES</span>
+                            <span class="lang es">EN</span>
                         </label>
                     </li>
                 </ul>
@@ -169,7 +196,7 @@
                             </li>
                             <li class="list-inline-item" id="element-language-chosen">
                                 <label class="switch-chose" @click="changeLanguage()">
-                                    <input type="checkbox" v-model="input_lang" id="language">
+                                    <input type="checkbox" v-model="input_lang" name="language">
                                     <span class="slider-chose round"></span>
                                     <span class="lang pt">PT</span>
                                     <span class="lang es">EN</span>

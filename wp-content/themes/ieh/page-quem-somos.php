@@ -4,6 +4,7 @@
 
 get_header();
 
+$idPageReferer = get_id_by_slug('quem-somos');
 ?>
 <div id="page-content" class="page-quem-somos page-content">
     <section class="container" id='quem-somos'>
@@ -20,12 +21,12 @@ get_header();
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
                 <div class="content" v-show="language == 'pt'">
                     <div class="page-content-text">
-                        <?php echo get_field('bloco_inicio_texto_pt'); ?>
+                        <?php echo get_field('bloco_inicio_texto_pt', $idPageReferer); ?>
                     </div>
                 </div>
                 <div class="content" v-show="language == 'en'">
                     <div class="page-content-text">
-                        <?php echo get_field('bloco_inicio_texto_en'); ?>
+                        <?php echo get_field('bloco_inicio_texto_en', $idPageReferer); ?>
                     </div>
                 </div>
             </div>
@@ -39,8 +40,8 @@ get_header();
             <div class="box-logo">
                 <img src="<?php echo get_template_directory_uri(); ?>/custom/img/logo-verde-preto.png" alt="" class="img-responsive logo-colorida">
                 <p class="text-after-logo">
-                    <span v-show="language == 'pt'"><?php echo get_field('texto_abaixo_da_logo_pt'); ?></span>
-                    <span v-show="language == 'en'"><?php echo get_field('texto_abaixo_da_logo_en'); ?></span>
+                    <span v-show="language == 'pt'"><?php echo get_field('texto_abaixo_da_logo_pt', $idPageReferer); ?></span>
+                    <span v-show="language == 'en'"><?php echo get_field('texto_abaixo_da_logo_en', $idPageReferer); ?></span>
                 </p>
             </div>
         </div>
@@ -64,8 +65,8 @@ get_header();
             </div>
             <div class="col-sm-12 col-sm-12 col-md-7 block-right-text">
                 <div class="content-text">
-                    <span v-show="language == 'pt'"><?php echo get_field('sobre_nos_text'); ?></span>
-                    <span v-show="language == 'en'"><?php echo get_field('sobre_nos_texto_en'); ?></span>
+                    <span v-show="language == 'pt'"><?php echo get_field('sobre_nos_text', $idPageReferer); ?></span>
+                    <span v-show="language == 'en'"><?php echo get_field('sobre_nos_texto_en', $idPageReferer); ?></span>
                 </div>
             </div>
         </div>
@@ -85,40 +86,8 @@ get_header();
                 <img src="<?php echo get_template_directory_uri(); ?>/custom/img/page-quem-somos/img002.png" alt="" class="img-responsive">
             </div>
             <div class="col-sm-12 col-sm-12 col-md-7 block-right-text">
-                <span v-show="language == 'pt'"><?php echo get_field('a_coordenacao_texto'); ?></span>
-                <span v-show="language == 'en'"><?php echo get_field('a_coordenação_texto_en'); ?></span>
-
-<!--                <ul class="list-unstyled list-coordenacao">-->
-<!--                    <li>-->
-<!--                        <div class="box-membrxs">-->
-<!--                            <p class="cargo">PRESIDENTE</p>-->
-<!--                            <p class="nome negrito">Profa. Maria José de Araújo Lima</p>-->
-<!--                            <p class="resumo">Bióloga pela UFPE; Mestre em Educação pela-->
-<!--                                UFMG; Especialista em Ordenamento de Territó--->
-<!--                                rio pelo Instituto de Altos Estudos Mediterrâneos-->
-<!--                                de Zaragoza - IAMAZ Europa; Doutora em Geo--->
-<!--                                grafia pela USP; Professora Universitária.</p>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <div class="box-membrxs">-->
-<!--                            <p class="cargo">COORDENADORA ADMINISTRATIVA E FINANCEIRA</p>-->
-<!--                            <p class="nome negrito">Dra. Márcia Lima de Azevedo Monteiro</p>-->
-<!--                            <p class="resumo">Médica, Mestre em Fisiologia pela UFPE; Doutora-->
-<!--                                em Neuropsiquiatria pela UFPE.</p>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <div class="box-membrxs">-->
-<!--                            <p class="cargo"></p>-->
-<!--                            <p class="nome negrito">Associados</p>-->
-<!--                            <p class="resumo">O Instituto de Ecologia Humana (IEH) tem 120-->
-<!--                                profissionais sócio-colaboradores, que partici--->
-<!--                                pam da execução dos projetos na condição de-->
-<!--                                assessores técnicos.</p>-->
-<!--                        </div>-->
-<!--                    </li>-->
-<!--                </ul>-->
+                <span v-show="language == 'pt'"><?php echo get_field('a_coordenacao_texto', $idPageReferer); ?></span>
+                <span v-show="language == 'en'"><?php echo get_field('a_coordenação_texto_en', $idPageReferer); ?></span>
             </div>
         </div>
     </section>
@@ -126,7 +95,10 @@ get_header();
     <section class="bg-stripped-transversal section-missao section-content" id="missao" >
         <div class="row">
             <div class="col-sm-12 col-md-5 text-right">
-                <h3 class="title-section c-white">MISSÃO</h3>
+                <h3 class="title-section c-white text-right">
+                    <span v-show="language == 'pt'">MISSÃO</span>
+                    <span v-show="language == 'en'">MISSION</span>
+                </h3>
             </div>
         </div>
         <div class="row">
@@ -135,10 +107,8 @@ get_header();
             </div>
             <div class="col-sm-12 col-sm-12 col-md-7 block-right-text c-white">
                 <div class="content-text content-text-block-3">
-                    <?php
-                        $missaoTexto =  get_post_meta(get_the_ID(), 'missao_texto', TRUE);
-                        echo apply_filters('meta_content', $missaoTexto);
-                    ?>
+                    <span v-show="language == 'pt'"><?php echo get_field('missao_texto', $idPageReferer); ?></span>
+                    <span v-show="language == 'en'"><?php echo get_field('missao_texto_en', $idPageReferer); ?></span>
                 </div>
             </div>
         </div>
@@ -147,7 +117,10 @@ get_header();
     <section class="bg-dotted-green section-transparencia section-content" id="transparencia">
         <div class="row">
             <div class="col-sm-12 col-md-5 text-right">
-                <h3 class="title-section c-white">Transparência</h3>
+                <h3 class="title-section c-white">
+                    <span v-show="language == 'pt'">Transparência</span>
+                    <span v-show="language == 'en'">Transparency</span>
+                </h3>
             </div>
         </div>
         <div class="row">
@@ -156,10 +129,8 @@ get_header();
             </div>
             <div class="col-sm-12 col-sm-12 col-md-7 block-right-text c-white">
                 <div class="content-text content-text-block-3">
-                    <?php
-                    $missaoTexto =  get_post_meta(get_the_ID(), 'transparencia_texto', TRUE);
-                    echo apply_filters('meta_content', $missaoTexto);
-                    ?>
+                    <span v-show="language == 'pt'"><?php echo get_field('transparencia_texto', $idPageReferer); ?></span>
+                    <span v-show="language == 'en'"><?php echo get_field('transparencia_texto_en', $idPageReferer); ?></span>
                 </div>
             </div>
         </div>

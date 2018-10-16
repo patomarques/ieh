@@ -3,8 +3,6 @@
 get_header();
 ?>
     <script type="text/javascript">
-        text_home = <?php echo json_encode(get_the_title()); ?>;
-        document.getElementById('text-home').textContent = text_home;
         document.getElementById('box-text-home').classList.add('content-text-bottom');
     </script>
 
@@ -76,9 +74,12 @@ get_header();
                 if(urlToScroll.length > 1){
                     var scrollToSection = urlToScroll[1];
 
-                    $('html, body').animate({
-                        scrollTop: $("#" + scrollToSection).offset().top - 140
-                    }, 600);
+
+                    if(typeof $("#" + scrollToSection).offset() != 'undefined'){
+                        $('html, body').animate({
+                            scrollTop: $("#" + scrollToSection).offset().top - 140
+                        }, 600);
+                    }
                     return false;
                 }
             });

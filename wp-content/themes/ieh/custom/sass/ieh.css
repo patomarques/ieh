@@ -661,16 +661,18 @@ nav {
         word-spacing: 0;
         line-height: 40px; }
   aside.open .switch-chose .lang {
-    margin-bottom: 10px !important; } }
+    margin-bottom: 10px !important; }
+  #element-language-chosen {
+    margin-top: 0;
+    top: 0;
+    padding-top: 0; } }
 
 @media (min-width: 768px) {
-  aside nav ul {
-    margin-top: 80px; }
-    aside nav ul li a {
-      font-size: 3em;
-      letter-spacing: 0;
-      word-spacing: 0;
-      line-height: 60px; } }
+  aside nav ul li a {
+    font-size: 3em;
+    letter-spacing: 0;
+    word-spacing: 0;
+    line-height: 60px; } }
 
 @media (min-width: 992px) {
   .navbar-nav-home-menu li {

@@ -7,36 +7,55 @@
        input.setAttribute("value", token);
        $("#menu-element").append(input);
 
+       // Probably not necessary to use noConflict mode, but I did in fact need it
+       // This just replaces the jQuery ($) with (j)
+       var j = jQuery.noConflict();
+
        var appWeb = new Vue({
            el: '#body-pseudelement',
            data: {
                _token: token,
                language: 'pt',
-               input_lang: false,
+               input_lang: false
            },
            watch: {
                input_lang : function(){
+                    var that = this;
+
                     if(this.input_lang){
                         this.language = 'en';
                     }else{
                         this.language = 'pt';
                     }
+
+                   setTimeout(function(){
+                       that.changeLanguage();
+                   }, 2000);
                }
            },
            methods: {
-               changeLanguage : function(event){
+               changeLanguage : function() {
                    // make AJAX POST call
-                   $.ajax({
-                       type: 'POST',
-                       url: 'wp-admin.php?wp_ajax_language_set_session',
+                   j.ajax({
+                       type: "POST",
+                       url: "/wp-admin/admin-ajax.php",
                        data: {
-                           'lang' : this.language
+                           action: 'language_set_session',
+                           data: {
+                               'lang': this.language
+                           }
                        },
                        success: function (response) {
                            console.log(response);
+                       },
+                       error: function (error) {
+                           console.log('There seems to be an error with this search.' + error);
                        }
                    });
                }
+           },
+           created: function(){
+               console.log(languageSession);
            }
        });
    });

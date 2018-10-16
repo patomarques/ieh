@@ -1,11 +1,12 @@
 <?php
 /* Template Name: O Que Fazemos */
 get_header();
+
+$idPageReferer = get_id_by_slug('o-que-fazemos');
+
 ?>
 
     <script type="text/javascript">
-        text_home = <?php echo json_encode(get_the_title()); ?>;
-        document.getElementById('text-home').textContent = text_home;
         document.getElementById('box-text-home').classList.add('content-text-bottom');
     </script>
 
@@ -13,16 +14,17 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-lg-1 text-right">
-                    <h1 class="title-section">O Que<br>Fazemos</h1>
+                    <h1 class="title-section">
+                        <span v-show="language == 'pt'">O Que<br>Fazemos</span>
+                        <span v-show="language == 'en'">What<br>We Do</span>
+                    </h1>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-lg-1 text-justify">
                     <div id="content-text-oq-fazemos">
-                        <?php
-                            $introTexto =  get_post_meta(get_the_ID(), 'intro', TRUE);
-                            echo apply_filters('meta_content', $introTexto);
-                        ?>
+                        <span v-show="language == 'pt'"><?php echo get_field('intro', $idPageReferer); ?></span>
+                        <span v-show="language == 'en'"><?php echo get_field('intro_en', $idPageReferer); ?></span>
                     </div>
                 </div>
             </div>
@@ -37,28 +39,25 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-lg-1 text-justify">
-                    <?php
-                    $objetivos =  get_post_meta(get_the_ID(), 'objetivos', TRUE);
-                    echo apply_filters('meta_content', $objetivos);
-                    ?>
+                    <span v-show="language == 'pt'"><?php echo get_field('objetivos', $idPageReferer); ?></span>
+                    <span v-show="language == 'en'"><?php echo get_field('objetivos_en', $idPageReferer); ?></span>
                 </div>
             </div>
         </div>
         <div class="full-content o-que-fazemos-bloco-imagens">
             <div class="column-img-1">
-                <img class="my_class" <?php awesome_acf_responsive_image(get_field('imagem_inline_1')['id'], 'thumb-840', '900px'); ?>  alt="" />
+                <img class="my_class" <?php awesome_acf_responsive_image(get_field('imagem_inline_1'), 'thumb-840', '900px'); ?>  alt="" />
             </div>
             <div class="column-img-2">
-                <img class="my_class" <?php awesome_acf_responsive_image(get_field('imagem_inline_2')['id'], 'thumb-840', '900px'); ?>  alt="" />
-
-
+                <img class="my_class" <?php awesome_acf_responsive_image(get_field('imagem_inline_2'), 'thumb-840', '900px'); ?>  alt="" />
             </div>
         </div>
 
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 bloco-texto-apos-imagens">
-                    <?php echo get_field('bloco_texto_apos_imagens'); ?>
+                    <span v-show="language == 'pt'"><?php echo get_field('bloco_texto_apos_imagens', $idPageReferer); ?></span>
+                    <span v-show="language == 'en'"><?php echo get_field('bloco_texto_apos_imagens_en', $idPageReferer); ?></span>
                 </div>
             </div>
         </div>
