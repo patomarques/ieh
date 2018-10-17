@@ -30,7 +30,7 @@
 
                    setTimeout(function(){
                        that.changeLanguage();
-                   }, 2000);
+                   }, 100);
                }
            },
            methods: {
@@ -40,7 +40,7 @@
                        type: "POST",
                        url: "/wp-admin/admin-ajax.php",
                        data: {
-                           action: 'language_set_session',
+                           action: 'set_language_site',
                            data: {
                                'lang': this.language
                            }
@@ -54,8 +54,18 @@
                    });
                }
            },
+           beforeMount: function(){
+               if(languageSession !== ''){
+                   this.language = languageSession;
+                   if(languageSession == 'pt'){
+                       this.input_lang = false;
+                   }else{
+                       this.input_lang = true;
+                   }
+               }
+           },
            created: function(){
-               console.log(languageSession);
+
            }
        });
    });
