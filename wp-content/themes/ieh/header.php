@@ -20,8 +20,8 @@
     <?php wp_head(); ?>
     <script>
         var languageSession = '';
-        <?php if(isset($_SESSION['site_language'])){ ?>
-        languageSession = <?= $_SESSION['site_language'] ?>;
+        <?php if(isset($_SESSION['lang_site'])){ ?>
+        languageSession = <?= json_encode($_SESSION['lang_site']) ?>;
         <?php } ?>
     </script>
     <script src="<?php echo get_template_directory_uri(); ?>/node_modules/vue/dist/vue.js"></script>
@@ -36,6 +36,8 @@
     $post_id    = $post->ID;
 
     $pagesInverseTitle = array('about-us', 'what-we-do', 'our-projects');
+
+
 ?>
 <script>
     (function($) {
@@ -45,6 +47,9 @@
                 $('#background-img-home').css('height', window.innerHeight);
             }
         }
+        $(document).on('load', function(){
+            setBgImgHeader();
+        });
 
         $(window).on('resize', function(){
             setBgImgHeader();

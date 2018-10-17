@@ -369,19 +369,13 @@ add_filter( 'meta_content', 'wpautop' );
 add_filter( 'meta_content', 'shortcode_unautop' );
 add_filter( 'meta_content', 'prepend_attachment' );
 
-add_action( 'wp_ajax_nopriv_language_set_session', 'language_set_session' );
-
-function language_set_session() {
-    // Make your response and echo it.
+add_action( 'wp_ajax_set_language_site', 'set_language_site' );
+add_action( 'wp_ajax_nopriv_set_language_site', 'set_language_site' );
+function set_language_site() {
     if (isset($_POST) && !empty($_POST['data']['lang'])) {
-        if (!session_id()) {
-            session_start();
-        }
-        $_SESSION['site_language'] = $_POST['data']['lang'];
+        $_SESSION['lang_site'] = $_POST['data']['lang'];
     }
-
-    // Don't forget to stop execution afterward.
-    die($_POST['data']['lang']);
+    die();
 }
 
 function get_id_by_slug($page_slug) {
