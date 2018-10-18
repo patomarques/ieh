@@ -19,6 +19,8 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
     <?php wp_head(); ?>
     <script>
+        urlBase = document.location.origin;
+
         var languageSession = '';
         <?php if(isset($_SESSION['lang_site'])){ ?>
         languageSession = <?= json_encode($_SESSION['lang_site']) ?>;

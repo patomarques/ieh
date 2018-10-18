@@ -38,7 +38,7 @@
                    // make AJAX POST call
                    j.ajax({
                        type: "POST",
-                       url: "/wp-admin/admin-ajax.php",
+                       url: urlBase + "/wp-admin/admin-ajax.php",
                        data: {
                            action: 'set_language_site',
                            data: {
