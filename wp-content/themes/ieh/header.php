@@ -38,8 +38,6 @@
     $post_id    = $post->ID;
 
     $pagesInverseTitle = array('about-us', 'what-we-do', 'our-projects');
-
-
 ?>
 <script>
     (function($) {

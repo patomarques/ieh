@@ -1377,14 +1377,14 @@ label {
     #home-ieh-em-numeros .title-section:after {
       background-color: #036422; }
   #home-ieh-em-numeros .list-ieh-numeros li {
-    line-height: 160px; }
+    line-height: 100px; }
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .numero {
       font-size: 80px; }
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .box-numeros {
       margin-left: 8%; }
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .text {
       position: absolute;
-      margin-top: 45px;
+      margin-top: 14px;
       font-size: 18px; }
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) {
       position: relative; }
@@ -1398,11 +1398,13 @@ label {
       #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .icon-arrow-right {
         display: inline-block;
         position: absolute;
-        margin: 45px 0 0 5px; }
+        margin: 0 0 0 10px; }
       #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .text {
         display: inline-block;
         position: absolute;
-        margin: 55px 0 0 80px; }
+        margin: -36px 0 0 0; }
+      #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .text-second {
+        margin: 10px 0 0 80px; }
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .box-numeros {
       margin-left: 10%; }
       #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .box-numeros .numero {
@@ -1433,23 +1435,33 @@ label {
 .content-mapa {
   position: relative; }
   .content-mapa .box-numeros {
-    text-align: right;
-    position: absolute;
-    width: 100%; }
+    text-align: center;
+    position: relative;
+    width: 100%;
+    padding: 0; }
+    .content-mapa .box-numeros .mais-de {
+      display: inline-block;
+      text-align: left;
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px;
+      line-height: 26px;
+      color: #036422;
+      margin-left: -54px; }
     .content-mapa .box-numeros .numero {
       color: #41b6d6;
       font-family: "Montserrat", sans-serif;
-      font-size: 80px;
-      font-weight: 700;
-      display: inline-block; }
+      font-size: 70px;
+      font-weight: 700 !important;
+      display: block;
+      line-height: 65px; }
     .content-mapa .box-numeros .text {
       display: inline-block;
       text-align: left;
       font-family: "Montserrat", sans-serif;
-      font-size: 20px;
-      line-height: 26px;
+      font-size: 18px;
+      line-height: 18px;
       color: #036422;
-      margin-left: 10px; }
+      margin-left: -36px; }
   .content-mapa .box-mapa {
     padding-top: 50px; }
   .content-mapa .text-area-atuacao {
@@ -1601,7 +1613,7 @@ label {
     margin: -25px 0 0 -5px;
     position: absolute; }
   .content-mapa .box-mapa {
-    padding-top: 100px; }
+    padding-top: 0; }
   .content-mapa .text-area-atuacao {
     font-size: 24px; }
   .logo-footer {
@@ -1618,12 +1630,18 @@ label {
     text-align: center; }
   .slick-slider:after {
     margin: 0 -5px 25px 0; }
-  #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .box-numeros .numero {
-    font-size: 60px; }
   #home-ieh-em-numeros .list-ieh-numeros .numero {
-    font-size: 50px; }
-  #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .box-numeros .numero {
-    font-size: 60px; }
+    font-size: 50px;
+    margin-left: 44px; }
+  #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) {
+    line-height: 100px; }
+    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .box-numeros .numero {
+      font-size: 70px;
+      margin-top: -18px;
+      font-weight: 700 !important; }
+  #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) {
+    line-height: 60px;
+    margin-bottom: 30px; }
   #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .box-numeros {
     margin-left: 0; }
   #home-ieh-em-numeros .text-area-atuacao {

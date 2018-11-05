@@ -191,31 +191,48 @@ get_header(); ?>
                             <div class="box-numeros">
                                 <span class="numero">30</span>
                                 <span class="icon icon-ampulheta"></span>
-                                <span class="text" v-show="language == 'pt'">anos <br>de atuação <br>no mercado</span>
-                                <span class="text" v-show="language == 'en'">years<br>of market <br>place</span>
+                                <span class="text" v-show="language == 'pt'">anos <br>de atuação</span>
+                                <span class="text" v-show="language == 'en'">years<br>of existence</span>
                             </div>
                         </li>
                         <li>
                             <div class="box-numeros">
-                            <span class="pre-text">
-                                <span class="d-none d-sm-block">
-                                    <span class="text" v-show="language == 'pt'">Mais<br>de</span>
-                                    <span class="text" v-show="language == 'en'">More<br>than</span>
-
+                                <span class="pre-text">
+                                    <span class="d-none d-sm-block">
+                                        <span class="text" v-show="language == 'pt'">Mais<br>de</span>
+                                        <span class="text" v-show="language == 'en'">More<br>than</span>
+                                    </span>
+                                    <span class="d-block d-sm-none"><i class="fa fa-plus"></i></span>
                                 </span>
-                                <span class="d-block d-sm-none"><i class="fa fa-plus"></i></span>
-                            </span>
                                 <span class="numero">120</span>
                                 <span class="icon icon-user-group"></span>
-                                <span class="text" v-show="language == 'pt'">profissionais <br>associados</span>
-                                <span class="text" v-show="language == 'en'">associated <br>professionals</span>
+                                <span class="text text-second" v-show="language == 'pt'">profissionais <br>associados</span>
+                                <span class="text text-second" v-show="language == 'en'">associated <br>professionals</span>
                             </div>
                         </li>
                         <li>
                             <div class="box-numeros">
-                                <span class="numero">21</span>
+                                <div class="numero">800</div>
+                                <span class="icon icon-certified"></span>
+                                <span class="text">profissionais<br>capacitados</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="box-numeros">
+                                <span class="numero">29</span>
                                 <span class="icon icon-anotation"></span>
-                                <span class="text" v-show="language == 'pt'">convênios<br>e contratos<</span>
+                                <span class="text" v-show="language == 'pt'">eventos<br>realizados</span>
+                                <span class="text" v-show="language == 'en'">events<br>realized</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="box-numeros">
+                                <div class="numero">21</div>
+<!--                                <span class="icon icon-certified"></span>-->
+                                <span class="icon icon-anotation"></span>
+                                <span class="text" v-show="language == 'pt'">convênios<br>contratos</span>
                                 <span class="text" v-show="language == 'en'">agreements<br>and contracts</span>
                             </div>
                         </li>
@@ -224,9 +241,11 @@ get_header(); ?>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
                     <div class="content-mapa">
                         <div class="box-numeros">
-                            <span class="numero">27</span>
-                            <span class="text"  v-show="language == 'pt'">áreas<br>atendidas</span>
-                            <span class="text" v-show="language == 'en'">attendend<br>areas</span>
+                            <span class="mais-de" v-show="language == 'pt'">Mais de</span>
+                            <span class="mais-de" v-show="language == 'en'">More than</span>
+                            <span class="numero">200</span>
+                            <span class="text" v-show="language == 'pt'">cidades<br>atendidas</span>
+                            <span class="text" v-show="language == 'en'">cities<br>assisted</span>
                         </div>
 
                         <div class="box-mapa">
@@ -253,7 +272,7 @@ get_header(); ?>
     <section id="home-depoimentos" class="bg-full-content-gray">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 col-md-8 offset-md-2">
                     <div class="slider">
                         <?php while ($depoimentos->have_posts()) : $depoimentos->the_post(); ?>
                             <div class="slider-item">
