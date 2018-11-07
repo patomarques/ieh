@@ -282,6 +282,7 @@ label{
     font-weight: 500;
     font-family: $ff-montserrat;
     font-size: 24px;
+    margin: 0 auto 40px
   }
 
   pre{
@@ -737,6 +738,11 @@ label{
       }
     }
   }
+  .box-depoimentos{
+    .text-depoimento{
+      width: 100%;
+    }
+  }
 }
 
 @media (min-width: $screen-sm-min) {
@@ -753,6 +759,11 @@ label{
       }
     }
   }
+  .box-depoimentos{
+    .text-depoimento{
+      width: 70%;
+    }
+  }
 }
 
 @media (min-width: $screen-md-min) {
@@ -762,13 +773,13 @@ label{
   .o-que-fazemos-bloco-imagens{
       @include count-gap(2, 0px);
   }
+  .box-depoimentos{
+    .text-depoimento{
+      width: 50%;
+    }
+  }
 }
 
 @media (min-width: $screen-lg-min) {
-  //.o-que-fazemos-bloco-imagens{
-  //  .column-img-1,
-  //  .column-img-2{
-  //    @include count-gap(2, 0px);
-  //  }
-  //}
+
 }

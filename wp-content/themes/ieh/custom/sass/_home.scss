@@ -215,72 +215,110 @@ header  .text-content{
     li{
       line-height: 100px;
 
+     .box-numeros{
+       position: relative;
+       .numero{
+         //text-shadow: 1px 3px 2px $azul-claro;
+         //font-weight: 900 !important;
+       }
+     }
+
       &:nth-child(1){
         .numero{
           font-size: 80px;
+          margin-right: 10px;
         }
         .box-numeros{
           margin-left: 8%;
         }
         .text{
           position: absolute;
-          margin-top: 14px;
+          margin: 14px 0 0 15px;
           font-size: 18px;
         }
       }
 
       &:nth-child(2){
         position: relative;
+        padding-left: 20px;
         .pre-text{
           text-align: right !important;
           right: 0;
-          padding-right: 5px;
+          padding-right: 15px;
           font-weight: 400;
           font-size: 20px;
         }
         .icon{
           display: inline-block;
           position: absolute;
-          margin: 0 0 0 10px;
+          margin: 4px 0 0 16px;
         }
         .text{
           display: inline-block;
           position: absolute;
-          margin: -36px 0 0 0;
+          margin: -36px 10px 0 0;
         }
 
         .text-second{
-          margin: 10px 0 0 80px;
+          margin: 5px 0 0 120px;
         }
       }
 
       &:nth-child(3){
         .box-numeros{
-          margin-left: 10%;
-
+          margin-left: 0;
           .numero{
+            margin-left: 4px;
             font-size: 80px;
             position: relative;
-            margin-top: -5px;
           }
-
         }
         .icon{
-          width: 80px;
-          height: 100px;
-          margin: 0 10px -20px 10px;
+          margin: 0 0 -8px 10px;
         }
         .text{
           position: absolute;
-          margin-top: 55px;
+          margin: 30px 0 0 10px;
         }
       }
 
+      &:nth-child(4){
+        .numero{
+          margin: 0 0 0 100px;
+        }
+        .icon{
+          position: absolute;
+          margin:18px 0 0 18px;
+        }
+
+        .text{
+          position: absolute;
+          margin: 28px 0 0 80px ;
+        }
+      }
+
+      &:nth-child(5){
+        .numero{
+          font-size: 80px;
+          margin: 8px 13px 0 82px;
+          display: inline-block;
+        }
+
+        .icon{
+          position: absolute;
+          margin: 20px 0 0 4px;
+          display: inline-block;
+        }
+        .text{
+          position: absolute;
+          margin: 46px 0 0 84px;
+          display: inline-block;
+        }
+      }
     }
     .numero{
       color: $azul-claro;
       font-size: 60px;
-      font-weight: 700 !important;
       font-family: $ff-montserrat;
       display: inline-block;
     }
@@ -295,13 +333,23 @@ header  .text-content{
   }
 }
 
+.box-numeros{
+  .numero{
+    //text-shadow: 1px 3px 2px $azul-claro;
+    font-weight: 900 !important;
+  }
+}
 .content-mapa{
   position: relative;
+  text-align: center;
+
   .box-numeros{
-    text-align: center;
+    text-align: left;
     position: relative;
-    width: 100%;
+    width: auto;
     padding: 0;
+    margin: 0 auto 20px;
+    display: inline-block;
 
     .mais-de{
       display: inline-block;
@@ -310,14 +358,13 @@ header  .text-content{
       font-size: 18px;
       line-height: 26px;
       color: #036422;
-      margin-left: -54px;
+      padding-left: 3px;
     }
 
     .numero{
       color: $azul-claro;
       font-family: $ff-montserrat;
       font-size: 70px;
-      font-weight: 700 !important;
       display: block;
       line-height: 65px;
     }
@@ -329,7 +376,6 @@ header  .text-content{
       font-size: 18px;
       line-height: 18px;
       color: $verde-lodo;
-      margin-left: -36px;
     }
   }
 
@@ -379,83 +425,83 @@ header  .text-content{
   li{
     margin: 28px !important;
 
-    &:nth-child(1){
-      img{
-        width: 180px;
-      }
-    }
-
-    &:nth-child(2){
-      img{
-        width: 150px;
-      }
-    }
-
-    &:nth-child(3){
-      img{
-        width: 200px;
-      }
-    }
-
-    &:nth-child(4){
-      img{
-        width: 130px;
-      }
-    }
-
-    &:nth-child(5){
-      img{
-        width: 120px;
-      }
-    }
-
-    &:nth-child(6){
-      img{
-        width: 130px;
-      }
-    }
-
-    &:nth-child(7){
-      img{
-        width: 130px;
-      }
-    }
-
-    &:nth-child(8){
-      img{
-        width: 160px;
-      }
-    }
-
-    &:nth-child(9){
-      img{
-        width: 120px;
-      }
-    }
-
-    &:nth-child(10){
-      img{
-        width: 110px;
-      }
-    }
-
-    &:nth-child(11){
-      img{
-        width: 180px;
-      }
-    }
-
-    &:nth-child(12){
-      img{
-        width: 120px;
-      }
-    }
-
-    &:nth-child(13){
-      img{
-        width: 180px;
-      }
-    }
+    //&:nth-child(1){
+    //  img{
+    //    width: 180px;
+    //  }
+    //}
+    //
+    //&:nth-child(2){
+    //  img{
+    //    width: 150px;
+    //  }
+    //}
+    //
+    //&:nth-child(3){
+    //  img{
+    //    width: 200px;
+    //  }
+    //}
+    //
+    //&:nth-child(4){
+    //  img{
+    //    width: 130px;
+    //  }
+    //}
+    //
+    //&:nth-child(5){
+    //  img{
+    //    width: 120px;
+    //  }
+    //}
+    //
+    //&:nth-child(6){
+    //  img{
+    //    width: 130px;
+    //  }
+    //}
+    //
+    //&:nth-child(7){
+    //  img{
+    //    width: 130px;
+    //  }
+    //}
+    //
+    //&:nth-child(8){
+    //  img{
+    //    width: 160px;
+    //  }
+    //}
+    //
+    //&:nth-child(9){
+    //  img{
+    //    width: 120px;
+    //  }
+    //}
+    //
+    //&:nth-child(10){
+    //  img{
+    //    width: 110px;
+    //  }
+    //}
+    //
+    //&:nth-child(11){
+    //  img{
+    //    width: 180px;
+    //  }
+    //}
+    //
+    //&:nth-child(12){
+    //  img{
+    //    width: 120px;
+    //  }
+    //}
+    //
+    //&:nth-child(13){
+    //  img{
+    //    width: 180px;
+    //  }
+    //}
   }
 }
 
@@ -679,26 +725,14 @@ header  .text-content{
             .numero{
               font-size: 70px;
               margin-top: -18px;
-              font-weight: 700 !important;
+              margin-left: 48px;
             }
-
           }
         }
 
         &:nth-child(2){
           line-height: 60px;
           margin-bottom: 30px;
-        }
-
-        &:nth-child(3) {
-
-          .box-numeros{
-            margin-left: 0;
-
-            .numero{
-
-            }
-          }
         }
       }
     }

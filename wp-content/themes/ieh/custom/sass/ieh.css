@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900");
 .transition, .btn-saiba-mais, .btn-white, .wpcf7-submit, .btn-enviar-contato, .navbar-nav-home-menu li a, nav ul li a, a, .item {
   transition: all 0.5s ease; }
 
@@ -229,9 +230,6 @@
   .subtext-title {
     font-size: 28px; } }
 
-.icon-plus {
-  background-image: url("../img/icons/add.png"); }
-
 .icon, .icon-arrow-left,
 .icon-arrow-right {
   width: 64px;
@@ -239,16 +237,32 @@
   display: inline-block; }
 
 .icon-ampulheta {
-  background-image: url("../img/icons/hourglass.png"); }
+  background: url("../img/icons/ieh-em-numeros/01.png") no-repeat;
+  width: 39px;
+  height: 56px; }
 
 .icon-user-group {
-  background-image: url("../img/icons/user-group.png"); }
+  background: url("../img/icons/ieh-em-numeros/02.png") no-repeat;
+  width: 99px;
+  height: 44px; }
+
+.icon-certified {
+  background: url("../img/icons/ieh-em-numeros/03.png") no-repeat;
+  width: 56px;
+  height: 74px; }
+
+.icon-events {
+  background: url("../img/icons/ieh-em-numeros/04.png") no-repeat;
+  width: 52px;
+  height: 53px; }
 
 .icon-anotation {
-  background: url("../img/icons/notes.png") no-repeat;
-  width: 85px;
-  height: 85px;
-  background-size: 100%; }
+  background: url("../img/icons/ieh-em-numeros/05.png") no-repeat;
+  width: 74px;
+  height: 71px; }
+
+.icon-plus {
+  background-image: url("../img/icons/add.png"); }
 
 .icon-arrow-left,
 .icon-arrow-right {
@@ -871,7 +885,8 @@ label {
     color: #41b6d6;
     font-weight: 500;
     font-family: "Montserrat", sans-serif;
-    font-size: 24px; }
+    font-size: 24px;
+    margin: 0 auto 40px; }
   .box-depoimentos pre {
     text-align: center;
     display: block;
@@ -1195,7 +1210,9 @@ label {
     column-count: 1;
     column-gap: 0px; }
   .list-coordenacao .box-membrxs .nome, .list-coordenacao .box-membrxs .resumo {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .box-depoimentos .text-depoimento {
+    width: 100%; } }
 
 @media (min-width: 768px) {
   #home-bg-img-parallax-2 {
@@ -1208,7 +1225,9 @@ label {
     column-count: 2;
     column-gap: 0px; }
   .list-coordenacao .box-membrxs .nome, .list-coordenacao .box-membrxs .resumo {
-    font-size: 26px; } }
+    font-size: 26px; }
+  .box-depoimentos .text-depoimento {
+    width: 70%; } }
 
 @media (min-width: 992px) {
   #home-bg-img-parallax-2 {
@@ -1219,7 +1238,9 @@ label {
     -moz-column-count: 2;
     -moz-column-gap: 0px;
     column-count: 2;
-    column-gap: 0px; } }
+    column-gap: 0px; }
+  .box-depoimentos .text-depoimento {
+    width: 50%; } }
 
 #background-img-home {
   background-color: #41b6d6; }
@@ -1378,51 +1399,74 @@ label {
       background-color: #036422; }
   #home-ieh-em-numeros .list-ieh-numeros li {
     line-height: 100px; }
+    #home-ieh-em-numeros .list-ieh-numeros li .box-numeros {
+      position: relative; }
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .numero {
-      font-size: 80px; }
+      font-size: 80px;
+      margin-right: 10px; }
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .box-numeros {
       margin-left: 8%; }
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .text {
       position: absolute;
-      margin-top: 14px;
+      margin: 14px 0 0 15px;
       font-size: 18px; }
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) {
-      position: relative; }
+      position: relative;
+      padding-left: 20px; }
       #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .pre-text {
         text-align: right !important;
         right: 0;
-        padding-right: 5px;
+        padding-right: 15px;
         font-weight: 400;
         font-size: 20px; }
       #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .icon, #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .icon-arrow-left,
       #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .icon-arrow-right {
         display: inline-block;
         position: absolute;
-        margin: 0 0 0 10px; }
+        margin: 4px 0 0 16px; }
       #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .text {
         display: inline-block;
         position: absolute;
-        margin: -36px 0 0 0; }
+        margin: -36px 10px 0 0; }
       #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .text-second {
-        margin: 10px 0 0 80px; }
+        margin: 5px 0 0 120px; }
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .box-numeros {
-      margin-left: 10%; }
+      margin-left: 0; }
       #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .box-numeros .numero {
+        margin-left: 4px;
         font-size: 80px;
-        position: relative;
-        margin-top: -5px; }
+        position: relative; }
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .icon, #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .icon-arrow-left,
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .icon-arrow-right {
-      width: 80px;
-      height: 100px;
-      margin: 0 10px -20px 10px; }
+      margin: 0 0 -8px 10px; }
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .text {
       position: absolute;
-      margin-top: 55px; }
+      margin: 30px 0 0 10px; }
+    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(4) .numero {
+      margin: 0 0 0 100px; }
+    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(4) .icon, #home-ieh-em-numeros .list-ieh-numeros li:nth-child(4) .icon-arrow-left,
+    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(4) .icon-arrow-right {
+      position: absolute;
+      margin: 18px 0 0 18px; }
+    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(4) .text {
+      position: absolute;
+      margin: 28px 0 0 80px; }
+    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(5) .numero {
+      font-size: 80px;
+      margin: 8px 13px 0 82px;
+      display: inline-block; }
+    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(5) .icon, #home-ieh-em-numeros .list-ieh-numeros li:nth-child(5) .icon-arrow-left,
+    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(5) .icon-arrow-right {
+      position: absolute;
+      margin: 20px 0 0 4px;
+      display: inline-block; }
+    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(5) .text {
+      position: absolute;
+      margin: 46px 0 0 84px;
+      display: inline-block; }
   #home-ieh-em-numeros .list-ieh-numeros .numero {
     color: #41b6d6;
     font-size: 60px;
-    font-weight: 700 !important;
     font-family: "Montserrat", sans-serif;
     display: inline-block; }
   #home-ieh-em-numeros .list-ieh-numeros .pre-text,
@@ -1432,13 +1476,19 @@ label {
     line-height: 20px;
     font-size: 20px; }
 
+.box-numeros .numero {
+  font-weight: 900 !important; }
+
 .content-mapa {
-  position: relative; }
+  position: relative;
+  text-align: center; }
   .content-mapa .box-numeros {
-    text-align: center;
+    text-align: left;
     position: relative;
-    width: 100%;
-    padding: 0; }
+    width: auto;
+    padding: 0;
+    margin: 0 auto 20px;
+    display: inline-block; }
     .content-mapa .box-numeros .mais-de {
       display: inline-block;
       text-align: left;
@@ -1446,12 +1496,11 @@ label {
       font-size: 18px;
       line-height: 26px;
       color: #036422;
-      margin-left: -54px; }
+      padding-left: 3px; }
     .content-mapa .box-numeros .numero {
       color: #41b6d6;
       font-family: "Montserrat", sans-serif;
       font-size: 70px;
-      font-weight: 700 !important;
       display: block;
       line-height: 65px; }
     .content-mapa .box-numeros .text {
@@ -1460,8 +1509,7 @@ label {
       font-family: "Montserrat", sans-serif;
       font-size: 18px;
       line-height: 18px;
-      color: #036422;
-      margin-left: -36px; }
+      color: #036422; }
   .content-mapa .box-mapa {
     padding-top: 50px; }
   .content-mapa .text-area-atuacao {
@@ -1493,32 +1541,6 @@ label {
   text-align: center; }
   .list-parceiros-apoiadores li {
     margin: 28px !important; }
-    .list-parceiros-apoiadores li:nth-child(1) img {
-      width: 180px; }
-    .list-parceiros-apoiadores li:nth-child(2) img {
-      width: 150px; }
-    .list-parceiros-apoiadores li:nth-child(3) img {
-      width: 200px; }
-    .list-parceiros-apoiadores li:nth-child(4) img {
-      width: 130px; }
-    .list-parceiros-apoiadores li:nth-child(5) img {
-      width: 120px; }
-    .list-parceiros-apoiadores li:nth-child(6) img {
-      width: 130px; }
-    .list-parceiros-apoiadores li:nth-child(7) img {
-      width: 130px; }
-    .list-parceiros-apoiadores li:nth-child(8) img {
-      width: 160px; }
-    .list-parceiros-apoiadores li:nth-child(9) img {
-      width: 120px; }
-    .list-parceiros-apoiadores li:nth-child(10) img {
-      width: 110px; }
-    .list-parceiros-apoiadores li:nth-child(11) img {
-      width: 180px; }
-    .list-parceiros-apoiadores li:nth-child(12) img {
-      width: 120px; }
-    .list-parceiros-apoiadores li:nth-child(13) img {
-      width: 180px; }
 
 .box-content-quem-somos .arrow-down {
   width: 0;
@@ -1638,12 +1660,10 @@ label {
     #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .box-numeros .numero {
       font-size: 70px;
       margin-top: -18px;
-      font-weight: 700 !important; }
+      margin-left: 48px; }
   #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) {
     line-height: 60px;
     margin-bottom: 30px; }
-  #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .box-numeros {
-    margin-left: 0; }
   #home-ieh-em-numeros .text-area-atuacao {
     font-size: 18px; }
   .slick-dots {
