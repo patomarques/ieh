@@ -1211,8 +1211,8 @@ label {
     column-gap: 0px; }
   .list-coordenacao .box-membrxs .nome, .list-coordenacao .box-membrxs .resumo {
     font-size: 20px; }
-  .box-depoimentos .text-depoimento {
-    width: 100%; } }
+  .box-depoimentos {
+    padding: 0; } }
 
 @media (min-width: 768px) {
   #home-bg-img-parallax-2 {
@@ -1226,8 +1226,8 @@ label {
     column-gap: 0px; }
   .list-coordenacao .box-membrxs .nome, .list-coordenacao .box-membrxs .resumo {
     font-size: 26px; }
-  .box-depoimentos .text-depoimento {
-    width: 70%; } }
+  .box-depoimentos {
+    padding: 0 15%; } }
 
 @media (min-width: 992px) {
   #home-bg-img-parallax-2 {
@@ -1239,8 +1239,8 @@ label {
     -moz-column-gap: 0px;
     column-count: 2;
     column-gap: 0px; }
-  .box-depoimentos .text-depoimento {
-    width: 50%; } }
+  .box-depoimentos {
+    padding: 0 20%; } }
 
 #background-img-home {
   background-color: #41b6d6; }

@@ -739,9 +739,7 @@ label{
     }
   }
   .box-depoimentos{
-    .text-depoimento{
-      width: 100%;
-    }
+    padding: 0;
   }
 }
 
@@ -760,9 +758,7 @@ label{
     }
   }
   .box-depoimentos{
-    .text-depoimento{
-      width: 70%;
-    }
+    padding: 0 15%;
   }
 }
 
@@ -774,9 +770,7 @@ label{
       @include count-gap(2, 0px);
   }
   .box-depoimentos{
-    .text-depoimento{
-      width: 50%;
-    }
+    padding: 0 20%;
   }
 }
 
