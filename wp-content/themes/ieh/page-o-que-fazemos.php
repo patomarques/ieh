@@ -5,7 +5,6 @@ get_header();
 $idPageReferer = get_id_by_slug('o-que-fazemos');
 
 ?>
-
     <script type="text/javascript">
         document.getElementById('box-text-home').classList.add('content-text-bottom');
     </script>
@@ -36,14 +35,15 @@ $idPageReferer = get_id_by_slug('o-que-fazemos');
             </div>
         </div>
 
-        <div class="container">
+        <section class="container" id="objetivos"></section>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 offset-lg-1 text-justify">
                     <span v-show="language == 'pt'"><?php echo get_field('objetivos', $idPageReferer); ?></span>
                     <span v-show="language == 'en'"><?php echo get_field('objetivos_en', $idPageReferer); ?></span>
                 </div>
             </div>
-        </div>
+        </section>
+
         <div class="full-content o-que-fazemos-bloco-imagens">
             <div class="column-img-1">
                 <img class="my_class" <?php awesome_acf_responsive_image(get_field('imagem_inline_1'), 'thumb-840', '900px'); ?>  alt="" />

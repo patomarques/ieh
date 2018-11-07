@@ -140,7 +140,10 @@ get_header(); ?>
 
                     <div class="form-group text-right">
 
-                        <button type="button" class="btn-call-modal btn-white" data-target="#modal-fale-conosco" data-toggle="modal">Fale Conosco</button>
+                        <button type="button" class="btn-call-modal btn-white" data-target="#modal-fale-conosco" data-toggle="modal">
+                            <span v-show="language == 'pt'">Fale Conosco</span>
+                            <span v-show="language == 'en'">Contact Us</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -159,14 +162,23 @@ get_header(); ?>
                     <h4 class="modal-title" id="modalLabel">
                         <span v-show="language == 'pt'">Fale Conosco</span>
                         <span v-show="language == 'en'">Contact Us</span>
-
-
                     </h4>
 
-                    <p class="text-modal text-justify">Sinta-se a vontade para nos mandar uma mensagem atráves do email
-                    <a href="mailto:comunicacao@ieh.org.br">comunicacao@ieh.org.br</a>, ou preencha o formulário abaixo com os seus dados e te retornaremos assim que possível.</p>
+                    <p class="text-modal text-justify">
+                        <span v-show="language == 'pt'">Sinta-se a vontade para nos mandar uma mensagem atráves do email</span>
+                        <span v-show="language == 'en'">Feel free to send us a message by email</span>
 
-                    <?php echo do_shortcode('[contact-form-7 id="31" title="Fale Conosco"]'); ?>
+                    <a href="mailto:comunicacao@ieh.org.br">comunicacao@ieh.org.br</a>,
+                        <span v-show="language == 'pt'">ou preencha o formulário abaixo com os seus dados e te retornaremos assim que possível.</span>
+                        <span v-show="language == 'en'">or fill out the form below with your details and we will get back to you as soon as possible.</span>
+                        </p>
+
+                    <div class="form-pt" v-show="language == 'pt'">
+                        <?php echo do_shortcode('[contact-form-7 title="Fale Conosco"]'); ?>
+                    </div>
+                    <div class="form-en" v-show="language == 'en'">
+                        <?php echo do_shortcode('[contact-form-7 title="Contact Us"]'); ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -221,7 +233,7 @@ get_header(); ?>
                         <li>
                             <div class="box-numeros">
                                 <span class="numero">29</span>
-                                <span class="icon icon-anotation"></span>
+                                <span class="icon icon-events"></span>
                                 <span class="text" v-show="language == 'pt'">eventos<br>realizados</span>
                                 <span class="text" v-show="language == 'en'">events<br>realized</span>
                             </div>
@@ -230,7 +242,6 @@ get_header(); ?>
                         <li>
                             <div class="box-numeros">
                                 <div class="numero">21</div>
-<!--                                <span class="icon icon-certified"></span>-->
                                 <span class="icon icon-anotation"></span>
                                 <span class="text" v-show="language == 'pt'">convênios<br>contratos</span>
                                 <span class="text" v-show="language == 'en'">agreements<br>and contracts</span>
@@ -272,7 +283,7 @@ get_header(); ?>
     <section id="home-depoimentos" class="bg-full-content-gray">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-8 offset-md-2">
+                <div class="col-sm-12 col-md-12">
                     <div class="slider">
                         <?php while ($depoimentos->have_posts()) : $depoimentos->the_post(); ?>
                             <div class="slider-item">
@@ -292,7 +303,8 @@ get_header(); ?>
 $args_parca = array(
     'posts_per_page' => -1, // Number of recent posts thumbnails to display
     'post_type' => 'parceiros-apoiadores', // Show only the published posts
-    'orderby' => "meta_value_ordem",
+    'meta_key' => 'ordem',
+    'orderby' => "meta_value",
     'order' => "ASC"
 );
 

@@ -43,8 +43,9 @@
     (function($) {
         //set backgrond baner-im-home height
         function setBgImgHeader(){
-            if($('#background-img-home').length > 0){
-                $('#background-img-home').css('height', window.innerHeight);
+            var bg_img_content = $('#background-img-home');
+            if(bg_img_content.length > 0){
+                bg_img_content.css('height', window.innerHeight);
             }
         }
         $(document).on('load', function(){
@@ -159,16 +160,7 @@
     </nav>
 </aside>
 
-<?php
-    $imagemUrl = "";
-    if (is_front_page() && !empty(get_field('banner_topo')['id'])){
-        $imagemUrl = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'full')[0];
-    }else{
-        $imagemUrl =  get_the_post_thumbnail_url(get_the_ID(), 'full');
-    }
-?>
-
-<section id="background-img-home" class="content-full-background parallax-effect bg-home-parallax" style="background-image: url(<?php echo $imagemUrl; ?>)">
+<section id="background-img-home" class="content-full-background parallax-effect bg-home-parallax"> <!--  style="background-image: url(<?//php echo $imagemUrl; ?>)" -->
     <div class="home-begin-content">
         <?php
             if (is_front_page() ){
@@ -312,8 +304,41 @@
             </div>
         </div>
     </div>
-
 </section>
 <div class="lines-fullsize bg-cinza-claro"></div>
 <div class="lines-fullsize bg-azul-claro"></div>
+
+    <?php
+
+        //full, larger, medium
+        if (is_front_page() && !empty(get_field('banner_topo')['id'])){
+            $imagemUrlFull   = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'full')[0];
+            $imagemUrlLarge  = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'large')[0];
+            $imagemUrlMedium = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'medium')[0];
+        }else{
+            $imagemUrlFull   =  get_the_post_thumbnail_url(get_the_ID(), 'full');
+            $imagemUrlLarge  =  get_the_post_thumbnail_url(get_the_ID(), 'large');
+            $imagemUrlMedium =  get_the_post_thumbnail_url(get_the_ID(), 'medium');
+        }
+    ?>
+    <script>
+        (function($) {
+            var imagemUrl = '';
+            var screenSizeW = window.innerWidth;
+
+            if(screenSizeW > 0 && screenSizeW < 480){
+                //medium
+                imagemUrl = <?= json_encode($imagemUrlLarge) ?>;
+            }else if(screenSizeW > 451 && screenSizeW < 1100){
+                //larger
+                imagemUrl = <?= json_encode($imagemUrlLarge)  ?>;
+            }else{
+                //full
+                imagemUrl = <?= json_encode($imagemUrlFull) ?>;
+            }
+            $('#background-img-home').css('background-image', "url('" + imagemUrl + "')");
+            console.log(imagemUrl);
+        })( jQuery );
+    </script>
+
 <?//php endif; ?>

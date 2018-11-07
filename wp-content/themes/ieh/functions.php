@@ -340,7 +340,7 @@ function create_posttype() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'parceiros-apoiadores'),
-            'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'order' )
+            'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields', 'order', 'page-attributes' )
         )
     );
 

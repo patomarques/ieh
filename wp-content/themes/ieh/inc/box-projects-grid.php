@@ -1,7 +1,8 @@
 <?php
     $args_projetos = array(
         'posts_per_page' => -1, // Number of recent posts thumbnails to display
-        'post_type' => 'nossos-projetos', // Show only the published posts
+        'post_type' => 'nossos-projetos', // Show only the published posts,
+        'public' => false,
         'orderby' => "ordem",
         'order' => "ASC"
     );

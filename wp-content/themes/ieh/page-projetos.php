@@ -29,6 +29,7 @@ get_header();
                 'posts_per_page' => -1, // Number of recent posts thumbnails to display
                 'post_type' => 'nossos-projetos', // Show only the published posts
                 'orderby' => "ordem",
+                'public' => false,
                 'order' => "ASC"
             );
 
