@@ -1610,10 +1610,8 @@ label {
     background-color: #41b6d6; }
   .logo-margin-bottom {
     margin-bottom: 0; }
-  .home-begin-content .box-text-home {
-    margin-top: 50px; }
-    .home-begin-content .box-text-home .text-home {
-      font-size: 4em; }
+  .home-begin-content .box-text-home .text-home {
+    font-size: 4em; }
   .page-o-que-fazemos .title-section {
     font-size: 40px;
     font-weight: 700;
