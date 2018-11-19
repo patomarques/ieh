@@ -1146,6 +1146,16 @@ label {
   position: relative;
   border-radius: 15px; }
 
+.wpcf7-mail-sent-ok {
+  background-color: #057261 !important;
+  color: #ffffff;
+  padding: 20px 10px !important;
+  margin: -25px 0  0 0 !important;
+  border: none !important;
+  text-align: center;
+  position: relative;
+  border-radius: 15px; }
+
 .imagem-canto {
   position: relative; }
   .imagem-canto img {

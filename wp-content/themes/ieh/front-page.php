@@ -300,7 +300,7 @@ get_header(); ?>
     </section>
 
 <?php
-$args_parca = array(
+$args_apoiadores = array(
     'posts_per_page' => -1, // Number of recent posts thumbnails to display
     'post_type' => 'parceiros-apoiadores', // Show only the published posts
     'meta_key' => 'ordem',
@@ -308,7 +308,7 @@ $args_parca = array(
     'order' => "ASC"
 );
 
-$parceiros = new WP_Query($args_parca);
+$apoadores = new WP_Query($args_apoiadores);
 ?>
 
     <section id="home-apoiadores" class="bg-stripped-transversal">
@@ -320,11 +320,11 @@ $parceiros = new WP_Query($args_parca);
 
 
                     <ul class="list-parceiros-apoiadores list-unstyled list-inline">
-                        <?php while ($parceiros->have_posts()) : $parceiros->the_post(); ?>
-                            <li class="list-inline-item">
+                        <?php while ($apoadores->have_posts()) : $apoadores->the_post(); ?>
+                            <li class="list-inline-item" data-ordem="<?php echo get_field('ordem'); ?>">
                                 <div class="box-img-apoio">
                                     <?php if(has_post_thumbnail()){ ?>
-                                        <?php echo the_post_thumbnail(); ?>
+                                        <?php the_post_thumbnail(); ?>
                                     <?php }else{ ?>
                                         <p><?php echo get_the_title(); ?></p>
                                     <?php } ?>

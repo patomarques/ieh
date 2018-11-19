@@ -1,4 +1,9 @@
 jQuery(document).ready(function($){
+    $(".list-parceiros-apoiadores li").sort(sort_li).appendTo('.list-parceiros-apoiadores');
+    function sort_li(a, b) {
+        return ($(b).data('ordem')) < ($(a).data('ordem')) ? 1 : -1;
+    }
+
     if($('.slider').length > 0){
         $(".slider").slick({
             dots: true,
