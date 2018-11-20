@@ -328,7 +328,7 @@
 
             if(screenSizeW > 0 && screenSizeW < 480){
                 //medium
-                imagemUrl = <?= json_encode($imagemUrlLarge) ?>;
+                imagemUrl = <?= json_encode($imagemUrlMedium) ?>;
             }else if(screenSizeW > 451 && screenSizeW < 1100){
                 //larger
                 imagemUrl = <?= json_encode($imagemUrlLarge)  ?>;
