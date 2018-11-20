@@ -737,7 +737,7 @@ a:hover {
   background-image: url("../img/bg/home-fullscreen-bg.jpg"); }
 
 #home-bg-img-parallax-2 {
-  background-image: url("../img/bg/bg-img2.png");
+  background-image: url("../img/bg/bg-img2.jpg");
   height: 600px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1323,7 +1323,7 @@ label {
         content: ''; }
 
 #home-o-que-fazemos {
-  background-image: url(../img/bg/o-que-fazemos-home-dark.png);
+  background-image: url(../img/bg/o-que-fazemos-home-dark.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
