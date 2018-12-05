@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Nossos Projetos */
+/* Template Name: Linhas de Ação */
 get_header();
 ?>
     <script type="text/javascript">
@@ -11,8 +11,8 @@ get_header();
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <h1 class="title-default title-nossos-projetos c-azul-claro">
-                        <span v-show="language == 'pt'">Nossos Projetos</span>
-                        <span v-show="language == 'en'">Our Projects</span>
+                        <span v-show="language == 'pt'">Linhas de Ação</span>
+                        <span v-show="language == 'en'">Courses of Action</span>
                     </h1>
                 </div>
             </div>

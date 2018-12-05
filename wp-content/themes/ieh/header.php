@@ -99,7 +99,7 @@
                 <a href="<?php echo get_site_url(); ?>/o-que-fazemos/" class="link-menu <?php if($post_slug == 'o-que-fazemos'){ echo "menu-actived"; } ?>">O QUE FAZEMOS</a>
             </li>
             <li>
-                <a href="<?php echo get_site_url(); ?>/projetos/" class="link-menu <?php if($post_slug == 'projetos'){ echo "menu-actived"; } ?>">NOSSOS PROJETOS</a>
+                <a href="<?php echo get_site_url(); ?>/linhas-de-acao/" class="link-menu <?php if($post_slug == 'linhas-de-acao'){ echo "menu-actived"; } ?>">LINHAS <br>DE AÇÃO</a>
             </li>
             <li>
                 <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-apoie-nossos-projetos" class="link-menu">APOIE NOSSOS PROJETOS</a>
@@ -119,7 +119,7 @@
                 <a href="<?php echo get_site_url(); ?>/what-we-do/" class="link-menu <?php if($post_slug == 'what-we-do'){ echo "menu-actived"; } ?>">WHAT WE DO</a>
             </li>
             <li>
-                <a href="<?php echo get_site_url(); ?>/our-projects/" class="link-menu <?php if($post_slug == 'our-projects'){ echo "menu-actived"; } ?>">OUR  PROJECTS</a>
+                <a href="<?php echo get_site_url(); ?>/course-of-action/" class="link-menu <?php if($post_slug == 'course-of-action'){ echo "menu-actived"; } ?>">COURSE<br>OF ACTION</a>
             </li>
             <li>
                 <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-apoie-nossos-projetos" class="link-menu">SUPPORT OUR PROJECTS</a>
@@ -266,7 +266,7 @@
                             <a href="<?php echo get_site_url(); ?>/o-que-fazemos/" class="link-menu <?php if($post_slug == 'o-que-fazemos'){ echo "menu-actived"; } ?>">O QUE <br>FAZEMOS</a>
                         </li>
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/projetos/" class="link-menu <?php if($post_slug == 'projetos'){ echo "menu-actived"; } ?>">NOSSOS <br>PROJETOS</a>
+                            <a href="<?php echo get_site_url(); ?>/linhas-de-acao/" class="link-menu <?php if($post_slug == 'linhas-de-acao'){ echo "menu-actived"; } ?>">LINHAS <br>DE AÇÃO</a>
                         </li>
                         <li>
                             <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-apoie-nossos-projetos" class="link-menu">APOIE <br>NOSSOS <br>PROJETOS</a>
@@ -287,7 +287,7 @@
                             <a href="<?php echo get_site_url(); ?>/what-we-do/" class="link-menu <?php if($post_slug == 'what-we-do'){ echo "menu-actived"; } ?>">WHAT<br>WE DO</a>
                         </li>
                         <li>
-                            <a href="<?php echo get_site_url(); ?>/our-projects/" class="link-menu <?php if($post_slug == 'our-projects'){ echo "menu-actived"; } ?>">OUR <br>PROJECTS</a>
+                            <a href="<?php echo get_site_url(); ?>/course-of-action/" class="link-menu <?php if($post_slug == 'course-of-action'){ echo "menu-actived"; } ?>">COURSE<br>OF ACTION</a>
                         </li>
                         <li>
                             <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-apoie-nossos-projetos" class="link-menu">SUPPORT <br>OUR<br>PROJECTS</a>
