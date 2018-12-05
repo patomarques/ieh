@@ -53,6 +53,11 @@ jQuery(document).ready(function($){
             return false;
         });
     }
+
+    //remove label on brazil map bottom;
+    if($('. fm-map-container a').length > 0){
+        $('. fm-map-container a').destroy();
+    }
 });
 
 (function($) {

@@ -505,8 +505,9 @@ nav {
   }
   aside {
     nav {
+      padding-top: 40px;
       ul {
-        margin-top: 40px;
+        margin-top: 0;
         li {
           padding: 5px 0;
           a {
@@ -564,22 +565,17 @@ nav {
         font-size: 16px;
       }
     }
-
   }
 }
 
 @media (min-width: $screen-lg-min) {
   .navbar-nav-home-menu{
     li{
-
       margin: 0 20px;
       a{
         font-size: 18px;
         line-height: 18px;
-
       }
     }
   }
-
 }
-

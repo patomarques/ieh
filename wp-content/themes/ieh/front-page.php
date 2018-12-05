@@ -191,7 +191,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-sm-12 text-left">
                     <h2 class="title-section">
-                        <span class="negrito first-word" v-show="language == 'pt'">IEH<br>em Números</span>
+                        <span class="negrito first-word" v-show="language == 'pt'">IEH <br class="d-none d-sm-block">em <br class="d-none d-lg-block">Números</span>
                         <span class="negrito first-word" v-show="language == 'en'">IEH<br>Statistics</span>
                     </h2>
                 </div>
@@ -262,7 +262,6 @@ get_header(); ?>
                         <div class="box-mapa">
                             <?php echo do_shortcode('[freehtml5map id="0"]'); ?>
                         </div>
-                        <span class="text-area-atuacao"><strong>AM </strong>(Manaus), <b>PA</b> (Belém), <b>CE</b> (Fortaleza, Icapuí, Caucaia, Trairí, São Gonçalo do Amarante, Paracuru, Paraíbaba e Itapipoca), <b>RN</b>, <b>PB</b> (Soledade e Fagundes), <b>PE</b> (Recife, Desterro, Aldeia e Jatobá), <b>AL</b> (Pariconha, Delmiro Golveia, Olho D'Agua do Casado e Piranhas), <b>SE</b> (Canindé do São Francisco e Poço Redondo), <b>BA</b> (Paulo Afonso e Glória), <b>MG</b> (Belo Horizonte), <b>DF</b> (Brasília) e <b>PR</b> (Curitiba).</span>
                     </div>
                 </div>
             </div>
@@ -299,17 +298,17 @@ get_header(); ?>
         </div>
     </section>
 
-<?php
-$args_apoiadores = array(
-    'posts_per_page' => -1, // Number of recent posts thumbnails to display
-    'post_type' => 'parceiros-apoiadores', // Show only the published posts
-    'meta_key' => 'ordem',
-    'orderby' => "meta_value",
-    'order' => "ASC"
-);
+    <?php
+        $args_apoiadores = array(
+            'posts_per_page' => -1, // Number of recent posts thumbnails to display
+            'post_type' => 'parceiros-apoiadores', // Show only the published posts
+            'meta_key' => 'ordem',
+            'orderby' => "meta_value",
+            'order' => "ASC"
+        );
 
-$apoadores = new WP_Query($args_apoiadores);
-?>
+        $apoiadores = new WP_Query($args_apoiadores);
+    ?>
 
     <section id="home-apoiadores" class="bg-stripped-transversal">
         <div class="container">
@@ -320,7 +319,7 @@ $apoadores = new WP_Query($args_apoiadores);
 
 
                     <ul class="list-parceiros-apoiadores list-unstyled list-inline">
-                        <?php while ($apoadores->have_posts()) : $apoadores->the_post(); ?>
+                        <?php while ($apoiadores->have_posts()) : $apoiadores->the_post(); ?>
                             <li class="list-inline-item" data-ordem="<?php echo get_field('ordem'); ?>">
                                 <div class="box-img-apoio">
                                     <?php if(has_post_thumbnail()){ ?>

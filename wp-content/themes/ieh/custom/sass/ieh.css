@@ -665,15 +665,17 @@ nav {
 @media (min-width: 320px) {
   .logo-home-img {
     max-width: 150px; }
-  aside nav ul {
-    margin-top: 40px; }
-    aside nav ul li {
-      padding: 5px 0; }
-      aside nav ul li a {
-        font-size: 2em;
-        letter-spacing: 0;
-        word-spacing: 0;
-        line-height: 40px; }
+  aside nav {
+    padding-top: 40px; }
+    aside nav ul {
+      margin-top: 0; }
+      aside nav ul li {
+        padding: 5px 0; }
+        aside nav ul li a {
+          font-size: 2em;
+          letter-spacing: 0;
+          word-spacing: 0;
+          line-height: 40px; }
   aside.open .switch-chose .lang {
     margin-bottom: 10px !important; }
   #element-language-chosen {
@@ -1407,73 +1409,8 @@ label {
     font-weight: 400; }
     #home-ieh-em-numeros .title-section:after {
       background-color: #036422; }
-  #home-ieh-em-numeros .list-ieh-numeros li {
-    line-height: 100px; }
-    #home-ieh-em-numeros .list-ieh-numeros li .box-numeros {
-      position: relative; }
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .numero {
-      font-size: 80px;
-      margin-right: 10px; }
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .box-numeros {
-      margin-left: 8%; }
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .text {
-      position: absolute;
-      margin: 14px 0 0 15px;
-      font-size: 18px; }
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) {
-      position: relative;
-      padding-left: 20px; }
-      #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .pre-text {
-        text-align: right !important;
-        right: 0;
-        padding-right: 15px;
-        font-weight: 400;
-        font-size: 20px; }
-      #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .icon, #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .icon-arrow-left,
-      #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .icon-arrow-right {
-        display: inline-block;
-        position: absolute;
-        margin: 4px 0 0 16px; }
-      #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .text {
-        display: inline-block;
-        position: absolute;
-        margin: -36px 10px 0 0; }
-      #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) .text-second {
-        margin: 5px 0 0 120px; }
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .box-numeros {
-      margin-left: 0; }
-      #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .box-numeros .numero {
-        margin-left: 4px;
-        font-size: 80px;
-        position: relative; }
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .icon, #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .icon-arrow-left,
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .icon-arrow-right {
-      margin: 0 0 -8px 10px; }
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(3) .text {
-      position: absolute;
-      margin: 30px 0 0 10px; }
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(4) .numero {
-      margin: 0 0 0 100px; }
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(4) .icon, #home-ieh-em-numeros .list-ieh-numeros li:nth-child(4) .icon-arrow-left,
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(4) .icon-arrow-right {
-      position: absolute;
-      margin: 18px 0 0 18px; }
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(4) .text {
-      position: absolute;
-      margin: 28px 0 0 80px; }
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(5) .numero {
-      font-size: 80px;
-      margin: 8px 13px 0 82px;
-      display: inline-block; }
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(5) .icon, #home-ieh-em-numeros .list-ieh-numeros li:nth-child(5) .icon-arrow-left,
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(5) .icon-arrow-right {
-      position: absolute;
-      margin: 20px 0 0 4px;
-      display: inline-block; }
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(5) .text {
-      position: absolute;
-      margin: 46px 0 0 84px;
-      display: inline-block; }
+  #home-ieh-em-numeros .list-ieh-numeros li .box-numeros {
+    position: relative; }
   #home-ieh-em-numeros .list-ieh-numeros .numero {
     color: #41b6d6;
     font-size: 60px;
@@ -1610,8 +1547,10 @@ label {
     background-color: #41b6d6; }
   .logo-margin-bottom {
     margin-bottom: 0; }
-  .home-begin-content .box-text-home .text-home {
-    font-size: 4em; }
+  .home-begin-content .box-text-home {
+    margin-top: 20px; }
+    .home-begin-content .box-text-home .text-home {
+      font-size: 4em; }
   .page-o-que-fazemos .title-section {
     font-size: 40px;
     font-weight: 700;
@@ -1639,8 +1578,8 @@ label {
     line-height: 22px; }
   .item .square-content .img-icon {
     margin: 0 auto; }
-  #home-ieh-em-numeros .list-ieh-numeros li .fa-plus {
-    margin: -25px 0 0 -5px;
+  .list-ieh-numeros li .fa-plus {
+    margin: -25px 0 0 -20px;
     position: absolute; }
   .content-mapa .box-mapa {
     padding-top: 0; }
@@ -1660,20 +1599,70 @@ label {
     text-align: center; }
   .slick-slider:after {
     margin: 0 -5px 25px 0; }
-  #home-ieh-em-numeros .list-ieh-numeros .numero {
-    font-size: 50px;
-    margin-left: 44px; }
-  #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) {
-    line-height: 100px; }
-    #home-ieh-em-numeros .list-ieh-numeros li:nth-child(1) .box-numeros .numero {
-      font-size: 70px;
-      margin-top: -18px;
-      margin-left: 48px; }
-  #home-ieh-em-numeros .list-ieh-numeros li:nth-child(2) {
-    line-height: 60px;
-    margin-bottom: 30px; }
-  #home-ieh-em-numeros .text-area-atuacao {
-    font-size: 18px; }
+  .list-ieh-numeros {
+    text-align: center; }
+    .list-ieh-numeros .numero {
+      font-size: 50px;
+      margin: 0; }
+    .list-ieh-numeros li:nth-child(1) {
+      line-height: 100px; }
+      .list-ieh-numeros li:nth-child(1) .box-numeros .numero {
+        font-size: 70px;
+        margin-top: -18px;
+        margin-left: 0; }
+    .list-ieh-numeros li:nth-child(2) {
+      line-height: 42px;
+      margin: 10px 0 20px; }
+      .list-ieh-numeros li:nth-child(2) .numero {
+        margin-left: 0; }
+      .list-ieh-numeros li:nth-child(2) .text-second {
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        display: block; }
+    .list-ieh-numeros li:nth-child(3) {
+      margin: 0;
+      text-align: center;
+      line-height: 52px; }
+      .list-ieh-numeros li:nth-child(3) .text {
+        margin: -28px auto 0;
+        display: block;
+        position: relative;
+        text-align: center; }
+    .list-ieh-numeros li:nth-child(4) {
+      margin: 20px 0; }
+      .list-ieh-numeros li:nth-child(4) .box-numeros {
+        text-align: center;
+        display: block; }
+        .list-ieh-numeros li:nth-child(4) .box-numeros .numero {
+          margin: 0; }
+        .list-ieh-numeros li:nth-child(4) .box-numeros .text {
+          margin: 0; }
+        .list-ieh-numeros li:nth-child(4) .box-numeros .numero,
+        .list-ieh-numeros li:nth-child(4) .box-numeros .text,
+        .list-ieh-numeros li:nth-child(4) .box-numeros .icon,
+        .list-ieh-numeros li:nth-child(4) .box-numeros .icon-arrow-left,
+        .list-ieh-numeros li:nth-child(4) .box-numeros .icon-arrow-right {
+          position: relative; }
+        
+        .list-ieh-numeros li:nth-child(4) .box-numeros .icon,
+        .list-ieh-numeros li:nth-child(4) .box-numeros .icon-arrow-left,
+        .list-ieh-numeros li:nth-child(4) .box-numeros .icon-arrow-right {
+          margin: 0 5px -8px 7px; }
+    .list-ieh-numeros li:nth-child(5) {
+      margin-bottom: 30px; }
+      .list-ieh-numeros li:nth-child(5) .box-numeros {
+        margin: 0;
+        text-align: center; }
+        .list-ieh-numeros li:nth-child(5) .box-numeros .numero {
+          margin: 0; }
+        .list-ieh-numeros li:nth-child(5) .box-numeros .icon, .list-ieh-numeros li:nth-child(5) .box-numeros .icon-arrow-left,
+        .list-ieh-numeros li:nth-child(5) .box-numeros .icon-arrow-right {
+          margin: 20px 0 0 7px; }
+        .list-ieh-numeros li:nth-child(5) .box-numeros .text {
+          position: relative; }
+    .list-ieh-numeros .text-area-atuacao {
+      font-size: 18px; }
   .slick-dots {
     display: block;
     margin: 0 auto;
@@ -1689,6 +1678,8 @@ label {
 @media (min-width: 768px) {
   .box-content-quem-somos .box-info {
     letter-spacing: 3px; }
+  .list-ieh-numeros li {
+    line-height: 100px; }
   .icon-arrow-left {
     margin: 8% -2% 0; }
   .icon-arrow-right {
@@ -1723,6 +1714,70 @@ label {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .list-ieh-numeros li:nth-child(1) .numero {
+    font-size: 80px;
+    margin-right: 10px; }
+  .list-ieh-numeros li:nth-child(1) .box-numeros {
+    margin-left: 8%; }
+  .list-ieh-numeros li:nth-child(1) .text {
+    position: absolute;
+    margin: 14px 0 0 15px;
+    font-size: 18px; }
+  .list-ieh-numeros li:nth-child(2) {
+    position: relative;
+    padding-left: 20px; }
+    .list-ieh-numeros li:nth-child(2) .pre-text {
+      text-align: right !important;
+      right: 0;
+      padding-right: 15px;
+      font-weight: 400;
+      font-size: 20px; }
+    .list-ieh-numeros li:nth-child(2) .icon, .list-ieh-numeros li:nth-child(2) .icon-arrow-left,
+    .list-ieh-numeros li:nth-child(2) .icon-arrow-right {
+      display: inline-block;
+      position: absolute;
+      margin: 4px 0 0 16px; }
+    .list-ieh-numeros li:nth-child(2) .text {
+      display: inline-block;
+      position: absolute;
+      margin: -36px 10px 0 0; }
+    .list-ieh-numeros li:nth-child(2) .text-second {
+      margin: 5px 0 0 120px;
+      display: inline-block !important; }
+  .list-ieh-numeros li:nth-child(3) .box-numeros {
+    margin-left: 0; }
+    .list-ieh-numeros li:nth-child(3) .box-numeros .numero {
+      margin-left: 4px;
+      font-size: 80px;
+      position: relative; }
+  .list-ieh-numeros li:nth-child(3) .icon, .list-ieh-numeros li:nth-child(3) .icon-arrow-left,
+  .list-ieh-numeros li:nth-child(3) .icon-arrow-right {
+    margin: 0 0 -8px 10px; }
+  .list-ieh-numeros li:nth-child(3) .text {
+    position: absolute;
+    margin: 30px 0 0 10px; }
+  .list-ieh-numeros li:nth-child(4) .numero {
+    margin: 0 0 0 100px; }
+  .list-ieh-numeros li:nth-child(4) .icon, .list-ieh-numeros li:nth-child(4) .icon-arrow-left,
+  .list-ieh-numeros li:nth-child(4) .icon-arrow-right {
+    position: absolute;
+    margin: 18px 0 0 18px; }
+  .list-ieh-numeros li:nth-child(4) .text {
+    position: absolute;
+    margin: 28px 0 0 80px; }
+  .list-ieh-numeros li:nth-child(5) .numero {
+    font-size: 80px;
+    margin: 8px 13px 0 82px;
+    display: inline-block; }
+  .list-ieh-numeros li:nth-child(5) .icon, .list-ieh-numeros li:nth-child(5) .icon-arrow-left,
+  .list-ieh-numeros li:nth-child(5) .icon-arrow-right {
+    position: absolute;
+    margin: 20px 0 0 4px;
+    display: inline-block; }
+  .list-ieh-numeros li:nth-child(5) .text {
+    position: absolute;
+    margin: 46px 0 0 84px;
+    display: inline-block; }
   .item .square-content .img-icon {
     margin-bottom: 20px; }
   .item .square-content .text-box {
@@ -1746,6 +1801,9 @@ label {
     margin: 0 -20% 0 -10%; }
   .icon-arrow-right {
     margin: 0 -10% 0 -20%; } }
+
+#element-language-chosen {
+  display: none !important; }
 
 #footer-site {
   background-color: #41b6d6;
