@@ -191,7 +191,7 @@ get_header(); ?>
             <div class="row">
                 <div class="col-sm-12 text-left">
                     <h2 class="title-section">
-                        <span class="negrito first-word" v-show="language == 'pt'">IEH <br class="d-none d-sm-block">em <br class="d-none d-lg-block">Números</span>
+                        <span class="negrito first-word" v-show="language == 'pt'">IEH <br>em Números</span>
                         <span class="negrito first-word" v-show="language == 'en'">IEH<br>Statistics</span>
                     </h2>
                 </div>
@@ -210,11 +210,11 @@ get_header(); ?>
                         <li>
                             <div class="box-numeros">
                                 <span class="pre-text">
-                                    <span class="d-none d-sm-block">
-                                        <span class="text" v-show="language == 'pt'">Mais<br>de</span>
-                                        <span class="text" v-show="language == 'en'">More<br>than</span>
+                                    <span>
+                                        <span class="text" v-show="language == 'pt'">Cerca<br>de</span>
+                                        <span class="text" v-show="language == 'en'">Around<br>than</span>
                                     </span>
-                                    <span class="d-block d-sm-none"><i class="fa fa-plus"></i></span>
+<!--                                    <span class="d-block d-sm-none"><i class="fa fa-plus"></i></span>-->
                                 </span>
                                 <span class="numero">120</span>
                                 <span class="icon icon-user-group"></span>
@@ -224,7 +224,11 @@ get_header(); ?>
                         </li>
                         <li>
                             <div class="box-numeros">
-                                <div class="numero">800</div>
+                                 <span class="pre-text">
+                                    <span class="text" v-show="language == 'pt'">Mais<br>de</span>
+                                    <span class="text" v-show="language == 'en'">More<br>than</span>
+                                </span>
+                                <div class="numero"><span class="num-lg">10</span> mil</div>
                                 <span class="icon icon-certified"></span>
                                 <span class="text">profissionais<br>capacitados</span>
                             </div>
@@ -260,7 +264,7 @@ get_header(); ?>
                         </div>
 
                         <div class="box-mapa">
-                            <?php echo do_shortcode('[freehtml5map id="0"]'); ?>
+                            <img src="<?php echo get_template_directory_uri() . '/custom/img/brazil-map.png'; ?>" alt="Brazil Map" class="img-responsive">
                         </div>
                     </div>
                 </div>

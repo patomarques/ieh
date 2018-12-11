@@ -11,7 +11,7 @@
 ?>
 <SquareGrid>
     <?php while ($projetos->have_posts()) : $projetos->the_post(); ?>
-    <div class="item">
+    <div class="item" data-ordem="<?php echo get_field('ordem'); ?>">
         <a href="<?php echo get_site_url(); ?>/projetos#<?php echo get_field('scroll-to');?>" class="square-content" data-scroll="<?php echo get_field('scroll-to');?>">
             <?php
             $image = get_field('icon');

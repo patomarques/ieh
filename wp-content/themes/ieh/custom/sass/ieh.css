@@ -1413,7 +1413,6 @@ label {
     position: relative; }
   #home-ieh-em-numeros .list-ieh-numeros .numero {
     color: #41b6d6;
-    font-size: 60px;
     font-family: "Montserrat", sans-serif;
     display: inline-block; }
   #home-ieh-em-numeros .list-ieh-numeros .pre-text,
@@ -1604,12 +1603,18 @@ label {
     .list-ieh-numeros .numero {
       font-size: 50px;
       margin: 0; }
+    .list-ieh-numeros .num-lg {
+      font-size: 80px;
+      margin-left: 10px; }
     .list-ieh-numeros li:nth-child(1) {
       line-height: 100px; }
       .list-ieh-numeros li:nth-child(1) .box-numeros .numero {
         font-size: 70px;
         margin-top: -18px;
         margin-left: 0; }
+      .list-ieh-numeros li:nth-child(1) .box-numeros .text {
+        text-align: left;
+        margin-left: 10px; }
     .list-ieh-numeros li:nth-child(2) {
       line-height: 42px;
       margin: 10px 0 20px; }
@@ -1628,9 +1633,14 @@ label {
         margin: -28px auto 0;
         display: block;
         position: relative;
-        text-align: center; }
+        text-align: center;
+        bottom: 10px; }
+      .list-ieh-numeros li:nth-child(3) .numero {
+        font-size: 40px; }
+      .list-ieh-numeros li:nth-child(3) .num-lg {
+        font-size: 70px; }
     .list-ieh-numeros li:nth-child(4) {
-      margin: 20px 0; }
+      margin: 0 0 20px 0; }
       .list-ieh-numeros li:nth-child(4) .box-numeros {
         text-align: center;
         display: block; }
@@ -1658,7 +1668,7 @@ label {
           margin: 0; }
         .list-ieh-numeros li:nth-child(5) .box-numeros .icon, .list-ieh-numeros li:nth-child(5) .box-numeros .icon-arrow-left,
         .list-ieh-numeros li:nth-child(5) .box-numeros .icon-arrow-right {
-          margin: 20px 0 0 7px; }
+          margin: 0px 4px -12px 15px; }
         .list-ieh-numeros li:nth-child(5) .box-numeros .text {
           position: relative; }
     .list-ieh-numeros .text-area-atuacao {
@@ -1714,70 +1724,58 @@ label {
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .list-ieh-numeros li:nth-child(1) .numero {
-    font-size: 80px;
-    margin-right: 10px; }
-  .list-ieh-numeros li:nth-child(1) .box-numeros {
-    margin-left: 8%; }
-  .list-ieh-numeros li:nth-child(1) .text {
-    position: absolute;
-    margin: 14px 0 0 15px;
-    font-size: 18px; }
-  .list-ieh-numeros li:nth-child(2) {
-    position: relative;
-    padding-left: 20px; }
-    .list-ieh-numeros li:nth-child(2) .pre-text {
-      text-align: right !important;
-      right: 0;
-      padding-right: 15px;
-      font-weight: 400;
-      font-size: 20px; }
+  .list-ieh-numeros li {
+    text-align: left; }
+    .list-ieh-numeros li .numero {
+      font-size: 40px; }
+    .list-ieh-numeros li:nth-child(1) {
+      margin-left: 60px; }
+      .list-ieh-numeros li:nth-child(1) .icon, .list-ieh-numeros li:nth-child(1) .icon-arrow-left,
+      .list-ieh-numeros li:nth-child(1) .icon-arrow-right {
+        margin: 0 10px -4px; }
+      .list-ieh-numeros li:nth-child(1) .numero {
+        font-size: 70px !important; }
+    .list-ieh-numeros li:nth-child(2) .text {
+      text-align: right; }
+    .list-ieh-numeros li:nth-child(2) .numero {
+      font-size: 50px;
+      margin: 0 10px 0 0; }
     .list-ieh-numeros li:nth-child(2) .icon, .list-ieh-numeros li:nth-child(2) .icon-arrow-left,
     .list-ieh-numeros li:nth-child(2) .icon-arrow-right {
-      display: inline-block;
-      position: absolute;
-      margin: 4px 0 0 16px; }
-    .list-ieh-numeros li:nth-child(2) .text {
-      display: inline-block;
-      position: absolute;
-      margin: -36px 10px 0 0; }
+      margin: -6px 0 0 0; }
     .list-ieh-numeros li:nth-child(2) .text-second {
-      margin: 5px 0 0 120px;
-      display: inline-block !important; }
-  .list-ieh-numeros li:nth-child(3) .box-numeros {
-    margin-left: 0; }
-    .list-ieh-numeros li:nth-child(3) .box-numeros .numero {
-      margin-left: 4px;
-      font-size: 80px;
-      position: relative; }
-  .list-ieh-numeros li:nth-child(3) .icon, .list-ieh-numeros li:nth-child(3) .icon-arrow-left,
-  .list-ieh-numeros li:nth-child(3) .icon-arrow-right {
-    margin: 0 0 -8px 10px; }
-  .list-ieh-numeros li:nth-child(3) .text {
-    position: absolute;
-    margin: 30px 0 0 10px; }
-  .list-ieh-numeros li:nth-child(4) .numero {
-    margin: 0 0 0 100px; }
-  .list-ieh-numeros li:nth-child(4) .icon, .list-ieh-numeros li:nth-child(4) .icon-arrow-left,
-  .list-ieh-numeros li:nth-child(4) .icon-arrow-right {
-    position: absolute;
-    margin: 18px 0 0 18px; }
-  .list-ieh-numeros li:nth-child(4) .text {
-    position: absolute;
-    margin: 28px 0 0 80px; }
-  .list-ieh-numeros li:nth-child(5) .numero {
-    font-size: 80px;
-    margin: 8px 13px 0 82px;
-    display: inline-block; }
-  .list-ieh-numeros li:nth-child(5) .icon, .list-ieh-numeros li:nth-child(5) .icon-arrow-left,
-  .list-ieh-numeros li:nth-child(5) .icon-arrow-right {
-    position: absolute;
-    margin: 20px 0 0 4px;
-    display: inline-block; }
-  .list-ieh-numeros li:nth-child(5) .text {
-    position: absolute;
-    margin: 46px 0 0 84px;
-    display: inline-block; }
+      margin: 0 0 0 15px;
+      display: inline-block;
+      position: absolute;
+      text-align: left; }
+    .list-ieh-numeros li:nth-child(3) {
+      text-align: left; }
+      .list-ieh-numeros li:nth-child(3) .numero {
+        font-size: 40px;
+        margin-right: 10px; }
+      .list-ieh-numeros li:nth-child(3) .text {
+        margin: 28px 0 0 10px; }
+      .list-ieh-numeros li:nth-child(3) .num-lg {
+        font-size: 70px; }
+    .list-ieh-numeros li:nth-child(4) {
+      margin: 0; }
+      .list-ieh-numeros li:nth-child(4) .box-numeros .numero {
+        font-size: 70px; }
+      
+      .list-ieh-numeros li:nth-child(4) .box-numeros .icon,
+      .list-ieh-numeros li:nth-child(4) .box-numeros .icon-arrow-left,
+      .list-ieh-numeros li:nth-child(4) .box-numeros .icon-arrow-right {
+        margin: 0 5px 1px 11px; }
+      .list-ieh-numeros li:nth-child(4) .box-numeros .text {
+        text-align: left;
+        margin: 0 0 0 4px;
+        bottom: 5px; }
+    .list-ieh-numeros li:nth-child(5) {
+      margin-bottom: 0;
+      line-height: 70px;
+      padding-left: 28px; }
+      .list-ieh-numeros li:nth-child(5) .numero {
+        font-size: 70px; }
   .item .square-content .img-icon {
     margin-bottom: 20px; }
   .item .square-content .text-box {
