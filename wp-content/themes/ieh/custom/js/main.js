@@ -1,5 +1,12 @@
 jQuery(document).ready(function($){
+    //orderna os apoiadores
     $(".list-parceiros-apoiadores li").sort(sort_li).appendTo('.list-parceiros-apoiadores');
+    function sort_li(a, b) {
+        return ($(b).data('ordem')) < ($(a).data('ordem')) ? 1 : -1;
+    }
+
+    //orderna as linhas de ação
+    $("squaregrid .item").sort(sort_li).appendTo('squaregrid');
     function sort_li(a, b) {
         return ($(b).data('ordem')) < ($(a).data('ordem')) ? 1 : -1;
     }
