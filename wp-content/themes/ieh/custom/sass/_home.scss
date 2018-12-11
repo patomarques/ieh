@@ -477,6 +477,11 @@ header  .text-content{
 
 }
 
+.content-text{
+  font-size: 22px;
+  font-family: $ff-montserrat;
+}
+
 /**
 ** @mediaqueries (responsive)
  */
@@ -509,7 +514,7 @@ header  .text-content{
     }
   }
 
-  #content-text-oq-fazemos{
+  .content-text-oq-fazemos{
     p{
       font-size: 22px;
       text-align: right;

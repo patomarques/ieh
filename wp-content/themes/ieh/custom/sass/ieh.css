@@ -1535,6 +1535,10 @@ label {
     margin-bottom: 0;
     padding-top: 20px; }
 
+.content-text {
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif; }
+
 /**
 ** @mediaqueries (responsive)
  */
@@ -1554,7 +1558,7 @@ label {
     font-size: 40px;
     font-weight: 700;
     text-shadow: 1px 1px #000000; }
-  #content-text-oq-fazemos p {
+  .content-text-oq-fazemos p {
     font-size: 22px;
     text-align: right; }
   .list-objetivos li {

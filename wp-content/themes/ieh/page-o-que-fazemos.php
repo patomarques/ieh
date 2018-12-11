@@ -55,7 +55,7 @@ $idPageReferer = get_id_by_slug('o-que-fazemos');
 
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 bloco-texto-apos-imagens">
+                <div class="col-xs-12 bloco-texto-apos-imagens content-text">
                     <span v-show="language == 'pt'"><?php echo get_field('bloco_texto_apos_imagens', $idPageReferer); ?></span>
                     <span v-show="language == 'en'"><?php echo get_field('bloco_texto_apos_imagens_en', $idPageReferer); ?></span>
                 </div>
