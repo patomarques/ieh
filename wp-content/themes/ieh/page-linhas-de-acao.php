@@ -36,12 +36,14 @@ get_header();
             $nossos_projetos = new WP_Query($args_projetos);
             ?>
 
+            <div class="container-linhas-acao">
             <?php while ( $nossos_projetos->have_posts() ) : $nossos_projetos->the_post();
 
                 $image = get_field('icon');
 
                 ?>
-                <div class="row row-nossos-projetos" id="<?php echo get_field('scroll-to');?>">
+                <div class="row row-nossos-projetos" id="<?php echo get_field('scroll-to');?>"
+                     data-ordem="<?php echo get_field('ordem'); ?>">
                     <div class="col-xs-12 col-sm-12 col-md-4 text-center">
                         <?php if( !empty($image) ): ?>
                             <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" class="img-projetos" />
@@ -62,6 +64,7 @@ get_header();
                     </div>
                 </div>
             <?php endwhile; ?>
+            </div>
             <?php wp_reset_postdata(); // reset the query ?>
         </div>
     </section>
