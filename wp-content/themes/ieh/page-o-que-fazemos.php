@@ -46,10 +46,10 @@ $idPageReferer = get_id_by_slug('o-que-fazemos');
 
         <div class="full-content o-que-fazemos-bloco-imagens">
             <div class="column-img-1">
-                <img class="my_class" <?php awesome_acf_responsive_image(get_field('imagem_inline_1'), 'thumb-840', '900px'); ?>  alt="" />
+                <?php echo wp_get_attachment_image(get_post_meta(get_the_ID(), 'imagem_inline_1', TRUE), 'full'); ?>
             </div>
             <div class="column-img-2">
-                <img class="my_class" <?php awesome_acf_responsive_image(get_field('imagem_inline_2'), 'thumb-840', '900px'); ?>  alt="" />
+                <?php echo wp_get_attachment_image(get_post_meta(get_the_ID(), 'imagem_inline_2', TRUE), 'full'); ?>
             </div>
         </div>
 
