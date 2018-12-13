@@ -386,3 +386,14 @@ function get_id_by_slug($page_slug) {
         return null;
     }
 }
+
+function calculate_years_from_date(){
+    $userDob = '1990-01-01';
+    $dob = new DateTime($userDob);
+    $now = new DateTime();
+    $difference = $now->diff($dob);
+    $age = $difference->y;
+
+    return $age;
+}
+add_shortcode('calculate_years','calculate_years_from_date');
