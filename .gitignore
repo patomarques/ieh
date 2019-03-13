@@ -1,9 +1,15 @@
+wp-admin/*
 wp-content/uploads
+wp-content/plugins
+wp-content/languages/*
+wp-includes/*
+wp-snapshots
+
 .idea
 .htaccess
 
 #wordpress files
-.index.php
+index.php
 license.txt
 readme.html
 wp-activate.php
@@ -19,3 +25,8 @@ wp-settings.php
 wp-singup.php
 wp-trackback.php
 wmlrpc.php
+
+wp-content/themes/ieh/yarn.lock
+wp-content/themes/ieh/package-lock.json
+wp-content/themes/ieh/node_modules/*
+wp-content/themes/ieh/bower_components/*
