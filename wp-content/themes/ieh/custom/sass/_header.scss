@@ -36,6 +36,7 @@
   display: block;
   margin: 0 auto 3%;
   width: 100%;
+  z-index: 99;
 }
 
 .navbar-nav-home-menu{
@@ -505,21 +506,21 @@ nav {
   }
   aside {
     nav {
-      padding-top: 40px;
+      padding-top: 60px;
       ul {
         margin-top: 0;
         li {
           padding: 5px 0;
           a {
-            font-size: 2em;
+            font-size: 1.7em;
             letter-spacing: 0;
             word-spacing: 0;
-            line-height: 40px;
+            line-height: 35px;
           }
         }
       }
-
     }
+
     &.open{
       .switch-chose{
         .lang{
@@ -538,6 +539,10 @@ nav {
     top: 0;
     padding-top: 0;
   }
+
+  #menu-bars-x.open {
+    margin: 10px 0;
+  }
 }
 
 @media (min-width: $screen-sm-min) {
@@ -554,6 +559,10 @@ nav {
         }
       }
     }
+  }
+
+  #menu-bars-x.open {
+    margin: 40px 10px;
   }
 }
 

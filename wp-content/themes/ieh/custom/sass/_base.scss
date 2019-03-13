@@ -69,9 +69,17 @@ a{
 }
 
 #home-o-que-fazemos{
-  background-image: url("../img/bg/home-fullscreen-bg.jpg");
+  //background-image: url("../img/bg/home-fullscreen-bg.jpg");
+  position: relative;
 }
 
+.container-bg-img{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
 #home-bg-img-parallax-2{
   background-image: url("../img/bg/bg-img2.jpg");
   height: 600px;
@@ -731,12 +739,15 @@ label{
   }
 }
 
+.hide-fake{
+  position: initial !important;
+}
 /**
 ** @mediaqueries (responsive)
  */
 @media (min-width: $screen-xs-min) {
   #home-bg-img-parallax-2{
-    height: 150px;
+    height: 200px;
   }
   .o-que-fazemos-bloco-imagens{
     @include count-gap(1, 0px);

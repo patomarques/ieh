@@ -34,8 +34,6 @@ jQuery(document).ready(function($){
         });
     }
 
-
-
     $(function() {
         $('.toggle-overlay').click(function() {
             $('aside').toggleClass('open');
@@ -45,6 +43,7 @@ jQuery(document).ready(function($){
     $('#menu-bars-x').click(function(){
         $(this).toggleClass('open');
         $('aside').toggleClass('open');
+        $('.home-begin-content').toggleClass('hide-fake');
     });
 
 
@@ -54,7 +53,7 @@ jQuery(document).ready(function($){
         }, 600);
     });
 
-    if($('.home').length == 0){
+    if($('.home').length === 0){
         $(".square-content").click(function(e) {
             e.preventDefault();
             var scrollToSection = $(this).data('scroll');
@@ -64,11 +63,6 @@ jQuery(document).ready(function($){
             }, 600);
             return false;
         });
-    }
-
-    //remove label on brazil map bottom;
-    if($('. fm-map-container a').length > 0){
-        $('. fm-map-container a').destroy();
     }
 });
 
@@ -95,8 +89,18 @@ jQuery(document).ready(function($){
         }
 
         $('a[href*=#].link-menu').click(function(event){
+            event.preventDefault();
+            distanteTop = 0;
+            if(screen.width < 768){
+                distanteTop = -80;
+            }
+
+            $section = $.attr(this, 'href').split("#");
+            $section = '#' + $section[1];
+            console.log($( $section ));
+            $('#menu-bars-x').click();
             $('html, body').animate({
-                scrollTop: $( $.attr(this, 'href') ).offset().top - 80
+                scrollTop: $( $section ).offset().top - distanteTop
             }, 2000);
             event.preventDefault();
         });

@@ -316,7 +316,8 @@
   text-align: center;
   display: block;
   margin: 0 auto 3%;
-  width: 100%; }
+  width: 100%;
+  z-index: 99; }
 
 .navbar-nav-home-menu {
   width: 100%;
@@ -666,29 +667,33 @@ nav {
   .logo-home-img {
     max-width: 150px; }
   aside nav {
-    padding-top: 40px; }
+    padding-top: 60px; }
     aside nav ul {
       margin-top: 0; }
       aside nav ul li {
         padding: 5px 0; }
         aside nav ul li a {
-          font-size: 2em;
+          font-size: 1.7em;
           letter-spacing: 0;
           word-spacing: 0;
-          line-height: 40px; }
+          line-height: 35px; }
   aside.open .switch-chose .lang {
     margin-bottom: 10px !important; }
   #element-language-chosen {
     margin-top: 0;
     top: 0;
-    padding-top: 0; } }
+    padding-top: 0; }
+  #menu-bars-x.open {
+    margin: 10px 0; } }
 
 @media (min-width: 768px) {
   aside nav ul li a {
     font-size: 3em;
     letter-spacing: 0;
     word-spacing: 0;
-    line-height: 60px; } }
+    line-height: 60px; }
+  #menu-bars-x.open {
+    margin: 40px 10px; } }
 
 @media (min-width: 992px) {
   .navbar-nav-home-menu li {
@@ -736,7 +741,14 @@ a:hover {
   /* The image used */ }
 
 #home-o-que-fazemos {
-  background-image: url("../img/bg/home-fullscreen-bg.jpg"); }
+  position: relative; }
+
+.container-bg-img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute; }
 
 #home-bg-img-parallax-2 {
   background-image: url("../img/bg/bg-img2.jpg");
@@ -1208,12 +1220,15 @@ label {
   .box-proporcional-img img {
     width: 100%; }
 
+.hide-fake {
+  position: initial !important; }
+
 /**
 ** @mediaqueries (responsive)
  */
 @media (min-width: 320px) {
   #home-bg-img-parallax-2 {
-    height: 150px; }
+    height: 200px; }
   .o-que-fazemos-bloco-imagens {
     -webkit-column-count: 1;
     -webkit-column-gap: 0px;
@@ -1325,11 +1340,7 @@ label {
         content: ''; }
 
 #home-o-que-fazemos {
-  background-image: url(../img/bg/o-que-fazemos-home-dark.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-color: #000000;
+  background-color: #41b6d6;
   overflow: hidden;
   padding-top: 80px;
   padding-bottom: 150px; }
@@ -1547,7 +1558,29 @@ label {
 @media (min-width: 320px) {
   #background-img-home {
     height: 100%;
-    background-color: #41b6d6; }
+    background-color: #41b6d6;
+    z-index: 1; }
+    #background-img-home .content-bg-img {
+      position: relative;
+      overflow: hidden;
+      float: left;
+      height: 100%;
+      z-index: 1; }
+    #background-img-home .bg-img-fix {
+      top: 0;
+      left: 0;
+      min-width: 1000px;
+      min-height: 100%;
+      background-repeat: no-repeat;
+      position: relative;
+      z-index: 1;
+      float: left; }
+    #background-img-home .home-begin-content {
+      z-index: 1;
+      position: absolute;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%; }
   .logo-margin-bottom {
     margin-bottom: 0; }
   .home-begin-content .box-text-home {
@@ -1690,6 +1723,17 @@ label {
     letter-spacing: 0; } }
 
 @media (min-width: 768px) {
+  .bg-img-fix {
+    width: 100%; }
+  #background-img-home {
+    height: 100%;
+    background-color: #41b6d6;
+    z-index: 1;
+    background-repeat: no-repeat;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover; }
   .box-content-quem-somos .box-info {
     letter-spacing: 3px; }
   .list-ieh-numeros li {

@@ -93,11 +93,11 @@
 }
 
 #home-o-que-fazemos{
-  background-image: url(../img/bg/o-que-fazemos-home-dark.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-color: $preto;
+  //background-image: url(../img/bg/o-que-fazemos-home-dark.jpg);
+  //background-repeat: no-repeat;
+  //background-position: center center;
+  //background-attachment: fixed;
+  background-color: $azul-claro;
   //@include brightness(50%);
   overflow: hidden;
   padding-top: 80px;
@@ -491,6 +491,39 @@ header  .text-content{
   #background-img-home {
     height: 100%;
     background-color: $azul-claro;
+    z-index: 1;
+    //background-image: none !important;
+    //background-size: contain;
+    //background-position: center;
+
+    .content-bg-img{
+      position: relative;
+      overflow: hidden;
+      float: left;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .bg-img-fix{
+      top: 0;
+      left: 0;
+      min-width: 1000px;
+      min-height: 100%;
+      background-repeat: no-repeat;
+      position: relative;
+      z-index: 1;
+      float: left;
+
+    }
+
+    .home-begin-content{
+      z-index: 1;
+      position: absolute;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+    }
+
   }
 
   .logo-margin-bottom{
@@ -551,6 +584,7 @@ header  .text-content{
   }
 
   #home-o-que-fazemos{
+    //background-image: url('../img/bg/o-que-fazemos-home-dark_mobile.jpg');
     .text-content{
       font-size: 18px;
     }
@@ -746,6 +780,23 @@ header  .text-content{
 }
 
 @media (min-width: $screen-sm-min) {
+  .bg-img-fix{
+    width: 100%;
+  }
+  #background-img-home {
+    height: 100%;
+    background-color: $azul-claro;
+    z-index: 1;
+    background-repeat: no-repeat;  -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size:cover;
+    background-size: cover;
+  }
+
+  #home-o-que-fazemos {
+    //background-image: url('../img/bg/o-que-fazemos-home-dark_mobile.jpg');
+  }
+
   .box-content-quem-somos .box-info{
     letter-spacing: 3px;
   }
@@ -828,6 +879,10 @@ header  .text-content{
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: $screen-md-min) {
+    #home-o-que-fazemos {
+      //background-image: url('../img/bg/o-que-fazemos-home-dark.jpg');
+    }
+
     .list-ieh-numeros{
       li{
         text-align: left;
