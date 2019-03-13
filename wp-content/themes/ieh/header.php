@@ -39,24 +39,6 @@
 
     $pagesInverseTitle = array('about-us', 'what-we-do', 'our-projects');
 ?>
-<script>
-    (function($) {
-        //set backgrond baner-im-home height
-        function setBgImgHeader(){
-            var bg_img_content = $('#background-img-home');
-            if(bg_img_content.length > 0){
-                bg_img_content.css('height', window.innerHeight);
-            }
-        }
-        $(document).on('load', function(){
-            setBgImgHeader();
-        });
-
-        $(window).on('resize', function(){
-            setBgImgHeader();
-        });
-    })( jQuery );
-</script>
 
 <div id="body-pseudelement">
 <header class="header-home">
@@ -174,7 +156,7 @@
     }
     ?>
 
-<section id="background-img-home" class="content-full-background parallax-effect bg-home-parallax"><!-- style="background: url('<?//php echo $imagemUrlMedium; ?>'); " -->
+<section id="background-img-home" class="content-full-background parallax-effect bg-home-parallax">
     <div class="content-bg-img">
         <img src="<?php echo $imagemUrlLarge; ?>" alt="" class="bg-img-fix d-block d-sm-none">
         <img src="<?php echo $imagemUrlFull; ?>" alt="" class="bg-img-fix d-none d-md-block d-lg-block d-xl-block">
@@ -287,9 +269,6 @@
                             <a href="<?php echo get_site_url(); ?>/linhas-de-acao/" class="link-menu <?php if($post_slug == 'linhas-de-acao'){ echo "menu-actived"; } ?>">LINHAS <br>DE AÇÃO</a>
                         </li>
                         <li>
-                            <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-apoie-nossos-projetos" class="link-menu">APOIE <br>NOSSOS <br>PROJETOS</a>
-                        </li>
-                        <li>
                             <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-ieh-em-numeros" class="link-menu">IEH EM <br>NÚMEROS</a>
                         </li>
                         <li>
@@ -308,9 +287,6 @@
                             <a href="<?php echo get_site_url(); ?>/course-of-action/" class="link-menu <?php if($post_slug == 'course-of-action'){ echo "menu-actived"; } ?>">COURSE<br>OF ACTION</a>
                         </li>
                         <li>
-                            <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-apoie-nossos-projetos" class="link-menu">SUPPORT <br>OUR<br>PROJECTS</a>
-                        </li>
-                        <li>
                             <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-ieh-em-numeros" class="link-menu">IEH <br>STATISTICS</a>
                         </li>
                         <li>
@@ -325,24 +301,3 @@
 </section>
 <div class="lines-fullsize bg-cinza-claro"></div>
 <div class="lines-fullsize bg-azul-claro"></div>
-    <script>
-        (function($) {
-            var imagemUrl = '';
-            var screenSizeW = window.innerWidth;
-
-            if(screenSizeW > 0 && screenSizeW < 480){
-                //medium
-                imagemUrl = <?= json_encode($imagemUrlMedium) ?>;
-            }else if(screenSizeW > 480 && screenSizeW < 1100){
-                //larger
-                imagemUrl = <?= json_encode($imagemUrlLarge)  ?>;
-            }else{
-                //full
-                imagemUrl = <?= json_encode($imagemUrlFull) ?>;
-            }
-//            $('#background-img-home').css('background-image', "url('" + imagemUrl + "')");
-//            $('#background-img-home').css('background', "url('" + imagemUrl + "')");
-        })( jQuery );
-    </script>
-
-<?//php endif; ?>

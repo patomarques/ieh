@@ -69,11 +69,8 @@ jQuery(document).ready(function($){
 (function($) {
 
     $(window).load(function() {
-        //Remove text 'Maps Html' from Home Maps
-        jQuery('a:contains("HTML5 Maps for WordPress")').remove();
-
         if($('.page-o-que-fazemos').length > 0 && $(window).width() > 800){
-            // Select a div with the id 'mydiv'
+
             var divReference = document.getElementById('content-text-oq-fazemos');
 
             // Get all offsets
@@ -83,7 +80,7 @@ jQuery(document).ready(function($){
             var offsetRight = document.documentElement.clientWidth - offset.right;
 
             // Offset of the div from the left side of the viewport
-            var offsetLeft = offset.left;
+            //var offsetLeft = offset.left;
 
             $('.box-proporcional-img').css('padding-right', offsetRight);
         }
@@ -97,7 +94,6 @@ jQuery(document).ready(function($){
 
             $section = $.attr(this, 'href').split("#");
             $section = '#' + $section[1];
-            console.log($( $section ));
             $('#menu-bars-x').click();
             $('html, body').animate({
                 scrollTop: $( $section ).offset().top - distanteTop
@@ -112,9 +108,19 @@ jQuery(document).ready(function($){
     }
 })( jQuery );
 
-//set image header background (DOMjs)
-function setImagemHeaderBackground(imagem_bg, text_home, pageClassName){
-    document.getElementById('text-home').textContent = text_home;
-    document.getElementById('background-img-home').classList.add(pageClassName);
-    document.getElementById('box-text-home').classList.add('content-text-bottom');
-}
+//set background baner-im-home height
+(function($) {
+    function setBgImgHeader(){
+        var bg_img_content = $('#background-img-home');
+        if(bg_img_content.length > 0){
+            bg_img_content.css('height', window.innerHeight);
+        }
+    }
+    $(document).on('load', function(){
+        setBgImgHeader();
+    });
+
+    $(window).on('resize', function(){
+        setBgImgHeader();
+    });
+})( jQuery );

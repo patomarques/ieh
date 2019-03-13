@@ -156,8 +156,6 @@ function wp_bootstrap_starter_widgets_init() {
 }
 add_action( 'widgets_init', 'wp_bootstrap_starter_widgets_init' );
 
-
-
 /**
  * Enqueue scripts and styles.
  */
@@ -311,11 +309,10 @@ function awesome_acf_responsive_image($image_id,$image_size,$max_width){
     }
 }
 
-// Our custom post type function
+// Custom Post Types
 function create_posttype() {
 
     register_post_type( 'depoimentos',
-        // CPT Options
         array(
             'labels' => array(
                 'name' => __( 'Depoimentos' ),
@@ -330,7 +327,6 @@ function create_posttype() {
     );
 
     register_post_type( 'parceiros-apoiadores',
-        // CPT Options
         array(
             'labels' => array(
                 'name' => __( 'Parceiros e Apoiadores' ),
@@ -345,7 +341,6 @@ function create_posttype() {
     );
 
     register_post_type( 'nossos-projetos',
-        // CPT Options
         array(
             'labels' => array(
                 'name' => __( 'Nossos Projetos' ),
@@ -356,6 +351,19 @@ function create_posttype() {
             'has_archive' => true,
             //'rewrite' => array('slug' => 'nossos-projetos'),
             'supports' => array( 'title', 'editor', 'thumbnail', 'custom-fields' )
+        )
+    );
+
+    register_post_type( 'home-slider',
+        array(
+            'labels' => array(
+                'name' => __( 'Home Sliders' ),
+                'singular_name' => __( 'Home Sliders' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'home-slider'),
+            'supports' => array( 'title', 'thumbnail', 'custom-fields' )
         )
     );
 }
