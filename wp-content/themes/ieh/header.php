@@ -160,7 +160,25 @@
     </nav>
 </aside>
 
-<section id="background-img-home" class="content-full-background parallax-effect bg-home-parallax"> <!--  style="background-image: url(<?//php echo $imagemUrl; ?>)" -->
+    <?php
+
+    //full, larger, medium
+    if (is_front_page() && !empty(get_field('banner_topo')['id'])){
+        $imagemUrlFull   = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'full')[0];
+        $imagemUrlLarge  = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'large')[0];
+        $imagemUrlMedium = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'medium')[0];
+    }else{
+        $imagemUrlFull   =  get_the_post_thumbnail_url(get_the_ID(), 'full');
+        $imagemUrlLarge  =  get_the_post_thumbnail_url(get_the_ID(), 'large');
+        $imagemUrlMedium =  get_the_post_thumbnail_url(get_the_ID(), 'medium');
+    }
+    ?>
+
+<section id="background-img-home" class="content-full-background parallax-effect bg-home-parallax"><!-- style="background: url('<?//php echo $imagemUrlMedium; ?>'); " -->
+    <div class="content-bg-img">
+        <img src="<?php echo $imagemUrlLarge; ?>" alt="" class="bg-img-fix d-block d-sm-none">
+        <img src="<?php echo $imagemUrlFull; ?>" alt="" class="bg-img-fix d-none d-md-block d-lg-block d-xl-block">
+    </div>
     <div class="home-begin-content">
         <?php
             if (is_front_page() ){
@@ -307,20 +325,6 @@
 </section>
 <div class="lines-fullsize bg-cinza-claro"></div>
 <div class="lines-fullsize bg-azul-claro"></div>
-
-    <?php
-
-        //full, larger, medium
-        if (is_front_page() && !empty(get_field('banner_topo')['id'])){
-            $imagemUrlFull   = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'full')[0];
-            $imagemUrlLarge  = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'large')[0];
-            $imagemUrlMedium = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'medium')[0];
-        }else{
-            $imagemUrlFull   =  get_the_post_thumbnail_url(get_the_ID(), 'full');
-            $imagemUrlLarge  =  get_the_post_thumbnail_url(get_the_ID(), 'large');
-            $imagemUrlMedium =  get_the_post_thumbnail_url(get_the_ID(), 'medium');
-        }
-    ?>
     <script>
         (function($) {
             var imagemUrl = '';
@@ -328,7 +332,7 @@
 
             if(screenSizeW > 0 && screenSizeW < 480){
                 //medium
-                imagemUrl = <?= json_encode($imagemUrlLarge) ?>;
+                imagemUrl = <?= json_encode($imagemUrlMedium) ?>;
             }else if(screenSizeW > 480 && screenSizeW < 1100){
                 //larger
                 imagemUrl = <?= json_encode($imagemUrlLarge)  ?>;
@@ -336,8 +340,8 @@
                 //full
                 imagemUrl = <?= json_encode($imagemUrlFull) ?>;
             }
-            $('#background-img-home').css('background-image', "url('" + imagemUrl + "')");
-            console.log(imagemUrl);
+//            $('#background-img-home').css('background-image', "url('" + imagemUrl + "')");
+//            $('#background-img-home').css('background', "url('" + imagemUrl + "')");
         })( jQuery );
     </script>
 
