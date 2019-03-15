@@ -145,28 +145,50 @@
     <?php
 
     //full, larger, medium
-    if (is_front_page() && !empty(get_field('banner_topo')['id'])){
-        $imagemUrlFull   = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'full')[0];
-        $imagemUrlLarge  = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'large')[0];
-        $imagemUrlMedium = wp_get_attachment_image_src(get_field('banner_topo')['id'], 'medium')[0];
+    if (is_front_page()){
+        $args_sliders = array(
+            'posts_per_page' => -1,
+            'post_type' => 'home-slider',
+            'orderby' => "ordem",
+            'public' => false,
+            'order' => "ASC"
+        );
+
+        $sliders = new WP_Query($args_sliders);
+        $images_qty = 0;
     }else{
         $imagemUrlFull   =  get_the_post_thumbnail_url(get_the_ID(), 'full');
         $imagemUrlLarge  =  get_the_post_thumbnail_url(get_the_ID(), 'large');
         $imagemUrlMedium =  get_the_post_thumbnail_url(get_the_ID(), 'medium');
     }
-    ?>
+?>
 
 <section id="background-img-home" class="content-full-background parallax-effect bg-home-parallax">
-    <div class="content-bg-img">
-        <img src="<?php echo $imagemUrlLarge; ?>" alt="" class="bg-img-fix d-block d-sm-none">
-        <img src="<?php echo $imagemUrlFull; ?>" alt="" class="bg-img-fix d-none d-md-block d-lg-block d-xl-block">
-    </div>
+    <?php if (is_front_page()) { ?>
+
+        <div class="slider-home">
+            <?php while ( $sliders->have_posts() ) : $sliders->the_post();
+                $images_qty++; ?>
+
+                <div class="content-bg-img <?= ($images_qty > 1) ? '' : '' ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="" class="bg-img-fix d-block d-sm-none">
+                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="" class="bg-img-fix d-none d-md-block d-lg-block d-xl-block">
+                </div>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+        </div>
+
+    <?php }else{ ?>
+
+        <div class="content-bg-img">
+            <img src="<?php echo $imagemUrlLarge; ?>" alt="" class="bg-img-fix d-block d-sm-none">
+            <img src="<?php echo $imagemUrlFull; ?>" alt="" class="bg-img-fix d-none d-md-block d-lg-block d-xl-block">
+        </div>
+
+    <?php } ?>
+
     <div class="home-begin-content">
-        <?php
-            if (is_front_page() ){
-                echo wp_get_attachment_image(get_field('imagem_destaque')['id'], 'full', '', array('class' => 'content-full-background parallax-effect bg-home-parallax'));
-            }
-        ?>
+
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12">

@@ -1580,7 +1580,8 @@ label {
       position: absolute;
       margin: 0 auto;
       text-align: center;
-      width: 100%; }
+      width: 100%;
+      top: 0; }
   .logo-margin-bottom {
     margin-bottom: 0; }
   .home-begin-content .box-text-home {
