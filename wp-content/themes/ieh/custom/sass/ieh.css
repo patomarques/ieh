@@ -751,7 +751,7 @@ a:hover {
   position: absolute; }
 
 #home-bg-img-parallax-2 {
-  background-image: url("../img/bg/bg-img2.jpg");
+  background-image: url("../img/2019/04-participe-bg.jpg");
   height: 600px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1320,7 +1320,7 @@ label {
   overflow: hidden; }
   .box-content-quem-somos .box-info {
     position: absolute;
-    height: 80%;
+    height: 90%;
     /* = 100% - 2*5% padding */
     width: 90%;
     /* = 100% - 2*5% padding */
@@ -1330,7 +1330,8 @@ label {
     color: #ffffff;
     background-color: #41b6d6;
     font-size: 16px;
-    letter-spacing: 3px; }
+    letter-spacing: 3px;
+    overflow: hidden; }
     .box-content-quem-somos .box-info .text-subtitle {
       width: 100%;
       padding: 10px;
