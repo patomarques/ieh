@@ -475,6 +475,17 @@ label{
   margin-bottom: 80px;
 }
 
+.list-lateral-imgs{
+  li{
+    margin-bottom: 30px;
+    overflow: hidden;
+    max-height: 450px;
+  }
+  img{
+    width: 100%;
+  }
+}
+
 .content-sobre-nos{
   background-color: $cinza-bg;
   color: $cinza-5d;
@@ -484,8 +495,8 @@ label{
     padding-top: 80px;
   }
   .block-left-image{
-    max-height: 400px;
-    overflow: hidden;
+    //max-height: 400px;
+    //overflow: hidden;
   }
   .block-right-text{
     .content-text{
@@ -555,8 +566,8 @@ label{
 
 .section-content{
   .block-left-image{
-    max-height: 350px;
-    overflow: hidden;
+    //max-height: 350px;
+    //overflow: hidden;
   }
   .block-right-text{
     padding-right: 7%;
@@ -721,8 +732,10 @@ label{
   .column-img-1,
   .column-img-2{
     width: 100% !important;
-    height: auto !important;
-    max-height: 540px;
+    height: auto;
+    //max-height: 540px;
+    max-height: 420px;
+    overflow: hidden;
 
     img{
       width: 100%;
@@ -781,6 +794,13 @@ label{
   .box-depoimentos{
     padding: 0 15%;
   }
+
+  .o-que-fazemos-bloco-imagens{
+    .column-img-1,
+    .column-img-2{
+      max-height: 250px;
+    }
+  }
 }
 
 @media (min-width: $screen-md-min) {
@@ -796,5 +816,10 @@ label{
 }
 
 @media (min-width: $screen-lg-min) {
-
+  .o-que-fazemos-bloco-imagens{
+    .column-img-1,
+    .column-img-2{
+      max-height: 420px;
+    }
+  }
 }
