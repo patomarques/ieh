@@ -147,9 +147,9 @@
     //full, larger, medium
     if (is_front_page()){
         $args_sliders = array(
-            'posts_per_page' => -1,
+            'posts_per_page' => 1,
             'post_type' => 'home-slider',
-            'orderby' => "ordem",
+            'orderby' => "rand",
             'public' => false,
             'order' => "ASC"
         );

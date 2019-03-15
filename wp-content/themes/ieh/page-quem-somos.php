@@ -9,7 +9,7 @@ $idPageReferer = get_id_by_slug('quem-somos');
 <div id="page-content" class="page-quem-somos page-content">
     <section class="container" id='quem-somos'>
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
+            <div class="col-xs-12 col-sm-12 col-md-12">
                 <h1 class="title-default c-verde-lodo">
                     <span v-show="language == 'pt'">Quem<br>Somos</span>
                     <span v-show="language == 'en'">About<br>Us</span>
@@ -18,7 +18,7 @@ $idPageReferer = get_id_by_slug('quem-somos');
         </div>
 
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 offset-lg-2">
+            <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="content" v-show="language == 'pt'">
                     <div class="page-content-text">
                         <?php echo get_field('bloco_inicio_texto_pt', $idPageReferer); ?>
@@ -32,18 +32,13 @@ $idPageReferer = get_id_by_slug('quem-somos');
             </div>
         </div>
     </section>
-    <div class="content-full">
-        <div class="coluna-direita">
-            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos-interna.png" alt="" class="img-responsive">
+
+    <div class="full-content o-que-fazemos-bloco-imagens">
+        <div class="column-img-1">
+            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/02-sobre-nos-bg-01.jpg" alt="" class="img-responsive">
         </div>
-        <div class="coluna-esquerda">
-            <div class="box-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/logo-verde-preto.png" alt="" class="img-responsive logo-colorida">
-                <p class="text-after-logo">
-                    <span v-show="language == 'pt'"><?php echo get_field('texto_abaixo_da_logo_pt', $idPageReferer); ?></span>
-                    <span v-show="language == 'en'"><?php echo get_field('texto_abaixo_da_logo_en', $idPageReferer); ?></span>
-                </p>
-            </div>
+        <div class="column-img-2">
+            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/02-sobre-nos-bg-02.jpg" alt="" class="img-responsive">
         </div>
     </div>
 
@@ -61,7 +56,20 @@ $idPageReferer = get_id_by_slug('quem-somos');
 
         <div class="row">
             <div class="col-sm-12 col-sm-12 col-md-5 block-left-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/page-quem-somos/img001.png" alt="" class="img-responsive">
+                <ul class="list-unstyled list-lateral-imgs">
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/custom/img/quem-somos-interna.png" alt="" class="img-responsive">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/02-sobre-nos-img-0001.jpg" alt="" class="img-responsive">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/02-sobre-nos-img-0002.jpg" alt="" class="img-responsive">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/02-sobre-nos-img-0003.jpg" alt="" class="img-responsive">
+                    </li>
+                </ul>
             </div>
             <div class="col-sm-12 col-sm-12 col-md-7 block-right-text">
                 <div class="content-text">
@@ -76,14 +84,21 @@ $idPageReferer = get_id_by_slug('quem-somos');
         <div class="row">
             <div class="col-sm-12">
                 <h2 class="title-section c-white">
-                    <span v-show="language == 'pt'">A Coordenação</span>
-                    <span v-show="language == 'en'">The Coordination</span>
+                    <span v-show="language == 'pt'">Equipe</span>
+                    <span v-show="language == 'en'">Team</span>
                 </h2>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12 col-sm-12 col-md-5 block-left-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/page-quem-somos/img002.png" alt="" class="img-responsive">
+                <ul class="list-unstyled list-lateral-imgs">
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/03-equipe-001.jpg" alt="" class="img-responsive">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/03-equipe-002.jpg" alt="" class="img-responsive">
+                    </li>
+                </ul>
             </div>
             <div class="col-sm-12 col-sm-12 col-md-7 block-right-text">
                 <span v-show="language == 'pt'"><?php echo get_field('a_coordenacao_texto', $idPageReferer); ?></span>
@@ -96,14 +111,25 @@ $idPageReferer = get_id_by_slug('quem-somos');
         <div class="row">
             <div class="col-sm-12 col-md-5 text-right">
                 <h3 class="title-section c-white text-right">
-                    <span v-show="language == 'pt'">MISSÃO</span>
+                    <span v-show="language == 'pt'">MISSÃO E VISÃO</span>
                     <span v-show="language == 'en'">MISSION</span>
                 </h3>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12 col-sm-12 col-md-5 block-left-image">
-                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/page-quem-somos/img003.png" alt="" class="img-responsive">
+                <ul class="list-unstyled list-lateral-imgs">
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/custom/img/page-quem-somos/img003.png" alt="" class="img-responsive">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/04-missao-001.jpg" alt="" class="img-responsive">
+                    </li>
+                    <li>
+                        <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/04-missao-002.jpg" alt="" class="img-responsive">
+                    </li>
+                </ul>
+
             </div>
             <div class="col-sm-12 col-sm-12 col-md-7 block-right-text c-white">
                 <div class="content-text content-text-block-3">

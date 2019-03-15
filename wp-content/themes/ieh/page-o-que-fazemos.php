@@ -29,9 +29,12 @@ $idPageReferer = get_id_by_slug('o-que-fazemos');
             </div>
         </div>
 
-        <div class="content-full">
-            <div class="box-proporcional-img">
+        <div class="full-content o-que-fazemos-bloco-imagens">
+            <div class="column-img-1">
                 <?php echo wp_get_attachment_image(get_post_meta(get_the_ID(), 'primeira_imagem', TRUE), 'full'); ?>
+            </div>
+            <div class="column-img-2">
+                <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/06-o-que-fazemos-img-001.jpg" alt="" class="img-responsive">
             </div>
         </div>
 
