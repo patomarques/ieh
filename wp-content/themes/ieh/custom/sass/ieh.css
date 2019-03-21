@@ -342,9 +342,9 @@
       color: #ffffff;
       margin: 13px -25px 2px 0; }
     .navbar-nav-home-menu li:nth-child(4):after {
-      margin: 28px -25px 2px 0; }
+      margin: 16px -25px 2px 0; }
     .navbar-nav-home-menu li:nth-child(5):after {
-      margin: 12px -25px 2px 0; }
+      display: none; }
     .navbar-nav-home-menu li:nth-child(6):after {
       display: none; }
     .navbar-nav-home-menu li a {
@@ -736,6 +736,9 @@ a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden; }
+
+.hidden {
+  display: none !important; }
 
 .bg-home-parallax {
   /* The image used */ }
