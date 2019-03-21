@@ -342,9 +342,9 @@
       color: #ffffff;
       margin: 13px -25px 2px 0; }
     .navbar-nav-home-menu li:nth-child(4):after {
-      margin: 28px -25px 2px 0; }
+      margin: 16px -25px 2px 0; }
     .navbar-nav-home-menu li:nth-child(5):after {
-      margin: 12px -25px 2px 0; }
+      display: none; }
     .navbar-nav-home-menu li:nth-child(6):after {
       display: none; }
     .navbar-nav-home-menu li a {
@@ -737,6 +737,9 @@ a:hover {
   background-size: cover;
   overflow: hidden; }
 
+.hidden {
+  display: none !important; }
+
 .bg-home-parallax {
   /* The image used */ }
 
@@ -751,7 +754,7 @@ a:hover {
   position: absolute; }
 
 #home-bg-img-parallax-2 {
-  background-image: url("../img/bg/bg-img2.jpg");
+  background-image: url("../img/2019/04-participe-bg.jpg");
   height: 600px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1034,15 +1037,20 @@ label {
   margin-top: 80px;
   margin-bottom: 80px; }
 
+.list-lateral-imgs li {
+  margin-bottom: 30px;
+  overflow: hidden;
+  max-height: 450px; }
+
+.list-lateral-imgs img {
+  width: 100%; }
+
 .content-sobre-nos {
   background-color: #f2f4f3;
   color: #5d5d5d;
   padding-bottom: 80px; }
   .content-sobre-nos .title-sobre-nos {
     padding-top: 80px; }
-  .content-sobre-nos .block-left-image {
-    max-height: 400px;
-    overflow: hidden; }
   .content-sobre-nos .block-right-text .content-text {
     padding-left: 20px;
     padding-right: 10%; }
@@ -1082,10 +1090,6 @@ label {
   .content-a-coordenacao .resumo {
     font-size: 24px;
     margin-bottom: 30px; }
-
-.section-content .block-left-image {
-  max-height: 350px;
-  overflow: hidden; }
 
 .section-content .block-right-text {
   padding-right: 7%;
@@ -1208,8 +1212,9 @@ label {
   .o-que-fazemos-bloco-imagens .column-img-1,
   .o-que-fazemos-bloco-imagens .column-img-2 {
     width: 100% !important;
-    height: auto !important;
-    max-height: 540px; }
+    height: auto;
+    max-height: 420px;
+    overflow: hidden; }
     .o-que-fazemos-bloco-imagens .column-img-1 img,
     .o-que-fazemos-bloco-imagens .column-img-2 img {
       width: 100%; }
@@ -1254,7 +1259,10 @@ label {
   .list-coordenacao .box-membrxs .nome, .list-coordenacao .box-membrxs .resumo {
     font-size: 26px; }
   .box-depoimentos {
-    padding: 0 15%; } }
+    padding: 0 15%; }
+  .o-que-fazemos-bloco-imagens .column-img-1,
+  .o-que-fazemos-bloco-imagens .column-img-2 {
+    max-height: 250px; } }
 
 @media (min-width: 992px) {
   #home-bg-img-parallax-2 {
@@ -1268,6 +1276,11 @@ label {
     column-gap: 0px; }
   .box-depoimentos {
     padding: 0 20%; } }
+
+@media (min-width: 1200px) {
+  .o-que-fazemos-bloco-imagens .column-img-1,
+  .o-que-fazemos-bloco-imagens .column-img-2 {
+    max-height: 420px; } }
 
 #background-img-home {
   background-color: #41b6d6; }
@@ -1320,7 +1333,7 @@ label {
   overflow: hidden; }
   .box-content-quem-somos .box-info {
     position: absolute;
-    height: 80%;
+    height: 90%;
     /* = 100% - 2*5% padding */
     width: 90%;
     /* = 100% - 2*5% padding */
@@ -1330,7 +1343,8 @@ label {
     color: #ffffff;
     background-color: #41b6d6;
     font-size: 16px;
-    letter-spacing: 3px; }
+    letter-spacing: 3px;
+    overflow: hidden; }
     .box-content-quem-somos .box-info .text-subtitle {
       width: 100%;
       padding: 10px;
@@ -1580,7 +1594,8 @@ label {
       position: absolute;
       margin: 0 auto;
       text-align: center;
-      width: 100%; }
+      width: 100%;
+      top: 0; }
   .logo-margin-bottom {
     margin-bottom: 0; }
   .home-begin-content .box-text-home {

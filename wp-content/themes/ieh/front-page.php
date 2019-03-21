@@ -27,7 +27,7 @@ get_header(); ?>
                                         <span v-show="language == 'en'">About Us</span>
                                     </span>
                                     <div class="arrow-down"></div>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/home-quem-somos/home-qs-1.jpg" alt="" class="img-bg-content">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/01-quem_somos-01.jpg" alt="" class="img-bg-content">
                                 </div>
                             </a>
                         </li>
@@ -36,11 +36,11 @@ get_header(); ?>
                                 <div class="box-info">
                                     <span class="text-subtitle">
                                         <button class="button-plus"></button>
-                                        <span v-show="language == 'pt'">A Coordenação</span>
-                                        <span v-show="language == 'en'">The Coordination</span>
+                                        <span v-show="language == 'pt'">Equipe</span>
+                                        <span v-show="language == 'en'">Team</span>
                                     </span>
                                     <div class="arrow-down"></div>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/home-quem-somos/home-qs-2.jpg" alt="" class="img-bg-content">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/01-quem_somos-02.jpg" alt="" class="img-bg-content">
                                 </div>
                             </a>
                         </li>
@@ -53,7 +53,7 @@ get_header(); ?>
                                         <span v-show="language == 'en'">Mission</span>
                                     </span>
                                     <div class="arrow-down"></div>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/home-quem-somos/home-qs-3.jpg" alt="" class="img-bg-content">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/01-quem_somos-03.jpg" alt="" class="img-bg-content">
                                 </div>
                             </a>
                         </li>
@@ -66,7 +66,7 @@ get_header(); ?>
                                         <span v-show="language == 'en'">Transparency</span>
                                     </span>
                                     <div class="arrow-down"></div>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/home-quem-somos/home-qs-4.jpg" alt="" class="img-bg-content">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/01-quem_somos-04.jpg" alt="" class="img-bg-content">
                                 </div>
                             </a>
                         </li>
@@ -117,8 +117,8 @@ get_header(); ?>
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <h2 class="title-section c-azul-claro">
-                        <span v-show="language == 'pt'">Nossos Projetos</span>
-                        <span v-show="language == 'en'">Our Projects</span>
+                        <span v-show="language == 'pt'">Linhas de Ação</span>
+                        <span v-show="language == 'en'">Action Lines</span>
                     </h2>
                 </div>
             </div>
@@ -135,12 +135,14 @@ get_header(); ?>
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
                     <h2 class="title-section c-white">
-                        <span v-show="language == 'pt'">Apoie <br>Nossos <br>Projetos</span>
-                        <span v-show="language == 'en'">Support Our <br>Projects</span>
+                        <span v-show="language == 'pt'">Participe</span>
+                        <span v-show="language == 'en'">Participate</span>
                     </h2>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
-                    <p class="subtext-title">Lorem ipsum dolor sit amet consectetur adipiscing elit, cubilia porta ridiculus inceptos sapien id pulvinar, mi eget placerat ornare potenti himenaeos. Vestibulum eleifend consequat urna dui inceptos conubia ullamcorper, fringilla purus sapien ligula fusce id, mi aliquam eget etiam nulla efficitur. dolor sit amet consectetur adipiscing elit, cubilia porta ridiculus inceptos sapien id pulvinar, mi eget placerat ornare potenti himenaeos.</p>
+                    <p class="subtext-title">Apoie nossos projetos, acompanhe de perto nossas atividades,
+                        receba as notícias e seja um colaborador. Convidamos você a participar do IEH e redescobrir
+                        a magia de ser feliz, fazendo aconteder.</p>
 
                     <div class="form-group text-right">
 
