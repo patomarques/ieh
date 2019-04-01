@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900");
-.transition, .btn-saiba-mais, .btn-white, .wpcf7-submit, .btn-enviar-contato, .navbar-nav-home-menu li a, nav ul li a, a, .item {
+.transition, .btn-saiba-mais, .btn-white, .wpcf7-submit, .btn-enviar-contato, .navbar-nav-home-menu li a, nav ul li a, a, .item, .controls li i {
   transition: all 0.5s ease; }
 
 .fade-in, .menu-fixed {
@@ -285,9 +285,6 @@
   max-width: 120px;
   display: block;
   margin: 20px auto 0; }
-
-.header-home {
-  display: none; }
 
 .logo-home,
 .content-top-right {
@@ -1564,12 +1561,65 @@ label {
   font-size: 22px;
   font-family: "Montserrat", sans-serif; }
 
+#element-language-chosen {
+  display: none !important; }
+
+.banner-slider {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: block;
+  overflow: hidden; }
+  .banner-slider .tiny-slider-inner {
+    top: 0; }
+
+.controls {
+  position: absolute;
+  top: 40%;
+  margin-top: 0;
+  width: 100%;
+  padding-left: 0; }
+  .controls li i {
+    font-size: 60px;
+    color: #acb4b5; }
+    .controls li i:hover {
+      color: #41b6d6; }
+  .controls .next {
+    float: right; }
+  .controls .prev {
+    float: left; }
+
+ul.controls.customized-arrows {
+  text-align: center; }
+
+ul.controls.customized-arrows li {
+  display: inline-block; }
+
+.controls.customized-arrows [aria-controls] {
+  font-size: 30px;
+  margin: 0 5px;
+  line-height: 1;
+  -moz-transition: color 0.3s ease-out;
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out; }
+
+.controls.customized-arrows [aria-controls]:hover {
+  cursor: pointer;
+  color: #056653; }
+
+.controls.customized-arrows [disabled] {
+  color: inherit;
+  opacity: 0.4;
+  cursor: not-allowed !important; }
+
 /**
 ** @mediaqueries (responsive)
  */
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 @media (min-width: 320px) {
+  .controls {
+    display: none; }
   #background-img-home {
     height: 100%;
     background-color: #41b6d6;
@@ -1738,6 +1788,8 @@ label {
     letter-spacing: 0; } }
 
 @media (min-width: 768px) {
+  .controls {
+    display: block; }
   .bg-img-fix {
     width: 100%; }
   #background-img-home {
@@ -1862,9 +1914,6 @@ label {
     margin: 0 -20% 0 -10%; }
   .icon-arrow-right {
     margin: 0 -10% 0 -20%; } }
-
-#element-language-chosen {
-  display: none !important; }
 
 #footer-site {
   background-color: #41b6d6;

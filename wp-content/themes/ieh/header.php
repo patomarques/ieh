@@ -147,7 +147,7 @@
     //full, larger, medium
     if (is_front_page()){
         $args_sliders = array(
-            'posts_per_page' => 1,
+            'posts_per_page' => -1,
             'post_type' => 'home-slider',
             'orderby' => "rand",
             'public' => false,
@@ -162,28 +162,46 @@
     }
 ?>
 
-<section id="background-img-home" class="content-full-background parallax-effect bg-home-parallax">
     <?php if (is_front_page()) { ?>
 
-        <div class="slider-home">
-            <?php while ( $sliders->have_posts() ) : $sliders->the_post(); ?>
+        <div class="banner-slider">
 
-                <div class="content-bg-img ">
-                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="" class="bg-img-fix d-block d-sm-none">
-                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="" class="bg-img-fix d-none d-md-block d-lg-block d-xl-block">
-                </div>
-            <?php endwhile; ?>
-            <?php wp_reset_postdata(); ?>
+            <div class="tiny-slider-customized-controls tiny-slider-inner">
+                <?php while ( $sliders->have_posts() ) : $sliders->the_post(); ?>
+                    <div class="tiny-slider-item">
+                        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="" class="bg-img-fix d-block d-sm-none">
+                        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="" class="bg-img-fix d-none d-md-block d-lg-block d-xl-block">
+                    </div>
+
+                <?php endwhile; ?>
+
+                <?php wp_reset_postdata(); ?>
+
+            </div>
+
+            <ul class="controls customized-arrows">
+                <li class="prev">
+                    <i class="fa fa-angle-left"></i>
+                </li>
+                <li class="next">
+                    <i class="fa fa-angle-right"></i>
+                </li>
+            </ul>
+
+            <div class="lines-fullsize bg-cinza-claro"></div>
+            <div class="lines-fullsize bg-azul-claro"></div>
+
+
         </div>
 
     <?php }else{ ?>
 
-        <div class="content-bg-img">
-            <img src="<?php echo $imagemUrlLarge; ?>" alt="" class="bg-img-fix d-block d-sm-none">
-            <img src="<?php echo $imagemUrlFull; ?>" alt="" class="bg-img-fix d-none d-md-block d-lg-block d-xl-block">
-        </div>
+        <section id="background-img-home" class="content-full-background parallax-effect bg-home-parallax">
 
-    <?php } ?>
+    <div class="content-bg-img">
+        <img src="<?php echo $imagemUrlLarge; ?>" alt="" class="bg-img-fix d-block d-sm-none">
+        <img src="<?php echo $imagemUrlFull; ?>" alt="" class="bg-img-fix d-none d-md-block d-lg-block d-xl-block">
+    </div>
 
     <div class="home-begin-content">
 
@@ -319,5 +337,8 @@
         </div>
     </div>
 </section>
-<div class="lines-fullsize bg-cinza-claro"></div>
-<div class="lines-fullsize bg-azul-claro"></div>
+
+        <div class="lines-fullsize bg-cinza-claro"></div>
+        <div class="lines-fullsize bg-azul-claro"></div>
+
+    <?php } ?>

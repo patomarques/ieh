@@ -483,12 +483,88 @@ header  .text-content{
   font-family: $ff-montserrat;
 }
 
+#element-language-chosen{
+  display: none !important;
+}
+
+.banner-slider{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+
+  .tiny-slider-inner{
+    top: 0;
+  }
+}
+.controls{
+  position: absolute;
+  top: 40%;
+  margin-top: 0;
+  width: 100%;
+  padding-left: 0;
+
+  li{
+    i{
+      font-size: 60px;
+      color: $cinza-arrow;
+      @extend .transition;
+
+      &:hover{
+        color: $azul-claro;
+      }
+    }
+
+  }
+
+  .next{
+    float: right;
+  }
+
+  .prev{
+    float: left;
+  }
+}
+
+ul.controls.customized-arrows {
+  text-align: center;
+}
+
+ul.controls.customized-arrows li {
+  display: inline-block;
+}
+
+.controls.customized-arrows [aria-controls] {
+  font-size: 30px;
+  margin: 0 5px;
+  line-height: 1;
+  -moz-transition: color 0.3s ease-out;
+  -webkit-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+
+.controls.customized-arrows [aria-controls]:hover {
+  cursor: pointer;
+  color: $verde-sha;
+}
+
+.controls.customized-arrows [disabled] {
+  color: inherit;
+  opacity: 0.4;
+  cursor: not-allowed !important
+}
+
 /**
 ** @mediaqueries (responsive)
  */
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 @media (min-width: $screen-xs-min) {
+  .controls {
+    display: none;
+  }
+
   #background-img-home {
     height: 100%;
     background-color: $azul-claro;
@@ -781,6 +857,10 @@ header  .text-content{
 }
 
 @media (min-width: $screen-sm-min) {
+  .controls {
+    display: block;
+  }
+
   .bg-img-fix{
     width: 100%;
   }
@@ -1121,8 +1201,4 @@ header  .text-content{
   .icon-arrow-right{
     margin: 0 -10% 0 -20%;
   }
-}
-
-#element-language-chosen{
-  display: none !important;
 }

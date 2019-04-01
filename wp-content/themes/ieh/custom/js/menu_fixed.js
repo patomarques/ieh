@@ -5,6 +5,11 @@ function watcherToFixedMenu() {
     var page_content     = document.getElementById('page-content');
 //    var contentSize      = page_content.offsetTop;
 
+    //verify if menu element exists
+    if(menu_fixed === null){
+        return false;
+    }
+
     //menu fixed automatic when scroll
     if(typeof(next_section) != 'undefined' && next_section != null){
         contentSize      = next_section.offsetTop;

@@ -227,6 +227,10 @@ function wp_bootstrap_starter_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	//Tiny Slider
+    wp_enqueue_style( 'tiny-slider-css', get_template_directory_uri() . '/node_modules/tiny-slider/dist/tiny-slider.css', false, '' );
+    wp_enqueue_script('tiny-slider-js', get_template_directory_uri() . '/node_modules/tiny-slider/dist/tiny-slider.js', array(), '', true );
 }
 add_action( 'wp_enqueue_scripts', 'wp_bootstrap_starter_scripts' );
 //
