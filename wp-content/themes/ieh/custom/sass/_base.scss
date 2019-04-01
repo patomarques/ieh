@@ -826,3 +826,12 @@ label{
     }
   }
 }
+
+@media (min-width: 1440px) {
+  .o-que-fazemos-bloco-imagens{
+    .column-img-1,
+    .column-img-2{
+      max-height: 520px;
+    }
+  }
+}

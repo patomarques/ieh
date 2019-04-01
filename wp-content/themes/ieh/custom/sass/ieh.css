@@ -1279,6 +1279,11 @@ label {
   .o-que-fazemos-bloco-imagens .column-img-2 {
     max-height: 420px; } }
 
+@media (min-width: 1440px) {
+  .o-que-fazemos-bloco-imagens .column-img-1,
+  .o-que-fazemos-bloco-imagens .column-img-2 {
+    max-height: 520px; } }
+
 #background-img-home {
   background-color: #41b6d6; }
 
@@ -1572,6 +1577,10 @@ label {
   overflow: hidden; }
   .banner-slider .tiny-slider-inner {
     top: 0; }
+
+.content-full-background {
+  position: absolute;
+  top: 0; }
 
 .controls {
   position: absolute;

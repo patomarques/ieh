@@ -42,7 +42,7 @@ $idPageReferer = get_id_by_slug('quem-somos');
         </div>
     </div>
 
-    <div class="lines-fullsize bg-azul-claro line-mt mb-0"></div>
+    <div class="lines-fullsize bg-azul-claro mb-0"></div>
 
     <section class="content-full content-sobre-nos" id="sobre-nos">
         <div class="row">
