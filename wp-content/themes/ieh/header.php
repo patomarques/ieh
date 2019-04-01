@@ -26,10 +26,6 @@
         languageSession = <?= json_encode($_SESSION['lang_site']) ?>;
         <?php } ?>
     </script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
-
     <script src="<?php echo get_template_directory_uri(); ?>/node_modules/vue/dist/vue.js"></script>
     <!--<script src="--><?php //get_template_directory_uri(); ?><!--/node_modules/vue/dist/vue.min.js"></script>-->
     <script src="<?php echo get_template_directory_uri(); ?>/custom/js/multilanguage.js"></script>
@@ -166,22 +162,18 @@
     }
 ?>
 
-<section id="background-img-home" class="content-full-background parallax-effect bg-home-parallax hidden">
+<section id="background-img-home" class="content-full-background parallax-effect bg-home-parallax">
     <?php if (is_front_page()) { ?>
 
         <div class="slider-home">
-
             <?php while ( $sliders->have_posts() ) : $sliders->the_post(); ?>
 
                 <div class="content-bg-img ">
                     <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="" class="bg-img-fix d-block d-sm-none">
                     <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="" class="bg-img-fix d-none d-md-block d-lg-block d-xl-block">
                 </div>
-
             <?php endwhile; ?>
-
             <?php wp_reset_postdata(); ?>
-
         </div>
 
     <?php }else{ ?>
@@ -329,15 +321,3 @@
 </section>
 <div class="lines-fullsize bg-cinza-claro"></div>
 <div class="lines-fullsize bg-azul-claro"></div>
-
-    <div class="my-slider">
-        <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/bg/img001.jpg" alt="">
-        </div>
-        <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/bg/img002.jpg" alt="">
-        </div>
-        <div>
-            <img src="<?php echo get_template_directory_uri(); ?>/custom/img/2019/bg/img003.jpg" alt="">
-        </div>
-    </div>
