@@ -1,10 +1,20 @@
 jQuery(document).ready(function($){
-    var slider = tns({
-        container: '.my-slider',
-        items: 1,
-        slideBy: 'page',
-        autoplay: true
-    });
+    // var slider = tns({
+    //     container: '.my-slider',
+    //     items: 1,
+    //     slideBy: 'page',
+    //     autoplay: true,
+    //     autoplayButtonOutput: false,
+    //     controlsContainer: ".customized-arrows",
+    //     controlsPosition: 'bottom',
+    //     nav: false,
+    //     centerMode: true,
+    //     accessibility: true,
+    //     mouseDrag: true,
+    //     autoHeight: '100%'
+    // });
+    //
+    // slider.play();
 
     //orderna os apoiadores
     $(".list-parceiros-apoiadores li").sort(sort_li).appendTo('.list-parceiros-apoiadores');
