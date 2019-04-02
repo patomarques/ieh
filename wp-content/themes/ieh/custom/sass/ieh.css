@@ -1924,6 +1924,12 @@ ul.controls.customized-arrows li {
   .icon-arrow-right {
     margin: 0 -10% 0 -20%; } }
 
+.section-content-home .home-begin-content {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 99; }
+
 #footer-site {
   background-color: #41b6d6;
   padding: 80px 0 40px; }

@@ -1208,3 +1208,12 @@ ul.controls.customized-arrows li {
     margin: 0 -10% 0 -20%;
   }
 }
+
+.section-content-home{
+  .home-begin-content{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+  }
+}
