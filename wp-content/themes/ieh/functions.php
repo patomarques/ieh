@@ -231,6 +231,8 @@ function wp_bootstrap_starter_scripts() {
 	//Tiny Slider
     wp_enqueue_style( 'tiny-slider-css', get_template_directory_uri() . '/node_modules/tiny-slider/dist/tiny-slider.css', false, '' );
     wp_enqueue_script('tiny-slider-js', get_template_directory_uri() . '/node_modules/tiny-slider/dist/tiny-slider.js', array(), '', true );
+
+    wp_enqueue_script('number-scroll-counter-js', get_template_directory_uri() . '/custom/js/number_scroll_counter.js', array(), '', true );
 }
 add_action( 'wp_enqueue_scripts', 'wp_bootstrap_starter_scripts' );
 //

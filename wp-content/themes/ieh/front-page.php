@@ -207,7 +207,10 @@ get_header(); ?>
                     <ul class="list-unstyled list-ieh-numeros">
                         <li>
                             <div class="box-numeros">
-                                <span class="numero">30</span>
+                                <span class="love_counter">
+                                  <span class="love_count numero">30</span>
+                                </span>
+                                
                                 <span class="icon icon-ampulheta"></span>
                                 <span class="text" v-show="language == 'pt'">anos <br>de atuação</span>
                                 <span class="text" v-show="language == 'en'">years<br>of existence</span>
@@ -222,7 +225,10 @@ get_header(); ?>
                                     </span>
 <!--                                    <span class="d-block d-sm-none"><i class="fa fa-plus"></i></span>-->
                                 </span>
-                                <span class="numero">120</span>
+
+                                <span class="love_counter">
+                                  <span class="love_count numero">120</span>
+                                </span>
                                 <span class="icon icon-user-group"></span>
                                 <span class="text text-second" v-show="language == 'pt'">profissionais <br>associados</span>
                                 <span class="text text-second" v-show="language == 'en'">associated <br>professionals</span>
@@ -234,7 +240,13 @@ get_header(); ?>
                                     <span class="text" v-show="language == 'pt'">Mais<br>de</span>
                                     <span class="text" v-show="language == 'en'">More<br>than</span>
                                 </span>
-                                <div class="numero"><span class="num-lg">10</span> mil</div>
+                                <div class="numero">
+                                   <span class="love_counter">
+                                      <span class="love_count num-lg">10</span>
+                                   </span>
+
+                                   mil
+                                </div>
                                 <span class="icon icon-certified"></span>
                                 <span class="text">profissionais<br>capacitados</span>
                             </div>
@@ -242,7 +254,10 @@ get_header(); ?>
 
                         <li>
                             <div class="box-numeros">
-                                <span class="numero">29</span>
+
+                                <span class="love_counter">
+                                   <div class="love_count numero">29</div>
+                                </span>
                                 <span class="icon icon-events"></span>
                                 <span class="text" v-show="language == 'pt'">eventos<br>realizados</span>
                                 <span class="text" v-show="language == 'en'">events<br>realized</span>
@@ -251,7 +266,9 @@ get_header(); ?>
 
                         <li>
                             <div class="box-numeros">
-                                <div class="numero">21</div>
+                                <span class="love_counter">
+                                   <span class="love_count numero">21</span>
+                                </span>
                                 <span class="icon icon-anotation"></span>
                                 <span class="text" v-show="language == 'pt'">convênios<br>contratos</span>
                                 <span class="text" v-show="language == 'en'">agreements<br>and contracts</span>
@@ -264,7 +281,9 @@ get_header(); ?>
                         <div class="box-numeros">
                             <span class="mais-de" v-show="language == 'pt'">Mais de</span>
                             <span class="mais-de" v-show="language == 'en'">More than</span>
-                            <span class="numero">200</span>
+                            <span class="love_counter">
+                               <span class="love_count numero">200</span>
+                            </span>
                             <span class="text" v-show="language == 'pt'">cidades<br>atendidas</span>
                             <span class="text" v-show="language == 'en'">cities<br>assisted</span>
                         </div>

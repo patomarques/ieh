@@ -68,23 +68,23 @@ $pagesInverseTitle = array('about-us', 'what-we-do', 'our-projects');
                         <?php } else { ?>
 
                             <span v-show="language == 'pt'">
-                                            <?php
-                                            if (in_array($post_slug, $pagesInverseTitle)) {
-                                                echo get_field('title_alternative');
-                                            } else {
-                                                echo get_the_title();
-                                            }
-                                            ?>
-                                      </span>
+                              <?php
+                                if (in_array($post_slug, $pagesInverseTitle)) {
+                                    echo get_field('title_alternative');
+                                } else {
+                                    echo get_the_title();
+                                }
+                              ?>
+                            </span>
                             <span v-show="language == 'en'">
-                                            <?php
-                                            if (in_array($post_slug, $pagesInverseTitle)) {
-                                                echo get_the_title();
-                                            } else {
-                                                echo get_field('title_alternative');
-                                            }
-                                            ?>
-                                        </span>
+                              <?php
+                                if (in_array($post_slug, $pagesInverseTitle)) {
+                                    echo get_the_title();
+                                } else {
+                                    echo get_field('title_alternative');
+                                }
+                              ?>
+                            </span>
 
                         <?php } ?>
 
@@ -109,6 +109,9 @@ $pagesInverseTitle = array('about-us', 'what-we-do', 'our-projects');
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="menu-fixed-col">
 
                 <ul class="navbar-nav-home-menu list-unstyled list-inline" v-show="language == 'pt'">
+                    <li>
+                      <a href="/" class="link-menu <?php if(is_home()){ echo "menu-actived"; } ?>">INÍCIO</a>
+                    </li>
                     <li>
                         <a href="<?php echo get_site_url(); ?>/quem-somos/"
                            class="link-menu <?php if ($post_slug == 'quem-somos') {

@@ -34,7 +34,7 @@ function watcherToFixedMenu() {
     }
 }
 
-window.onscroll = function (oEvent) {
-    // executa um bloco de código ou funções, quando o scroll é feito na janela.
+// executa um bloco de código ou funções, quando o scroll é feito na janela.
+window.onscroll = function () {
     watcherToFixedMenu();
-}
+};

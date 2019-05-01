@@ -75,6 +75,9 @@
 <aside id="menu-element">
     <nav>
         <ul v-show="language == 'pt'">
+          <li>
+            <a href="/" class="link-menu <?php if(is_home()){ echo "menu-actived"; } ?>">INÍCIO</a>
+          </li>
             <li>
                 <a href="<?php echo get_site_url(); ?>/quem-somos/" class="link-menu <?php if($post_slug == 'quem-somos'){ echo "menu-actived"; } ?>">QUEM SOMOS</a>
             </li>
@@ -172,7 +175,7 @@
             <div class="tiny-slider-customized-controls tiny-slider-inner">
                 <?php while ( $sliders->have_posts() ) : $sliders->the_post(); ?>
                     <div class="tiny-slider-item">
-                        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>" alt="" class="bg-img-fix d-block d-sm-none">
+                        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="" class="bg-img-fix d-block d-sm-none">
                         <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>" alt="" class="bg-img-fix d-none d-md-block d-lg-block d-xl-block">
                     </div>
 
@@ -191,14 +194,23 @@
                 </li>
             </ul>
 
-
-
         </section>
 
         <div class="lines-fullsize bg-cinza-claro"></div>
         <div class="lines-fullsize bg-azul-claro"></div>
 
     <?php }else{ ?>
+
+        <ul class="list-inline d-lg-none d-xl-none">
+          <li class="list-inline-item">
+            <div id="menu-bars-x">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </li>
+        </ul>
 
         <section id="background-img-home" class="content-full-background parallax-effect bg-home-parallax">
 

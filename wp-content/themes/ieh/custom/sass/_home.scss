@@ -493,10 +493,6 @@ header  .text-content{
   height: 100%;
   display: block;
   overflow: hidden;
-
-  .tiny-slider-inner{
-    top: 0;
-  }
 }
 
 .content-full-background{
@@ -514,14 +510,13 @@ header  .text-content{
   li{
     i{
       font-size: 60px;
-      color: $cinza-arrow;
+      color: $branco;
       @extend .transition;
 
       &:hover{
         color: $azul-claro;
       }
     }
-
   }
 
   .next{
@@ -535,6 +530,7 @@ header  .text-content{
 
 ul.controls.customized-arrows {
   text-align: center;
+  z-index: 999;
 }
 
 ul.controls.customized-arrows li {
@@ -567,6 +563,40 @@ ul.controls.customized-arrows li {
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 @media (min-width: $screen-xs-min) {
+  .modal-fale-conosco{
+    .modal-header{
+      .close{
+        margin: -1rem  -40px -1rem auto;
+      }
+    }
+  }
+
+  .banner-slider{
+    .tiny-slider-inner{
+      top: 0;
+    }
+
+    .tns-item,
+    .tns-slider,
+    .tns-ovh,
+    .tns-inner,
+    .tns-outer{
+      height: 100% !important;
+    }
+
+    .tiny-slider-item{
+      //img{
+      //  width: auto !important;
+      //  max-width: none;
+      //}
+    }
+  }
+
+  .bg-img-fix{
+    width: auto;
+    height: 100%;
+  }
+
   .controls {
     display: none;
   }
@@ -859,6 +889,7 @@ ul.controls.customized-arrows li {
 
   .box-content-quem-somos .box-info{
     letter-spacing: 0;
+    height: 100%;
   }
 }
 
@@ -969,6 +1000,11 @@ ul.controls.customized-arrows li {
     #home-o-que-fazemos {
       //background-image: url('../img/bg/o-que-fazemos-home-dark.jpg');
     }
+
+  .box-content-quem-somos .box-info{
+    letter-spacing: 0;
+    height: 90%;
+  }
 
     .list-ieh-numeros{
       li{
@@ -1189,6 +1225,28 @@ ul.controls.customized-arrows li {
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: $screen-lg-min) {
+
+  .banner-slider{
+    .tiny-slider-inner{
+      top: 0;
+    }
+
+    .tns-item,
+    .tns-slider,
+    .tns-ovh,
+    .tns-inner,
+    .tns-outer{
+      height: 100% !important;
+    }
+
+    .tiny-slider-item{
+      img{
+        width: 100%;
+        //max-width: none;
+      }
+    }
+  }
+
   .item{
     .square-content{
       .img-icon{
@@ -1216,4 +1274,6 @@ ul.controls.customized-arrows li {
     top: 0;
     z-index: 99;
   }
+
+
 }
