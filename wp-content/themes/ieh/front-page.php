@@ -90,7 +90,7 @@ get_header(); ?>
                     <h2 class="title-section c-white">O Que <br>Fazemos</h2>
 
                     <p class="text-content c-white text-justify">
-                        Há <?php echo do_shortcode('calculate_years'); ?> [calculate_years] anos o <a href="<?php echo get_site_url(); ?>" class="link c-white text-negrito">Instituto de Ecologia Humana</a> já realizou cerca de 40 eventos, promoveu 120 cursos; propiciou estágios a 100 estudantes universitários, capacitou cerca de 600 educadores, coordenou 40 projetos, dentre eles 15 projetos de pesquisa, todos com metodologia interdisciplinar e realizou cerca de 15 avaliações de projetos. Coordenou e participou das publicações de cerca de 70 títulos. Realizou o encontro da Arte com a Ciência ao concretizar duas exposições sobre a temática ambiental.
+                        Há <?php echo do_shortcode('[calculate_years]'); ?> anos o <a href="<?php echo get_site_url(); ?>" class="link c-white text-negrito">Instituto de Ecologia Humana</a> já realizou cerca de 40 eventos, promoveu 120 cursos; propiciou estágios a 100 estudantes universitários, capacitou cerca de 600 educadores, coordenou 40 projetos, dentre eles 15 projetos de pesquisa, todos com metodologia interdisciplinar e realizou cerca de 15 avaliações de projetos. Coordenou e participou das publicações de cerca de 70 títulos. Realizou o encontro da Arte com a Ciência ao concretizar duas exposições sobre a temática ambiental.
                     </p>
 
                     <div class="button-content text-center">
@@ -101,7 +101,7 @@ get_header(); ?>
                     <h2 class="title-section c-white">What <br>We Do</h2>
 
                     <p class="text-content c-white text-justify">
-                        For <?php echo do_shortcode('calculate_years'); ?> years the <a href="<?php echo get_site_url(); ?>" class="link c-white text-negrito">Instituto de Ecologia Humana</a> has held about 40 events, promoted 120 courses; provided training for 100 university students, trained about 600 educators, coordinated 40 projects, including 15 research projects, all with interdisciplinary methodology and conducted about 15 project evaluations. Coordinated and participated in publications of about 70 titles. He held the meeting of Art and Science by making two exhibitions on the environmental theme.
+                        For <?php echo do_shortcode('[calculate_years]'); ?> years the <a href="<?php echo get_site_url(); ?>" class="link c-white text-negrito">Instituto de Ecologia Humana</a> has held about 40 events, promoted 120 courses; provided training for 100 university students, trained about 600 educators, coordinated 40 projects, including 15 research projects, all with interdisciplinary methodology and conducted about 15 project evaluations. Coordinated and participated in publications of about 70 titles. He held the meeting of Art and Science by making two exhibitions on the environmental theme.
                     </p>
 
                     <div class="button-content text-center">
