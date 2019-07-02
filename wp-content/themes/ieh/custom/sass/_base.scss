@@ -11,26 +11,26 @@ body{
   height: 100%;
 
 
-  //&::-webkit-scrollbar
-  //{
-  //  width: 9px;  /* for vertical scrollbars */
-  //  height: 9px; /* for horizontal scrollbars */
-  //  background: transparent !important;
-  //
-  //}
-  //
-  //&::-webkit-scrollbar-track
-  //{
-  //  webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  //  background: transparent !important;
-  //
-  //}
-  //
-  //&::-webkit-scrollbar-thumb
-  //{
-  //  background: $cinza-5d;
-  //  @include border-radius(10px);
-  //}
+  &::-webkit-scrollbar
+  {
+    width: 9px;  /* for vertical scrollbars */
+    height: 9px; /* for horizontal scrollbars */
+    background: #d2d2d2 !important;
+  }
+
+  &::-webkit-scrollbar-track
+  {
+    webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background: #d2d2d2 !important;
+
+
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    background: $cinza-5d;
+    @include border-radius(10px);
+  }
 }
 
 #body-pseudelement{
@@ -66,13 +66,10 @@ a{
   display: none !important;
 }
 .bg-home-parallax {
-  /* The image used */
-  //background-image: url("../img/bg/bg-ieh.png");
 
 }
 
 #home-o-que-fazemos{
-  //background-image: url("../img/bg/home-fullscreen-bg.jpg");
   position: relative;
 }
 
@@ -778,6 +775,10 @@ label{
   .box-depoimentos{
     padding: 0;
   }
+
+  #content-text-oq-fazemos{
+    text-align: left;
+  }
 }
 
 @media (min-width: $screen-sm-min) {
@@ -823,6 +824,15 @@ label{
     .column-img-1,
     .column-img-2{
       max-height: 420px;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  .o-que-fazemos-bloco-imagens{
+    .column-img-1,
+    .column-img-2{
+      max-height: 520px;
     }
   }
 }

@@ -5,6 +5,11 @@ function watcherToFixedMenu() {
     var page_content     = document.getElementById('page-content');
 //    var contentSize      = page_content.offsetTop;
 
+    //verify if menu element exists
+    if(menu_fixed === null){
+        return false;
+    }
+
     //menu fixed automatic when scroll
     if(typeof(next_section) != 'undefined' && next_section != null){
         contentSize      = next_section.offsetTop;
@@ -29,7 +34,7 @@ function watcherToFixedMenu() {
     }
 }
 
-window.onscroll = function (oEvent) {
-    // executa um bloco de código ou funções, quando o scroll é feito na janela.
+// executa um bloco de código ou funções, quando o scroll é feito na janela.
+window.onscroll = function () {
     watcherToFixedMenu();
-}
+};
