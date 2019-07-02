@@ -110,9 +110,6 @@ $pagesInverseTitle = array('about-us', 'what-we-do', 'our-projects');
 
                 <ul class="navbar-nav-home-menu list-unstyled list-inline" v-show="language == 'pt'">
                     <li>
-                      <a href="/" class="link-menu <?php if(is_home()){ echo "menu-actived"; } ?>">INÍCIO</a>
-                    </li>
-                    <li>
                         <a href="<?php echo get_site_url(); ?>/quem-somos/"
                            class="link-menu <?php if ($post_slug == 'quem-somos') {
                                echo "menu-actived";
@@ -129,6 +126,11 @@ $pagesInverseTitle = array('about-us', 'what-we-do', 'our-projects');
                            class="link-menu <?php if ($post_slug == 'linhas-de-acao') {
                                echo "menu-actived";
                            } ?>">LINHAS <br>DE AÇÃO</a>
+                    </li>
+                    <li>
+                      <a href="<?php if (!is_home()) {
+                          echo get_site_url();
+                      } ?>#home-participe" class="link-menu">PARTICIPE</a>
                     </li>
                     <li>
                         <a href="<?php if (!is_home()) {
@@ -162,13 +164,16 @@ $pagesInverseTitle = array('about-us', 'what-we-do', 'our-projects');
                                echo "menu-actived";
                            } ?>">COURSE<br>OF ACTION</a>
                     </li>
+                  <li>
+                    <a href="<?php if (!is_home()) { echo get_site_url(); } ?>#home-participe/" class="link-menu">PARTICIPE</a>
+                  </li>
                     <li>
                         <a href="<?php if (!is_home()) {
                             echo get_site_url();
                         } ?>#home-ieh-em-numeros" class="link-menu">IEH <br>STATISTICS</a>
                     </li>
                     <li>
-                        <a href="<?php if (!is_home()) { echo get_site_url() . "#home-depoimentos"; } ?>"
+                        <a href="<?php if (!is_home()) { echo get_site_url(); } ?>#home-depoimentos"
                            class="link-menu">TESTIMONIALS</a>
                     </li>
                 </ul>

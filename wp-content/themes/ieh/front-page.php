@@ -130,7 +130,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section id="home-apoie-nossos-projetos" class="fullscreen-bg bg-azul-claro">
+    <section id="home-participe" class="fullscreen-bg bg-azul-claro home-apoie-nossos-projetos">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">

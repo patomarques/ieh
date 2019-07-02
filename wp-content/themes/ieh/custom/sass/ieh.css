@@ -752,9 +752,6 @@ a:hover {
 .hidden {
   display: none !important; }
 
-.bg-home-parallax {
-  /* The image used */ }
-
 #home-o-que-fazemos {
   position: relative; }
 
@@ -1256,7 +1253,9 @@ label {
   .list-coordenacao .box-membrxs .nome, .list-coordenacao .box-membrxs .resumo {
     font-size: 20px; }
   .box-depoimentos {
-    padding: 0; } }
+    padding: 0; }
+  #content-text-oq-fazemos {
+    text-align: left; } }
 
 @media (min-width: 768px) {
   #home-bg-img-parallax-2 {
@@ -1413,15 +1412,15 @@ label {
   width: 100%;
   padding-bottom: 24%; }
 
-#home-apoie-nossos-projetos {
+.home-apoie-nossos-projetos {
   padding-top: 170px;
   padding-bottom: 60px; }
-  #home-apoie-nossos-projetos .title-section {
+  .home-apoie-nossos-projetos .title-section {
     font-size: 50px;
     letter-spacing: 4px;
     font-weight: 700;
     margin: 0 0 40px 10px; }
-    #home-apoie-nossos-projetos .title-section:after {
+    .home-apoie-nossos-projetos .title-section:after {
       display: block;
       content: '';
       border-left: 4px solid #ffffff;
@@ -1429,7 +1428,7 @@ label {
       position: absolute;
       top: 0;
       margin-left: -30px; }
-  #home-apoie-nossos-projetos .subtext-title {
+  .home-apoie-nossos-projetos .subtext-title {
     color: #ffffff;
     font-family: "Montserrat", sans-serif;
     text-align: justify; }
@@ -1726,12 +1725,12 @@ ul.controls.customized-arrows li {
     margin: 0;
     padding: 0 30px 30px;
     max-width: 100%; }
-  #home-apoie-nossos-projetos .title-section {
+  .home-apoie-nossos-projetos .title-section {
     font-size: 40px; }
-  #home-apoie-nossos-projetos .subtext-title {
+  .home-apoie-nossos-projetos .subtext-title {
     font-size: 20px;
     text-align: left; }
-  #home-apoie-nossos-projetos .btn-white {
+  .home-apoie-nossos-projetos .btn-white {
     display: block;
     text-align: center; }
   .slick-slider:after {
@@ -1872,13 +1871,13 @@ ul.controls.customized-arrows li {
   .bloco-texto-apos-imagens p {
     text-align: justify; }
   .slick-slider:after {
-    margin: 0 -5px -50px 0; } }
+    margin: 0 -5px -50px 0; }
+  .box-content-quem-somos .box-info {
+    letter-spacing: 0;
+    height: 90%; } }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .box-content-quem-somos .box-info {
-    letter-spacing: 0;
-    height: 90%; }
   .list-ieh-numeros li {
     text-align: left; }
     .list-ieh-numeros li .numero {

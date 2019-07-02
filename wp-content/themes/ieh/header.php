@@ -29,6 +29,7 @@
     <script src="<?php echo get_template_directory_uri(); ?>/node_modules/vue/dist/vue.js"></script>
     <!--<script src="--><?php //get_template_directory_uri(); ?><!--/node_modules/vue/dist/vue.min.js"></script>-->
     <script src="<?php echo get_template_directory_uri(); ?>/custom/js/multilanguage.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -75,9 +76,9 @@
 <aside id="menu-element">
     <nav>
         <ul v-show="language == 'pt'">
-          <li>
-            <a href="/" class="link-menu <?php if(is_home()){ echo "menu-actived"; } ?>">INÍCIO</a>
-          </li>
+            <li>
+              <a href="/" class="link-menu <?php if(is_home()){ echo "menu-actived"; } ?>">INÍCIO</a>
+            </li>
             <li>
                 <a href="<?php echo get_site_url(); ?>/quem-somos/" class="link-menu <?php if($post_slug == 'quem-somos'){ echo "menu-actived"; } ?>">QUEM SOMOS</a>
             </li>
@@ -88,7 +89,7 @@
                 <a href="<?php echo get_site_url(); ?>/linhas-de-acao/" class="link-menu <?php if($post_slug == 'linhas-de-acao'){ echo "menu-actived"; } ?>">LINHAS DE AÇÃO</a>
             </li>
             <li>
-                <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-apoie-nossos-projetos" class="link-menu">APOIE NOSSOS PROJETOS</a>
+                <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-participe" class="link-menu">PARTICIPE</a>
             </li>
             <li>
                 <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-ieh-em-numeros" class="link-menu">IEH EM NÚMEROS</a>
@@ -108,7 +109,7 @@
                 <a href="<?php echo get_site_url(); ?>/course-of-action/" class="link-menu <?php if($post_slug == 'course-of-action'){ echo "menu-actived"; } ?>">COURSE OF ACTION</a>
             </li>
             <li>
-                <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-apoie-nossos-projetos" class="link-menu">SUPPORT OUR PROJECTS</a>
+                <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-participe" class="link-menu">PARTICIPE</a>
             </li>
             <li>
                 <a href="<?php if(!is_home()){ echo get_site_url(); } ?>#home-ieh-em-numeros" class="link-menu">IEH STATISTICS</a>

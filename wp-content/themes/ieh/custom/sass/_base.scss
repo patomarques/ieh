@@ -66,13 +66,10 @@ a{
   display: none !important;
 }
 .bg-home-parallax {
-  /* The image used */
-  //background-image: url("../img/bg/bg-ieh.png");
 
 }
 
 #home-o-que-fazemos{
-  //background-image: url("../img/bg/home-fullscreen-bg.jpg");
   position: relative;
 }
 
@@ -777,6 +774,10 @@ label{
   }
   .box-depoimentos{
     padding: 0;
+  }
+
+  #content-text-oq-fazemos{
+    text-align: left;
   }
 }
 
